@@ -1,0 +1,3306 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="2050, calculator, kenya, My 2050 Calculator">
+        <meta name="description" content="Website to calculate to the total Carbon Omission in the atmosphere depending on various factors">
+        <meta name="author" content="Martin Maina Mbote">
+
+        <title>
+            My 2050 Calculator
+        </title>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+        <style>
+            html::-webkit-scrollbar{
+                width: 0.1vw;
+            }
+
+            #car1{
+                animation-name: car-1;
+                animation-duration: 15s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+                transition: opacity 0.5s;
+                position: absolute;
+                width: 5.3vw;
+                left: 35vw;
+                top: 30.1vw;
+            }
+
+            @keyframes car-1{
+                0%{
+                    top: 20.7vw;
+                    left: 4.3vw;
+                }
+
+                55%{
+                    top: 30.5vw;
+                    left: 36.5vw;
+                }
+
+                100%{
+                    top: 38vw; 
+                    left: 60vw;
+                }
+            }
+
+            #electric-white{
+                animation-name: car-1;
+                animation-duration: 15s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+                transition: opacity 0.5s;
+                opacity: 0;
+                position: absolute;
+                width: 5.5vw;
+                left: 34.25vw;
+                top: 29.8vw;
+            }
+
+            @keyframes car-1{
+                0%{
+                    top: 20.4vw;
+                    left: 3.55vw;
+                }
+
+                55%{
+                    top: 30.2vw;
+                    left: 35.75vw;
+                }
+
+                100%{
+                    top: 37.7vw; 
+                    left: 59.25vw;
+                }
+            }
+
+            #blue-lorry{
+                animation-name: bluelorry;
+                animation-duration: 15s;
+                animation-iteration-count: infinite;
+                transition: opacity 0.5s;
+                position: absolute;
+                width: 11.5vw;
+                left: 6vw;
+                top: 20.15vw;
+                rotate: -0.6deg;
+            }
+
+            @keyframes bluelorry{
+                0%{
+                    /*opacity: 0;*/
+                    top: 20vw;;
+                    left: 6vw;
+                }
+
+                /*10%{
+                    opacity: 1;
+                }*/
+
+                50%{
+                    left: 37.7vw; 
+                    top: 29.7vw;
+                }
+
+                100%{
+                    left: 59vw; 
+                    top: 36.3vw;
+                }
+            }
+
+            #blue-lorry-electric{
+                animation-name: bluelorry-electric;
+                animation-duration: 15s;
+                animation-iteration-count: infinite;
+                transition: opacity 0.5s;
+                position: absolute;
+                width: 11.5vw;
+                rotate: -0.6deg;
+                opacity: 0;
+            }
+
+            @keyframes bluelorry-electric{
+                0%{
+                    top: 20.5vw;;
+                    left: 6vw;
+                }
+
+                50%{
+                    left: 37.1vw; 
+                    top: 29.8vw;
+                }
+
+                100%{
+                    left: 59vw; 
+                    top: 36.3vw;
+                }
+            }
+
+            #red-lorry{
+                animation-name: redlorry;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                position: absolute; 
+                width: 9vw;                 
+            }
+
+            @keyframes redlorry{
+                0%{
+                    left: 59vw; 
+                    top: 13.2vw;
+                }
+
+                100%{
+                    left: 36vw;
+                    top: 6vw;
+                }
+            }
+
+            #red-lorry-electric{
+                animation-name: redlorry;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                position: absolute; 
+                width: 8vw; 
+                opacity: 0;
+                
+            }
+
+            @keyframes redlorry{
+                0%{
+                    left: 59vw; 
+                    top: 13.2vw;
+                }
+
+                100%{
+                    left: 36vw;
+                    top: 6vw;
+                }
+            }
+
+            #bus-right-corner{
+                animation-name: rightbus;
+                animation-duration: 18s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                position: absolute; 
+                width: 9vw; 
+            }
+
+            @keyframes rightbus{
+                0%{
+                    left: 91vw; 
+                    top: 9.4vw;
+                }
+
+                100%{
+                    top: 40vw; 
+                    left: 28vw;
+                }
+            }
+
+            #bus-right-corner-electric{
+                animation-name: rightbus;
+                animation-duration: 18s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                position: absolute; 
+                width: 9vw; 
+            }
+
+            @keyframes rightbus{
+                0%{
+                    left: 91vw; 
+                    top: 9.4vw;
+                }
+
+                100%{
+                    top: 40vw; 
+                    left: 28vw;
+                }
+            }
+
+            #parliament-parked-cars{
+                transition: opacity 1s, top 1s;
+                position: absolute;
+                width: 10vw;
+                left: 38vw;
+                top: 26.4vw;
+            }
+
+            #red-bus-on-highway{
+                animation-name: redbusonhighway;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 0.5s;
+                position: absolute; 
+                z-index: 30;
+                width: 9vw; 
+            }
+
+            @keyframes redbusonhighway{
+                0%{
+                    top: -2.9vw;
+                    left: 53.55vw;
+                }
+
+                100%{
+                    left: -6vw;
+                    top: 26vw;
+                }
+            }
+
+            #red-bus-on-highway1-electric1{
+                animation-name: redbusonhighway;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 0.5s;
+                position: absolute; 
+                z-index: 30;
+                width: 9vw; 
+            }
+
+            @keyframes redbusonhighway{
+                0%{
+                    top: -2.9vw;
+                    left: 53.55vw;
+                }
+
+                100%{
+                    left: -6vw;
+                    top: 26vw;
+                }
+            }
+
+            #red-bus-on-highway1{
+                animation-name: redbusonhighway1;
+                animation-duration: 7s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 1s;
+                position: absolute; 
+                z-index: 40;
+                width: 9vw; 
+                
+            }
+
+            @keyframes redbusonhighway1{
+                0%{
+                    top: -3vw;
+                    left: 50vw;
+                }
+
+                100%{
+                    top: 24.4vw;
+                    left: -6.2vw;
+                }
+            }
+
+            #red-bus-on-highway1-electric{
+                animation-name: redbusonhighway1;
+                animation-duration: 7s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 1s;
+                position: absolute; 
+                z-index: 40;
+                width: 9vw; 
+                
+            }
+
+            @keyframes redbusonhighway1{
+                0%{
+                    top: -3vw;
+                    left: 50vw;
+                }
+
+                100%{
+                    top: 24.4vw;
+                    left: -6.2vw;
+                }
+            }
+
+            #red-car-right-side{
+                animation-name: rightcar;
+                animation-duration: 18s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 0.9s;
+                position: absolute;
+                width: 6.15vw;
+            }
+
+            @keyframes rightcar{
+                0%{
+                    left: 93.5vw; 
+                    top: 9.5vw;
+                }
+
+                100%{
+                    top: 39vw; 
+                    left: 33vw;
+                }
+            }
+
+            #red-car-right-side-electric{
+                animation-name: rightcarElectric;
+                animation-duration: 18s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 0.9s;
+                position: absolute;
+                opacity: 0;
+                width: 5vw;
+            }
+
+            @keyframes rightcarElectric{
+                0%{
+                    left: 95.2vw; 
+                    top: 9.5vw;
+                }
+
+                100%{
+                    top: 39vw; 
+                    left: 34.2vw;
+                }
+            }
+
+            #tram{
+                animation-name: tramcar;
+                animation-duration: 18s;
+                animation-iteration-count: infinite;
+                transition: opacity 0.5s;
+                position: absolute;
+                width: 16vw; 
+                z-index: 10;
+            }
+
+            @keyframes tramcar{
+                0%{
+                    left: 54.3vw; 
+                    top: 17.9vw; 
+                }
+
+                50%{
+                    left: 29vw; 
+                    top: 10vw;
+                }
+
+                100%{
+                    left: 54.3vw; 
+                    top: 17.9vw; 
+                }
+            }
+
+            #greycar-next-kcc{
+                animation-name: greycar1;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+                transition: opacity 0.5s;
+                position: absolute;
+                width: 5.3vw; 
+                z-index: 15;
+            }
+
+            @keyframes greycar1{
+                0%{
+                    left: 54vw; 
+                    top: 21vw;
+                }
+
+                100%{
+                    left: 37vw; 
+                    top: 15.5vw;
+                }
+            }
+
+            #electric-blue{
+                animation-name: greycar1;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+                transition: opacity 0.5s;
+                opacity: 0;
+                position: absolute;
+                width: 5.3vw; 
+                z-index: 15;
+            }
+
+            @keyframes greycar1{
+                0%{
+                    left: 54vw; 
+                    top: 21vw;
+                }
+
+                100%{
+                    left: 37vw; 
+                    top: 15.5vw;
+                }
+            }
+
+            #second-greycar-next-kcc{
+                animation-name: secondgreycar1;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                position: absolute;  
+                z-index: 10;
+                width: 5.6vw; 
+            }
+
+            @keyframes secondgreycar1{
+                0%{
+                    left: 37.5vw;
+                    top: 14.5vw;
+                }
+
+                100%{
+                    left: 51.5vw; 
+                    top: 19vw;
+                }
+            }
+
+            #second-greycar-next-kcc-electric{
+                animation-name: secondgreycar1;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                position: absolute;  
+                z-index: 10;
+                width: 5.6vw; 
+                opacity: 0;
+            }
+
+            @keyframes secondgreycar1{
+                0%{
+                    left: 37.5vw;
+                    top: 14.5vw;
+                }
+
+                100%{
+                    left: 51.5vw; 
+                    top: 19vw;
+                }
+            }
+
+            #red-car-on-highway{
+                animation-name: redcarhighway;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                position: absolute; 
+                z-index: 25;
+                width: 6.15vw; 
+            }
+
+            @keyframes redcarhighway{
+                0%{
+                    left: 53.7vw; 
+                    top: -1.5vw;
+                }
+
+                100%{
+                    left: -4vw; 
+                    top: 26.5vw;
+                }
+            }
+
+            #red-car-on-highway-2{
+                animation-name: redcarhighway2;
+                animation-duration: 7s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                position: absolute; 
+                width: 6.15vw;
+                z-index: 25; 
+            }
+
+            @keyframes redcarhighway2{
+                0%{
+                    left: 50.9vw; 
+                    top: -1.8vw;
+                }
+
+                100%{
+                    left: -4vw; 
+                    top: 24.8vw;
+                }
+            }
+
+            #red-car-on-highway-3{
+                animation-name: redcarhighway3;
+                animation-duration: 7s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 2s;
+                position: absolute; 
+                width: 6.15vw;
+                z-index: 25; 
+            }
+
+            @keyframes redcarhighway3{
+                0%{
+                    left: 50.9vw; 
+                    top: -1.8vw;
+                }
+
+                100%{
+                    left: -4vw; 
+                    top: 24.8vw;
+                }
+            }
+
+            #red-car-on-highway-4{
+                animation-name: redcarhighway4;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 4s;
+                position: absolute; 
+                z-index: 25;
+                width: 6.15vw; 
+            }
+
+            @keyframes redcarhighway4{
+                0%{
+                    left: 53.7vw; 
+                    top: -1.5vw;
+                }
+
+                100%{
+                    left: -4vw; 
+                    top: 26.5vw;
+                }
+            }
+
+            #black-car-on-highway-cover-up-right-lane{
+                animation-name: redcarhighway;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                opacity: 0;
+                position: absolute; 
+                z-index: 25;
+                width: 6.15vw; 
+            }
+
+            @keyframes redcarhighway{
+                0%{
+                    left: 53.7vw; 
+                    top: -1.5vw;
+                }
+
+                100%{
+                    left: -4vw; 
+                    top: 26.5vw;
+                }
+            }
+
+            #black-car-on-highway-cover-up-right-lane1{
+                animation-name: redcarhighway2;
+                animation-duration: 7s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                opacity: 0;
+                position: absolute; 
+                width: 6.15vw;
+                z-index: 25; 
+            }
+
+            @keyframes redcarhighway2{
+                0%{
+                    left: 50.9vw; 
+                    top: -1.8vw;
+                }
+
+                100%{
+                    left: -4vw; 
+                    top: 24.8vw;
+                }
+            }
+
+            #black-car-on-highway-cover-up-right-lane2{
+                animation-name: redcarhighway3;
+                animation-duration: 7s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                opacity: 0;
+                animation-delay: 2s;
+                position: absolute; 
+                width: 6.15vw;
+                z-index: 25; 
+            }
+
+            @keyframes redcarhighway3{
+                0%{
+                    left: 50.9vw; 
+                    top: -1.8vw;
+                }
+
+                100%{
+                    left: -4vw; 
+                    top: 24.8vw;
+                }
+            }
+
+            #black-car-on-highway-cover-up-right-lane3{
+                animation-name: redcarhighway4;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                opacity: 0;
+                animation-delay: 4s;
+                position: absolute; 
+                z-index: 25;
+                width: 6.15vw; 
+            }
+
+            @keyframes redcarhighway4{
+                0%{
+                    left: 53.7vw; 
+                    top: -1.5vw;
+                }
+
+                100%{
+                    left: -4vw; 
+                    top: 26.5vw;
+                }
+            }
+
+            #green-small-car-on-highway-cover-up-right-lane{
+                animation-name: redcarhighway;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                opacity: 0;
+                position: absolute; 
+                z-index: 25;
+                width: 6.15vw; 
+            }
+
+            @keyframes redcarhighway{
+                0%{
+                    left: 53.7vw; 
+                    top: -1.5vw;
+                }
+
+                100%{
+                    left: -4vw; 
+                    top: 26.5vw;
+                }
+            }
+
+            #green-small-car-on-highway-cover-up-right-lane1{
+                animation-name: redcarhighway2;
+                animation-duration: 7s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                opacity: 0;
+                position: absolute; 
+                width: 6.15vw;
+                z-index: 25; 
+            }
+
+            @keyframes redcarhighway2{
+                0%{
+                    left: 50.9vw; 
+                    top: -1.8vw;
+                }
+
+                100%{
+                    left: -4vw; 
+                    top: 24.8vw;
+                }
+            }
+
+            #green-small-car-on-highway-cover-up-right-lane2{
+                animation-name: redcarhighway3;
+                animation-duration: 7s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                opacity: 0;
+                animation-delay: 2s;
+                position: absolute; 
+                width: 6.15vw;
+                z-index: 25; 
+            }
+
+            @keyframes redcarhighway3{
+                0%{
+                    left: 50.9vw; 
+                    top: -1.8vw;
+                }
+
+                100%{
+                    left: -4vw; 
+                    top: 24.8vw;
+                }
+            }
+
+            #green-small-car-on-highway-cover-up-right-lane3{
+                animation-name: redcarhighway4;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                opacity: 0;
+                animation-delay: 4s;
+                position: absolute; 
+                z-index: 25;
+                width: 6.15vw; 
+            }
+
+            @keyframes redcarhighway4{
+                0%{
+                    left: 53.7vw; 
+                    top: -1.5vw;
+                }
+
+                100%{
+                    left: -4vw; 
+                    top: 26.5vw;
+                }
+            }
+
+            #left-train{
+                animation-name: lefttrain;
+                animation-duration: 17s;
+                animation-iteration-count: infinite;
+                transition: opacity 0.8s;
+                z-index: 40;
+                position: absolute; 
+                width: 40vw; 
+            }
+
+            @keyframes lefttrain{
+                0%{
+                    left: -36vw; 
+                    top: 13vw;
+                }
+
+                50%{
+                    left: -10.9vw; 
+                    top: 1vw;
+                }
+
+                100%{
+                    left: -36vw; 
+                    top: 13vw;
+                }
+            }
+
+            #right-train{
+                animation-name: righttrain;
+                animation-duration: 17s;
+                animation-iteration-count: infinite;
+                transition: opacity 0.5s;
+                position: absolute; 
+                z-index: 30;
+                width: 40vw; 
+            }
+
+            @keyframes righttrain{
+                0%{
+                    left: 22vw; 
+                    top: -11.5vw;
+                }
+
+                50%{
+                    left: -10vw; 
+                    top: 4vw;
+                }
+
+                100%{
+                    left: -31vw; 
+                    top: 14.1vw;
+                }
+            }
+
+            #plane{
+                animation-name: KQplane;
+                animation-duration: 24s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                position: absolute;
+                width: 22.5vw;
+                z-index: 50;
+            }
+
+            @keyframes KQplane{
+                0%{
+                    /*opacity: 0;*/
+                    left: -16vw; 
+                    top: 2vw;
+                }
+
+                /*3%{
+                    opacity: 1;
+                }*/
+
+                50%{
+                    left: 77vw; 
+                    top: 35vw;
+                }
+
+                100%{
+                    left: 77vw; 
+                    top: 35vw;
+                }
+            }
+
+            #blue-bus-on-highway{
+                animation-name: highwaybus;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                position: absolute;
+                z-index: 40;
+                width: 9vw; 
+            }
+
+            @keyframes highwaybus{
+                0%{
+                    top: 20.6vw; 
+                    left: -6.2vw;
+                }
+
+                100%{
+                    top: -3vw; 
+                    left: 42.5vw;
+                }
+            }
+
+            #results-button-style-data{
+                position: absolute; 
+                width: 6.5vw; 
+                height: 4vw; 
+                left: 91vw; 
+                top: 35.5vw; 
+                background-color: #F0A800; 
+                border-radius: 4%; 
+                border-style: solid; 
+                border-color: white; 
+                border-width: 0.15vw;
+            }
+
+            #results-button-text-style{
+                position: absolute; 
+                width: 3.1vw; 
+                top: 36vw; 
+                left: 92.7vw; 
+                font-family: 'Roboto', sans-serif; 
+                font-size: 0.8vw; 
+                font-weight: normal; 
+                text-align: center; 
+                color: #FFFFFF;
+            }
+
+            #greenLorry{
+                animation-name: greenlorry;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                position: absolute; 
+                width: 8.5vw; 
+                
+            }
+
+            @keyframes greenlorry{
+                0%{
+                    left: 53vw; 
+                    top: 36.3vw;
+                }
+
+                100%{
+                    left: 0;
+                    top: 20.3vw;
+                }
+            }
+
+            #green-lorry-electric{
+                animation-name: greenlorry;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                position: absolute; 
+                width: 8.5vw; 
+                opacity: 0;
+                
+            }
+
+            @keyframes greenlorry{
+                0%{
+                    left: 53vw; 
+                    top: 36vw;
+                }
+
+                100%{
+                    left: 0;
+                    top: 20vw;
+                }
+            }
+
+            #black-car-on-highway{
+                animation-name: blackcar;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 0.8s;
+                position: absolute; 
+                z-index: 40;
+                width: 6.15vw; 
+            }
+
+            @keyframes blackcar{
+                0%{
+                    top: 21vw; 
+                    left: -4vw;
+                }
+
+                100%{
+                    left: 43.5vw;
+                    top: -2vw;
+                }
+            }
+
+            #green-small-car-on-highway-cover-up{
+                animation-name: blackcar;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 0.8s;
+                position: absolute; 
+                opacity: 0;
+                z-index: 40;
+                width: 6.15vw; 
+            }
+
+            @keyframes blackcar{
+                0%{
+                    top: 21vw; 
+                    left: -4vw;
+                }
+
+                100%{
+                    left: 43.5vw;
+                    top: -2vw;
+                }
+            }
+
+            #black-car-on-highway1{
+                animation-name: blackcar1;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 2s;
+                position: absolute; 
+                z-index: 40;
+                width: 6.15vw; 
+            }
+
+            @keyframes blackcar1{
+                0%{
+                    top: 21vw; 
+                    left: -4vw;
+                }
+
+                100%{
+                    left: 43.5vw;
+                    top: -2vw;
+                }
+            }
+
+            #green-small-car-on-highway-cover-up1{
+                animation-name: blackcar1;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 2s;
+                position: absolute; 
+                opacity: 0;
+                z-index: 40;
+                width: 6.15vw; 
+            }
+
+            @keyframes blackcar1{
+                0%{
+                    top: 21vw; 
+                    left: -4vw;
+                }
+
+                100%{
+                    left: 43.5vw;
+                    top: -2vw;
+                }
+            }
+
+            #green-small-car-on-highway{
+                animation-name: greenhighwaycar;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 1.3s;
+                position: absolute; 
+                z-index: 40;
+                width: 6.15vw;                  
+            }
+
+            @keyframes greenhighwaycar{
+                0%{
+                    left: -4vw; 
+                    top: 21.1vw;
+                }
+
+                100%{
+                    left: 43.4vw;
+                    top: -1.8vw;
+                }
+            }
+
+            #green-small-car-on-highway-cover-up3{
+                animation-name: greenhighwaycar;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 1.3s;
+                position: absolute; 
+                z-index: 40;
+                width: 6.15vw; 
+                opacity: 0;                 
+            }
+
+            @keyframes greenhighwaycar{
+                0%{
+                    left: -4vw; 
+                    top: 21.1vw;
+                }
+
+                100%{
+                    left: 43.4vw;
+                    top: -1.8vw;
+                }
+            }
+
+            #green-small-car-on-highway1{
+                animation-name: greenhighwaycar1;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 1.3s;
+                position: absolute; 
+                width: 6.15vw;  
+                z-index: 40;
+            }
+
+            @keyframes greenhighwaycar1{
+                0%{
+                    left: -3.6vw; 
+                    top: 22.6vw;
+                }
+
+                100%{
+                    left: 47.1vw; 
+                    top: -2vw;
+                }
+            }
+
+            #green-small-car-on-highway-cover-up4{
+                animation-name: greenhighwaycar1;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 1.3s;
+                position: absolute; 
+                width: 6.15vw;  
+                z-index: 40;
+                opacity: 0;
+            }
+
+            @keyframes greenhighwaycar1{
+                0%{
+                    left: -3.6vw; 
+                    top: 22.6vw;
+                }
+
+                100%{
+                    left: 47.1vw; 
+                    top: -2vw;
+                }
+            }
+
+            #black-car-on-highway-cover-up{
+                animation-name: greenhighwaycar1;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 1.3s;
+                position: absolute; 
+                width: 6.15vw;  
+                z-index: 40;
+                opacity: 0;
+            }
+
+            @keyframes greenhighwaycar1{
+                0%{
+                    left: -3.6vw; 
+                    top: 22.6vw;
+                }
+
+                100%{
+                    left: 47.1vw; 
+                    top: -2vw;
+                }
+            }
+
+            #black-car-on-highway-cover-up1{
+                animation-name: greenhighwaycar;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                animation-delay: 1.3s;
+                position: absolute; 
+                z-index: 40;
+                width: 6.15vw;    
+                opacity: 0;              
+            }
+
+            @keyframes greenhighwaycar{
+                0%{
+                    left: -4vw; 
+                    top: 21.1vw;
+                }
+
+                100%{
+                    left: 43.4vw;
+                    top: -1.8vw;
+                }
+            }
+
+            #plane-above-station{
+                animation-name: plane-abv-station;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition: opacity 0.5s;
+                position: absolute; 
+                z-index: 100;
+                width: 24vw; 
+            }
+
+            @keyframes plane-abv-station{
+                0%{
+                    left: 16vw; 
+                    top: -7vw;
+                }
+
+                50%{
+                    left: -19vw; 
+                    top: 7vw; 
+                }
+
+                100%{
+                    left: -19vw; 
+                    top: 7vw; 
+                }
+            }
+
+            #smoke-level-1-1{
+                animation-name: smoke-up;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-out;
+                position: absolute;  
+                border-radius: 50%; 
+                background-color: white;
+                z-index: 45;
+            }
+
+            @keyframes smoke-up{
+                0%{
+                    width: 0.3vw; 
+                    height: 0.3vw; 
+                    top: 24vw;
+                    left: 26.45vw; 
+                    opacity: 0.8;
+                }
+
+                100%{
+                    width: 8vw; 
+                    height: 8vw;
+                    top: 7vw;
+                    left: 23vw; 
+                    opacity: 0;
+                }
+            }
+
+            #smoke-level-1-2{
+                animation-name: smoke-up-1;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-out;
+                position: absolute;  
+                border-radius: 50%; 
+                background-color: white;
+                z-index: 45;
+            }
+
+            @keyframes smoke-up-1{
+                0%{
+                    width: 0.3vw; 
+                    height: 0.3vw; 
+                    top: 24vw;
+                    left: 26.45vw; 
+                    opacity: 0.8;
+                }
+
+                100%{
+                    width: 9vw; 
+                    height: 9vw;
+                    top: 7vw;
+                    left: 26.45vw; 
+                    opacity: 0;
+                }
+            }
+
+            #smoke-level-1-3{
+                animation-name: smoke-up-2;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-out;
+                position: absolute;  
+                border-radius: 50%; 
+                background-color: white;
+                z-index: 45;
+            }
+
+            @keyframes smoke-up-2{
+                0%{
+                    width: 0.3vw; 
+                    height: 0.3vw; 
+                    top: 24vw;
+                    left: 26.45vw; 
+                    opacity: 0.8;
+                }
+
+                100%{
+                    width: 6vw; 
+                    height: 6vw;
+                    top: 6vw;
+                    left: 23vw; 
+                    opacity: 0;
+                }
+            }
+
+            #smoke-level-1-1-chimney-2{
+                animation-name: smoke-up-2-chimney;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-out;
+                position: absolute;  
+                border-radius: 50%; 
+                background-color: white;
+                z-index: 45;
+            }
+
+            @keyframes smoke-up-2-chimney{
+                0%{
+                    width: 0.3vw; 
+                    height: 0.3vw; 
+                    top: 24vw;
+                    left: 25.15vw; 
+                    opacity: 0.8;
+                }
+
+                100%{
+                    width: 6vw; 
+                    height: 6vw;
+                    top: 6vw;
+                    left: 23vw; 
+                    opacity: 0;
+                }
+            }
+
+            #smoke-level-1-1-chimney-3{
+                animation-name: smoke-up-3-chimney;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-out;
+                position: absolute;  
+                border-radius: 50%; 
+                background-color: white;
+                z-index: 45;
+            }
+
+            @keyframes smoke-up-3-chimney{
+                0%{
+                    width: 0.3vw; 
+                    height: 0.3vw; 
+                    top: 23.7vw;
+                    left: 23.85vw;
+                    opacity: 0.8;
+                }
+
+                100%{
+                    width: 6vw; 
+                    height: 6vw;
+                    top: 7vw;
+                    left: 21vw; 
+                    opacity: 0;
+                }
+            }
+
+            #nuclear-lvl-1{
+                transition: opacity 1s;
+            }
+
+            #nuclear-lvl-2{
+                transition: opacity 1s;
+            }
+
+            #nuclear-lvl-3{
+                transition: opacity 1s;
+            }
+
+            #nuclear-lvl-4{
+                transition: opacity 1s;
+            }
+
+            #geo-lvl-4{
+                transition: opacity 1s;
+            }
+
+            #geo-lvl-3{
+                transition: opacity 1s;
+            }
+
+            #geo-lvl-2{
+                transition: opacity 1s;
+            }
+
+            #geo-lvl-1{
+                transition: opacity 1s;
+            }
+
+            #hep-lvl-4{
+                transition: opacity 1s;
+            }
+
+            #hep-lvl-3{
+                transition: opacity 1s;
+            }
+            
+            #hep-lvl-2{
+                transition: opacity 1s;
+            }
+
+            #turbine-1{
+                transition: opacity 1s;
+            }
+
+            #turbine-2{
+                transition: opacity 1s;
+            }
+
+            #turbine-3{
+                transition: opacity 1s;
+            }
+
+            #turbine-4{
+                transition: opacity 1s;
+            }
+
+            #geo-powerline{
+                transition: opacity 1s;
+            }
+
+            #nuc-powerline{
+                transition: opacity 1s;
+            }
+
+            #hep-powerline{
+                transition: opacity 1s;
+            }
+
+        </style>
+    </head>
+
+    <body style="background-color: #054170;">
+        <div id="animation">
+            <div id="background-image">
+                <!-- <img src="Assets/Background_ALL.png" style="position: absolute; width: 100vw; left: 0vw; top: 0vw; z-index: 0;"> -->
+                <!-- <img src="Assets/Background/empty-background-update.png" style="position: absolute; width: 100vw; left: 0vw; top: 0vw; z-index: 0;"> -->
+                <!-- <img src="Assets/Background/latest-background-update.png" style="position: absolute; width: 100vw; left: 0vw; top: 0vw; z-index: 0;"> -->
+                <img src="Assets/Background/deadline-background-update.png" style="position: absolute; width: 100vw; left: 0vw; top: 0vw; z-index: 0;">
+            </div>
+
+            <div id="vehicles">
+                <img src="Assets/Car1.png" id="car1">
+                <img src="Assets/Car1.png" id="greycar-next-kcc">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-south-east.png" id="electric-white">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-north-west.png" id="electric-blue">
+                <img src="Assets/vehicles/Cars/Car11.png" id="second-greycar-next-kcc">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-south-east.png" id="second-greycar-next-kcc-electric">
+                <img src="Assets/vehicles/Cars/parked-cars.png" id="parliament-parked-cars">
+                <img src="Assets/blue-lorry.png" id="blue-lorry">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-lorry-1-south-east.png" id="blue-lorry-electric">
+                <img src="Assets/red-lorry.png" id="red-lorry">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-lorry-1-north-west.png" id="red-lorry-electric">
+                <img src="Assets/bus.png" id="bus-right-corner">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-bus-south-west.png" id="bus-right-corner-electric">
+                <img src="Assets/bus.png" id="red-bus-on-highway1">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-bus-south-west.png" id="red-bus-on-highway1-electric">
+                <img src="Assets/bus.png" id="red-bus-on-highway">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-bus-south-west.png" id="red-bus-on-highway1-electric1">
+                <img src="Assets/Car4.png" id="red-car-right-side">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-south-west.png" id="red-car-right-side-electric">
+                <img src="Assets/Car4.png" id="red-car-on-highway">
+                <img src="Assets/Car4.png" id="red-car-on-highway-2">
+                <img src="Assets/Car4.png" id="red-car-on-highway-3">
+                <img src="Assets/Car4.png" id="red-car-on-highway-4">
+                <img src="Assets/Train1.png" id="tram">
+                <img src="Assets/Train2.png" id="left-train">
+                <img src="Assets/Train4.png" id="right-train">
+                <img src="Assets/KQ_Plane.png" id="plane">
+                <img src="Assets/travel-bus.png" id="blue-bus-on-highway">
+                <img src="Assets/vehicles/Aircrafts/helicopter.gif" id="choppa" style="position: absolute; left: 0vw; top: 0; width: 100vw; z-index: 50;">
+                <img src="Assets/vehicles/Cars/green-lorry.png" id="greenLorry">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-lorry-2-north-west.png" id="green-lorry-electric">
+                <img src="Assets/vehicles/Cars/black-car.png" id="black-car-on-highway"> 
+                <img src="Assets/vehicles/Cars/black-car.png" id="black-car-on-highway1">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-north-east.png" id="green-small-car-on-highway-cover-up">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-north-east.png" id="green-small-car-on-highway-cover-up1">
+                <img src="Assets/vehicles/Cars/green-small-car.png" id="green-small-car-on-highway-cover-up-right-lane">
+                <img src="Assets/vehicles/Cars/green-small-car.png" id="green-small-car-on-highway-cover-up-right-lane1">
+                <img src="Assets/vehicles/Cars/green-small-car.png" id="green-small-car-on-highway-cover-up-right-lane2">
+                <img src="Assets/vehicles/Cars/green-small-car.png" id="green-small-car-on-highway-cover-up-right-lane3">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-north-east.png" id="black-car-on-highway-cover-up">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-north-east.png" id="black-car-on-highway-cover-up1">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-south-west.png" id="black-car-on-highway-cover-up-right-lane"> 
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-south-west.png" id="black-car-on-highway-cover-up-right-lane1">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-south-west.png" id="black-car-on-highway-cover-up-right-lane2">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-south-west.png" id="black-car-on-highway-cover-up-right-lane3">
+                <img src="Assets/vehicles/Cars/green-small-car.png" id="green-small-car-on-highway">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-north-east.png" id="green-small-car-on-highway-cover-up3">
+                <img src="Assets/vehicles/Cars/green-small-car.png" id="green-small-car-on-highway1">
+                <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-north-east.png" id="green-small-car-on-highway-cover-up4">
+                <img src="Assets/vehicles/Aircrafts/KQ_PlaneFlip.png" id="plane-above-station">
+            </div>
+
+            <div id="buildings">
+                <!-- <img src="Assets/green-building.png" style="position: absolute; left: 58vw; width: 15vw; top: 8.3vw; z-index: 0;"> -->
+                <img src="Assets/new/Assets_KCert(ZIP)/green-building.png" style="position: absolute; left: 3.4vw; top: 0.7vw; width: 95vw; z-index: 0;">
+                <!-- <img src="Assets/brown-building.png" style="position: absolute; left: 44.5vw; width: 14.6vw; top: 4.6vw; z-index: 0;"> -->
+                <!-- <img src="Assets/Buildings-images/brown-building-high-res.png" style="position: absolute; left: 0vw; top: 0vw; width: 100vw; z-index: 45;"> -->
+                <img src="Assets/factory-building.png" style="position: absolute; left: 11.6vw; width: 20vw; top: 23vw; z-index: 10;">
+                <!-- <img src="Assets/freepass-overlay.png" style="position: absolute; left: 2.1vw; width: 15.9vw; top: 15.4vw; z-index: 20;"> -->
+                <img src="Assets/Background/overlays/expressway-overlay.png" style="position: absolute; left: 0vw; top: 0; width: 100vw; z-index: 20;">
+                <!-- <img src="Assets/kcc-tower.png" style="position: absolute; left: 33.5vw; width: 9vw; top: 3vw; z-index: 45;"> -->
+                <img src="Assets/small-blue-building.png" style="position: absolute; left: 51vw; width: 7vw; top: 15.5vw; z-index: 20;">
+                <!-- <img src="Assets/parliament-highway-overlay.png" style="position: absolute; left: 20.7vw; width: 15.05vw; top: 7.15vw; z-index: 20;"> -->
+                <!-- <img src="Assets/parliament-tower.png" style="position: absolute; left: 29.1vw; width: 5.5vw; top: 8.8vw; z-index: 45;"> -->
+                <img src="Assets/Buildings-images/Parliament.png"style="position: absolute; left: 2.1vw; top: 0.8vw; width: 95vw; z-index: 45;">
+                <img src="Assets/Buildings-images/KICC.png" style="position: absolute; left: 0vw; top: 0; width: 100vw; z-index: 45;">
+                <!-- <img src="Assets/train-stop.png" style="position: absolute; width: 11.5vw; left: 9.6vw; top: 6.5vw; z-index: 35;"> -->
+                <!-- <img src="Assets/Buildings-images/railwaystation-shade.png" style="position: absolute; left: 0.9vw; top: 1.1vw; width: 87vw; z-index: 40;"> -->
+                <img src="Assets/Background/overlays/railwaystation-right-shade.png" style="position: absolute; width: 95vw; left: -1vw; z-index: 40;">
+                <!-- <img src="Assets/Buildings-images/foreground-building.png" style="position: absolute; width: 13.9vw; left: 47.1vw; top: 21.19vw; z-index: 45;"> -->
+                <img src="Assets/Buildings-images/foreground-building-update.png" style="position: absolute; width: 99vw; top: 0.2vw; z-index: 45;">
+                <!-- <img src="Assets/Background/overlays/windturbine-1.png" style="position: absolute; width: 25vw; left: 70vw; top: 0vw;">
+                <img src="Assets/Background/overlays/windturbine-1.png" style="position: absolute; width: 25vw; left: 75vw; top: -1vw;">
+                <img src="Assets/Background/overlays/windturbine-1.png" style="position: absolute; width: 25vw; left: 80vw; top: 0vw;"> -->
+            </div>
+
+            <div id="charging-station-parking-section">
+                <!-- <div id="charging-stations">
+                    <img src="Assets/vehicles/Cars/electric-cars/charging-station.png" style="position: absolute; width: 5vw; left: 48vw; top: 11.5vw;">
+                    <img src="Assets/vehicles/Cars/electric-cars/charging-station.png" style="position: absolute; width: 5vw; left: 52vw; top: 12.7vw;">
+                </div>
+
+                 <div id="parked-electric-cars">
+                    <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-south-east.png" style="position: absolute; width: 5vw; left: 47.6vw; top: 12.9vw;">
+                    <img src="Assets/vehicles/Cars/electric-cars/electric-car-1-south-east.png" style="position: absolute; width: 5vw; left: 51.5vw; top: 14.1vw;">
+                </div> -->
+
+                <div>
+                    <img src="Assets/vehicles/Cars/electric-cars/charging-station/level-2-charging-station.png" id="charging-station-level-2" style="position: absolute; width: 88vw; left: 5.5vw; top: 1.8vw; transition: opacity 0.5s;">
+                    <img src="Assets/vehicles/Cars/electric-cars/charging-station/level-3-charging-station.png" id="charging-station-level-3" style="position: absolute; width: 88vw; left: 5.5vw; top: 1.8vw; transition: opacity 0.5s;">
+                    <img src="Assets/vehicles/Cars/electric-cars/charging-station/level-4-charging-station.png" id="charging-station-level-4" style="position: absolute; width: 88vw; left: 5.5vw; top: 1.8vw; transition: opacity 0.5s;">
+                </div>
+            </div>
+
+            <div id="solar-panels-script-id" style="position: absolute; z-index: 45;">
+                <div id="parliament-solar-panels" style="transition: opacity 0.5s;">
+                    <div id="first-pair">
+                        <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2vw; left: 32.8vw; top: 21.6vw;">
+                        <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2vw; left: 33.65vw; top: 21.88vw;">
+                    </div>
+
+                    <div id="second-pair">
+                        <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2vw; left: 35.5vw; top: 22.5vw;">
+                        <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2vw; left: 36.3vw; top: 22.75vw;">
+                    </div>   
+
+                    <div id="third-pair">
+                        <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2vw; left: 38.1vw; top: 23.35vw;">
+                        <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2vw; left: 38.9vw; top: 23.64vw;">
+                    </div>
+                    
+                    <div id="fourth-pair">
+                        <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2vw; left: 36.5vw; top: 24.2vw;">
+                        <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2vw; left: 37.3vw; top: 24.5vw;">
+                    </div>
+                </div>
+
+                <div id="green-building-solar-panels" style="transition: opacity 0.5s;">
+                    <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2vw; left: 61.8vw; top: 10.4vw;">
+                    <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2vw; left: 62.7vw; top: 10.7vw;">
+                    <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2vw; left: 63.6vw; top: 11vw;"> <!-- 0.9 0.3 -->
+                    <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2vw; left: 64.5vw; top: 11.3vw;">
+                </div>
+
+                <div id="farm-house-solar-panels" style="transition: opacity 0.5s;">
+                    <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2vw; left: 84vw; top: 9.5vw;">
+                </div>
+
+                <div id="foreground-building-solar-panels" style="transition: opacity 0.5s;">
+                    <div id="foreground-building-first-pair">
+                        <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2.5vw; left: 52.1vw; top: 25.2vw;">
+                        <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2.5vw; left: 53vw; top: 25.5vw;">
+                    </div>
+
+                    <div id="foreground-building-second-pair">
+                        <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2.5vw; left: 47.65vw; top: 23.9vw;">
+                        <img src="Assets/Background/overlays/solar-panel.png" style="position: absolute; width: 2.5vw; left: 48.6vw; top: 24.2vw;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div id="smoke-effect">
+                <div id="smoke-level-1">
+                    <div id="chimney-1">
+                        <div id="smoke-level-1-1">
+                        </div>
+        
+                        <div id="smoke-level-1-2">
+                        </div>
+        
+                        <div id="smoke-level-1-3">
+                        </div>
+                    </div>
+    
+                    <div id="chimney-2">
+                        <div id="smoke-level-1-1-chimney-2">
+                        </div>
+                    </div>
+    
+                    <div id="chimney-3">
+                        <div id="smoke-level-1-1-chimney-3">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div id="factory-smoking-gif">
+                <img src="Assets/Background/overlays/factory-smoke-gif.gif" style="position: absolute; width: 90vw; left: 1.35vw; top: 1.3vw; z-index: 45;">
+            </div>
+
+            <div id="building-insulation">
+                <img src="Assets/Background/overlays/insulators-lv1.png" id="insulatorlv1" style="position: absolute; width: 99vw; top: 0.2vw; z-index: 45; transition: opacity 1s, top 1s;">
+                <img src="Assets/Background/overlays/insulators-lv2.png" id="insulatorlv2" style="position: absolute; width: 99vw; top: 0.2vw; z-index: 45; transition: opacity 1s, top 1s;">
+                <img src="Assets/Background/overlays/insulators-lv3.png" id="insulatorlv3" style="position: absolute; width: 99vw; top: 0.2vw; z-index: 45; transition: opacity 1s, top 1s;">
+                <img src="Assets/Background/overlays/insulators-lv4.png" id="insulatorlv4" style="position: absolute; width: 99vw; top: 0.2vw; z-index: 45; transition: opacity 1s, top 1s;">
+            </div>
+
+            <div id="thermometers-overlay">
+                <!-- <img src="Assets/Background/overlays/thermometer-level-2.png" id="thermometerlevel-2" style="position: absolute; width: 99vw; z-index: 45;">
+                <img src="Assets/Background/overlays/thermometer-level-3.png" id="thermometerlevel-3" style="position: absolute; width: 99vw; z-index: 45;">
+                <img src="Assets/Background/overlays/thermometer-level-4.png" id="thermometerlevel-4" style="position: absolute; width: 99vw; z-index: 45;"> -->
+                <img src="Assets/Background/overlays/empty-thermometer.png" id="thermometerlevel-4" style="position: absolute; width: 99vw; z-index: 45;">
+
+                <div id="thermometer-red-liquid" style="position: absolute; width: 0.3vw; height: 4.45vw; left: 59.7vw; bottom: 19vw; background-color: #B1202C; z-index: 45; border-top-left-radius: 1vw; border-top-right-radius: 1vw;">
+                </div>
+
+                <div id="thermometer-red-liquid-gap-fill" style="position: absolute; width: 0.3vw; height: 0.4vw; left: 59.7vw; bottom: 18.7vw; background-color: #B1202C; z-index: 45; border-top-left-radius: 1vw; border-top-right-radius: 1vw;">
+                </div>
+            </div>
+
+            <div id="pipes-overlay">
+                <img src="Assets/Background/overlays/pipes-level-2.png" id="pipe-level-2" style="position: absolute; width: 99vw; top: 0.55vw; transition: opacity 1s, top 1s;">
+                <img src="Assets/Background/overlays/pipes-level-3.png" id="pipe-level-3" style="position: absolute; width: 99vw; top: 0.55vw; transition: opacity 1s, top 1s;">
+                <img src="Assets/Background/overlays/pipes-level-4.png" id="pipe-level-4" style="position: absolute; width: 99vw; top: 0.55vw; transition: opacity 1s, top 1s;">
+            </div>
+
+            <div id="turbines">
+                <img src="Assets/Background/overlays/wind-turbine-gif.gif" id="turbine-1" style="position: absolute; width: 18vw; left: 62vw; top: -2vw;">
+                <img src="Assets/Background/overlays/wind-turbine-gif.gif" id="turbine-2" style="position: absolute; width: 18vw; left: 65vw; top: -1.5vw;">
+                <img src="Assets/Background/overlays/wind-turbine-gif.gif" id="turbine-3" style="position: absolute; width: 18vw; left: 63vw; top: -0.4vw;">
+                <img src="Assets/Background/overlays/wind-turbine-gif.gif" id="turbine-4" style="position: absolute; width: 18vw; left: 66.2vw; top: 0.6vw;">
+                <img src="Assets/Background/overlays/wind-turbine-gif.gif" id="turbine-5" style="position: absolute; width: 18vw; left: 75.5vw; top: -1vw;">
+            </div>
+
+            <div id="nuclear-geo-hep-section">
+                <img src="Assets/Buildings-images/nuclear-lv1.png" id="nuclear-lvl-1" style="position: absolute; width: 99vw; top: 0vw; z-index: 20;">
+                <img src="Assets/Buildings-images/nuclear-lv2.png" id="nuclear-lvl-2" style="position: absolute; width: 99vw; top: 0vw; z-index: 20;">
+                <img src="Assets/Buildings-images/nuclear-lv3.png" id="nuclear-lvl-3" style="position: absolute; width: 99vw; z-index: 20;">
+                <img src="Assets/Buildings-images/geo-lv4.png" id="geo-lvl-4" style="position: absolute; width: 99vw; z-index: 20;">
+                <img src="Assets/Buildings-images/geo-lvl-3.png" id="geo-lvl-3" style="position: absolute; width: 99vw; z-index: 20;">
+                <img src="Assets/Buildings-images/geo-lvl-2.png" id="geo-lvl-2" style="position: absolute; width: 99vw; z-index: 20;">
+                <img src="Assets/Buildings-images/geo-lvl-1.png" id="geo-lvl-1" style="position: absolute; width: 99vw; z-index: 20;">
+                <img src="Assets/Buildings-images/powerStation.png" style="position: absolute; width: 99vw; z-index: 20;">
+                <img src="Assets/Buildings-images/hep-lv3.png" id="hep-lvl-4" style="position: absolute; width: 99vw; left: 1vw;">
+                <img src="Assets/Buildings-images/hep-lv2.png" id="hep-lvl-3" style="position: absolute; width: 99vw; left: 1vw;">
+                <img src="Assets/Buildings-images/hep-lv1.png" id="hep-lvl-2" style="position: absolute; width: 99vw; left: 1vw;">
+                <img src="Assets/Buildings-images/geo-powerLine.png" id="geo-powerline" style="position: absolute; width: 99vw; z-index: 20;">
+                <img src="Assets/Buildings-images/hep-powerLine.png" id="hep-powerline" style="position: absolute; width: 99vw; z-index: 20;">
+                <img src="Assets/Buildings-images/nuclear-powerline.png" id="nuc-powerline" style="position: absolute; width: 99vw; z-index: 20;">
+            </div>
+        </div>
+
+        <div id="animation-delay-bug-overlay" style="position: absolute; width: 7vw; height: 5vw; top: 0vw; left: 0vw; background-color: #B0D6A4; z-index: 90;">
+        </div>
+
+        <div id="right-side-meter" style="position: absolute; z-index: 60;">
+            <img src="Assets/Meter-Background.svg" style="position: absolute; width: 5.3vw; left: 93vw; top: 5.4vw;">
+            <img src="Assets/Meter-Lever.svg" style="position: absolute; width: 1.9vw; top: 9.5vw; left: 94.7vw; opacity: 0.9;">
+            <img src="Assets/co2-meter-background.svg" style="position: absolute; width: 9vw; top: 4.7vw; left: 88vw;">
+            <!-- <img src="Assets/meter-percent-background.svg" style="position: absolute; left: 93.79vw; top: 15.7vw; z-index: 65;"> -->
+            <img src="Assets/meter-percent-background.svg" style="position: absolute; width: 3.7vw; left: 93.79vw; top: 15.7vw; z-index: 65;">
+
+            <div id="yellow-background" style="position: absolute; width: 1.7vw; height: 8.85vw; left: 94.8vw; top: 17vw; background-color: #F0A800; border-radius: 4%;">
+            </div>
+
+            <p style="position: absolute; width: 7vw; left: 89.15vw; top: 5vw; font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                CO&nbsp&nbsp&nbspe METER
+            </p>
+
+            <p style="position: absolute; width: 6vw; left: 88.3vw; top: 5.45vw; font-family: 'Roboto', sans-serif; font-size: 0.9vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                2
+            </p>
+
+            <p style="position: absolute; width: 6vw; left: 92.7vw; top: 15.2vw; font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF; z-index: 65;">
+                -35%
+            </p>
+        </div>
+
+        <div id="lower-section">
+            <div id="blue-rectangle-background">
+                <img src="Assets/Rectangle-2-noborder.svg" style="position: absolute; left: 0vw; top: 33.8vw; height: 15.5vw; z-index: 55;"> 
+                <img src="Assets/Rectangle-2-noborder.svg" style="position: absolute; right: 0vw; top: 33.8vw; height: 15.5vw; z-index: 55;"> 
+            </div>
+
+            <div id="icons" style="position: absolute; z-index: 60;">
+                <div id="all-sliders-background">
+                    <img src="Assets/Slider_ALL.svg" style="position: absolute; width: 85.36vw; top: 39.85vw; left: 2.55vw;"> 
+                </div>
+
+                <div id="yellow-lines">
+                    <div id="yellow-border-btwn-sliders" style="position: absolute; width: 0.1vw; height: 7.9vw; left: 16.9vw; top: 39.2vw; background-color: #F0A800; border-radius: 10%; opacity: 0.7;">
+                    </div>
+
+                    <div id="yellow-border-btwn-sliders" style="position: absolute; width: 0.1vw; height: 7.9vw; left: 35.5vw; top: 39.2vw; background-color: #F0A800; border-radius: 10%; opacity: 0.7;">
+                    </div>
+
+                    <div id="yellow-border-btwn-sliders" style="position: absolute; width: 0.1vw; height: 7.9vw; left: 54.1vw; top: 39.2vw; background-color: #F0A800; border-radius: 10%; opacity: 0.7;">
+                    </div>
+
+                    <div id="yellow-border-btwn-sliders" style="position: absolute; width: 0.1vw; height: 7.9vw; left: 77.5vw; top: 39.2vw; background-color: #F0A800; border-radius: 10%; opacity: 0.7;">
+                    </div>
+                </div>
+
+                <div id="transport-section">
+                    <p style="position: absolute; left: 5.25vw; top: 46.3vw; font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                        TRANSPORT
+                    </p>
+
+                    <div id="travel-demand-section">
+                        <a target="_blank" href="travel-demand-info-page.html">
+                            <img src="Assets/transport-demand.svg" style="position: absolute; width: 3.5vw; top: 34.8vw; left: 1.5vw;">
+                        </a>
+                        <!-- <img src="Assets/transport-demand.svg" style="position: absolute; width: 3.5vw; top: 34.8vw; left: 1.5vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-14" style="position: absolute; width: 1.46vw; left: 2.45vw; top: 39.81vw; transition: top 0.5s;">
+    
+                        <p style="position: absolute; width: 3.1vw; top: 36.6vw; left: 1.64vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Travel Demand
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="travelDemandKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.95vw; left: 2.75vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="travelDemandKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 2.75vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="travelDemandKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 2.75vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="travelDemandKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 2.75vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="light-vehicles-section">
+                        <a target="_blank" href="light-vehicles-info-page.html">
+                            <img src="Assets/light-vehicles.svg" style="position: absolute; width: 2vw; top: 34.8vw; left: 7.35vw;">
+                        </a>
+
+                        <!-- <img src="Assets/light-vehicles.svg" style="position: absolute; width: 2vw; top: 34.8vw; left: 7.35vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-13" style="position: absolute; width: 1.46vw; left: 7.4vw; top: 39.81vw; transition: top 0.5s;">
+
+                        <p style="position: absolute; width: 3.1vw; top: 36.6vw; left: 6.35vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Technology
+                        </p>
+                        
+                        <div id="button-background">
+                            <div onclick="lightVehiclesKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.95vw; left: 7.7vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="lightVehiclesKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 7.7vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="lightVehiclesKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 7.7vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="lightVehiclesKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 7.7vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div id="heavy-vehicles-section">
+                        <a target="_blank" href="heavy-vehicles-info-page.html">
+                            <img src="Assets/heavy-vehicles.svg" style="position: absolute; width: 2.4vw; top: 34.74vw; left: 11.8vw;">
+                        </a>
+
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-12" style="position: absolute; width: 1.46vw; left: 12.3vw; top: 39.81vw; transition: top 0.5s;">
+
+                        <p style="position: absolute; width: 3.1vw; top: 36.6vw; left: 11.4vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Heavy Vehicles
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="heavyVehiclesKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.95vw; left: 12.6vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="heavyVehiclesKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 12.6vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="heavyVehiclesKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 12.6vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="heavyVehiclesKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 12.6vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div id="buildings-section">
+                    <p style="position: absolute; left: 23vw; top: 46.3vw; font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                        BUILDINGS
+                    </p>
+
+                    <div id="travel-demand-section">
+                        <a target="_blank" href="behaviour-info-page.html">
+                            <img src="Assets/house-temp-icon.svg" style="position: absolute; width: 2vw; top: 34.8vw; left: 18.8vw;">
+                        </a>
+
+                        <!-- <img src="Assets/house-temp-icon.svg" style="position: absolute; width: 2vw; top: 34.8vw; left: 18.8vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-11" style="position: absolute; width: 1.46vw; left: 19.1vw; top: 39.81vw; transition: top 0.5s;">
+    
+                        <p style="position: absolute; width: 3.5vw; top: 36.6vw; left: 18.1vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Household Cookery
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="behaviourKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.95vw; left: 19.4vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="behaviourKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 19.4vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="behaviourKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 19.4vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="behaviourKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 19.4vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="light-vehicles-section">
+                        <a target="_blank" href="efficiency-info-page.html">
+                            <img src="Assets/efficiency.svg" style="position: absolute; width: 2vw; top: 34.85vw; left: 24.25vw;">
+                        </a>
+
+                        <!-- <img src="Assets/efficiency.svg" style="position: absolute; width: 2vw; top: 34.85vw; left: 24.25vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-10" style="position: absolute; width: 1.46vw; left: 24.45vw; top: 39.81vw; transition: top 0.5s;">
+
+                        <p style="position: absolute; width: 4vw; top: 36.65vw; left: 23.2vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Lighting & Appliances
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="efficiencyKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.95vw; left: 24.7vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="efficiencyKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 24.7vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="efficiencyKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 24.7vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="efficiencyKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 24.7vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="heavy-vehicles-section">
+                        <a target="_blank" href="heating-systems-info-page (copy).html">
+                            <img src="Assets/heating.svg" style="position: absolute; width: 2.7vw; top: 34.74vw; left: 29.65vw;">
+                        </a>
+                        
+                        <!-- <img src="Assets/heating.svg" style="position: absolute; width: 2.7vw; top: 34.74vw; left: 29.65vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-9" style="position: absolute; width: 1.46vw; left: 30.3vw; top: 39.81vw; transition: top 0.5s;">
+
+                        <p style="position: absolute; width: 3.1vw; top: 36.6vw; left: 29.5vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Hot Water
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="heatingKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.95vw; left: 30.6vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="heatingKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 30.6vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="heatingKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 30.6vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="heatingKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 30.6vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="industry-ccs-hydrogen-section">
+                    <p style="position: absolute; width: 20vw; left: 35vw; top: 46.3vw; font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                        INDUSTRY & CCS
+                    </p>
+
+                    <div id="travel-demand-section">
+                        <a target="_blank" href="carbon-intensity-systems-info-page.html">
+                            <img src="Assets/carbon-intensity.svg" style="position: absolute; width: 2vw; top: 34.8vw; left: 38.05vw;">
+                        </a>
+
+                        <!-- <img src="Assets/carbon-intensity.svg" style="position: absolute; width: 2vw; top: 34.8vw; left: 38.05vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-8" style="position: absolute; width: 1.46vw; left: 38.22vw; top: 39.81vw; transition: top 0.5s;">
+    
+                        <p style="position: absolute; width: 3.1vw; top: 36.6vw; left: 37.5vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Carbon Intensity
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="carbonIntensityKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.9vw; left: 38.51vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="carbonIntensityKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 38.51vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="carbonIntensityKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 38.51vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="carbonIntensityKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 38.51vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="light-vehicles-section">
+                        <a target="_blank" href="carbon-capture-systems-info-page.html">
+                            <img src="Assets/carbon-capture.svg" style="position: absolute; width: 2.2vw; top: 34.85vw; left: 43.5vw;">
+                        </a>
+
+                        <!-- <img src="Assets/carbon-capture.svg" style="position: absolute; width: 2.2vw; top: 34.85vw; left: 43.5vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-7" style="position: absolute; width: 1.46vw; left: 44vw; top: 39.81vw; transition: top 0.5s;">
+
+                        <p style="position: absolute; width: 3.1vw; top: 36.65vw; left: 43.1vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Carbon Capture
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="carbonKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.9vw; left: 44.25vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="carbonKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 44.25vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="carbonKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 44.25vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="carbonKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 44.25vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="heavy-vehicles-section">
+                        <a target="_blank" href="hydrogen-info-page.html">
+                            <img src="Assets/H2.svg" style="position: absolute; width: 2.2vw; top: 34.74vw; left: 49vw;">
+                        </a>
+
+                        <!-- <img src="Assets/H2.svg" style="position: absolute; width: 2.2vw; top: 34.74vw; left: 49vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-6" style="position: absolute; width: 1.46vw; left: 49.3vw; top: 39.81vw; transition: top 0.5s;">
+
+                        <p style="position: absolute; width: 4vw; top: 36.6vw; left: 48vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Hydroelectric Power
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="hydrogenKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.9vw; left: 49.6vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="hydrogenKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 49.6vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="hydrogenKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 49.6vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="hydrogenKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 49.6vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="low-carbon-electricity-section">
+                    <p style="position: absolute; width: 20vw; left: 56vw; top: 46.3vw; font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                        ELECTRICITY
+                    </p>
+
+                    <div id="nuclear-section">
+                        <a target="_blank" href="nuclear-info-page.html">
+                            <img src="Assets/nuclear-icon.svg" style="position: absolute; width: 2vw; top: 34.8vw; left: 56vw;">
+                        </a>
+
+                        <!-- <img src="Assets/nuclear-icon.svg" style="position: absolute; width: 2vw; top: 34.8vw; left: 56vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-5" style="position: absolute; width: 1.46vw; left: 56.35vw; top: 39.81vw; transition: top 0.5s;">
+    
+                        <p style="position: absolute; width: 3.1vw; top: 36.6vw; left: 55.5vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Nuclear
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="nuclearKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.9vw; left: 56.65vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="nuclearKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 56.65vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="nuclearKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 56.65vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="nuclearKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 56.65vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="wind-section">
+                        <a target="_blank" href="wind-info-page.html">
+                            <img src="Assets/windmill-icon.svg" style="position: absolute; width: 2.2vw; top: 34.9vw; left: 61.5vw;">
+                        </a>
+
+                        <!-- <img src="Assets/windmill-icon.svg" style="position: absolute; width: 2.2vw; top: 34.9vw; left: 61.5vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-4" style="position: absolute; width: 1.46vw; left: 61.74vw; top: 39.81vw; transition: top 0.5s;">
+
+                        <p style="position: absolute; width: 3.1vw; top: 36.65vw; left: 60.85vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Wind
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="windKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.9vw; left: 62.05vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="windKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 62.05vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="windKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 62.05vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="windKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 62.05vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="solar-section">
+                        <a target="_blank" href="solar-info-page.html">
+                            <img src="Assets/solar-icon.svg" style="position: absolute; width: 2.2vw; top: 34.8vw; left: 66.7vw;">
+                        </a>
+
+                        <!-- <img src="Assets/solar-icon.svg" style="position: absolute; width: 2.2vw; top: 34.8vw; left: 66.7vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-3" style="position: absolute; width: 1.46vw; left: 67.4vw; top: 39.81vw; transition: top 0.5s;">
+
+                        <p style="position: absolute; width: 3.1vw; top: 36.6vw; left: 66.52vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Solar
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="solarKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.9vw; left: 67.65vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="solarKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 67.65vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="solarKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 67.65vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="solarKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 67.65vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="wave-and-tidal-section">
+                        <a target="_blank" href="wave-tidal-info-page.html">
+                            <img src="Assets/wave-tidal-icon.svg" style="position: absolute; width: 3.1vw; top: 34.9vw; left: 72.15vw;">
+                        </a>
+
+                        <!-- <img src="Assets/wave-tidal-icon.svg" style="position: absolute; width: 3.1vw; top: 34.9vw; left: 72.15vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-2" style="position: absolute; width: 1.46vw; left: 72.935vw; top: 39.81vw; transition: top 0.5s;">
+
+                        <p style="position: absolute; width: 3.1vw; top: 36.6vw; left: 71.8vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Geothermal
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="waveKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.9vw; left: 73.25vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="waveKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 73.25vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="waveKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 73.25vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="waveKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 73.25vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="land-bioenergy-waste-section">
+                    <p style="position: absolute; width: 20vw; left: 75.5vw; top: 46.3vw; font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                        LAND, BIOENERGY & WASTE
+                    </p>
+
+                    <div id="forestry-section">
+                        <a target="_blank" href="">
+                            <img src="Assets/forestr-icon.svg" style="position: absolute; width: 2.4vw; top: 34.8vw; left: 79vw;">
+                        </a>
+
+                        <!-- <img src="Assets/forestr-icon.svg" style="position: absolute; width: 2.4vw; top: 34.8vw; left: 79vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob-1" style="position: absolute; width: 1.46vw; top: 39.81vw; left: 79.51vw; transition: top 0.5s;">
+    
+                        <p style="position: absolute; width: 3.1vw; top: 36.6vw; left: 78.6vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Forestry
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="forestryKnobLevel1()" style="position: absolute; width: 0.9vw; height: 1.9vw; left: 79.8vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="forestryKnobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 79.8vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="forestryKnobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 79.8vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="forestryKnobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 79.8vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="bioenergy-section">
+                        <a target="_blank" href="bioenergy-info-page.html">
+                            <img src="Assets/bio-energy-icon.svg" style="position: absolute; width: 1.8vw; top: 34.7vw; left: 84.4vw;">
+                        </a>
+
+                        <!-- <img src="Assets/bio-energy-icon.svg" style="position: absolute; width: 1.8vw; top: 34.7vw; left: 84.4vw;"> -->
+                        <img src="Assets/Slider_Knob.svg" id="yellow-knob" style="position: absolute; width: 1.46vw; top: 39.81vw; left: 84.9vw; transition: top 0.5s;">
+
+                        <p style="position: absolute; width: 3.1vw; top: 36.65vw; left: 84vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            Bio-Energy
+                        </p>
+
+                        <div id="button-background">
+                            <div onclick="knobLevel1()" style="position: absolute; width: 0.9vw; height: 1.9vw; left: 85.2vw; top: 44.45vw; background-color: black; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="knobLevel2()" style="position: absolute; width: 0.9vw; height: 1.8vw; left: 85.2vw; top: 42.65vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="knobLevel3()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 85.2vw; top: 41.4vw; background-color: yellow; cursor: pointer; opacity: 0;">
+                            </div>
+
+                            <div onclick="knobLevel4()" style="position: absolute; width: 0.9vw; height: 1.3vw; left: 85.2vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="buttons" style="position: absolute; z-index: 60;">
+                <a href="">
+                    <div id="results-button">
+                        <div id="results-button-style-data">
+                        </div>
+    
+                        <p id="results-button-text-style">
+                            GO TO RESULTS
+                        </p>
+                    </div>
+                </a>
+                
+                <div onclick="moveup()" style="cursor: pointer;">
+                    <div id="reset-levers-button">
+                        <div style="position: absolute; width: 6.5vw; height: 4vw; left: 91vw; top: 41.7vw; background-color: white; border-radius: 4%; border-style: solid; border-color: #F0A800; border-width: 0.15vw;">
+                        </div>
+    
+                        <p style="position: absolute; width: 3.1vw; top: 42.2vw; left: 92.8vw; font-family: 'Roboto', sans-serif; font-size: 0.8vw; font-weight: normal; text-align: center; color: black;">
+                            RESET LEVERS
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="kuficha-rada" style="position: absolute; background-color: rgb(26, 64, 109); width: 5vw; height: 7vw; z-index: 60; top: 40vw; left: 12vw;">
+            </div>
+        </div>
+
+        <script>
+            var knob = document.getElementById("yellow-knob")
+            var knob1 = document.getElementById("yellow-knob-1")
+            var knob2 = document.getElementById("yellow-knob-2")
+            var knob3 = document.getElementById("yellow-knob-3")
+            var knob4 = document.getElementById("yellow-knob-4")
+            var knob5 = document.getElementById("yellow-knob-5")
+            var knob6 = document.getElementById("yellow-knob-6")
+            var knob7 = document.getElementById("yellow-knob-7")
+            var knob8 = document.getElementById("yellow-knob-8")
+            var knob9 = document.getElementById("yellow-knob-9")
+            var knob10 = document.getElementById("yellow-knob-10")
+            var knob11 = document.getElementById("yellow-knob-11")
+            var knob12 = document.getElementById("yellow-knob-12")
+            var knob13 = document.getElementById("yellow-knob-13")
+            var knob14 = document.getElementById("yellow-knob-14")
+
+            //Light Vehicles
+
+            var greyCar1 = document.getElementById("car1");
+            var electricCar1 = document.getElementById("electric-white")
+            var greycarNearKcc = document.getElementById("greycar-next-kcc")
+            var electricBlue = document.getElementById("electric-blue")
+            var parking = document.getElementById("parliament-parked-cars")
+            var blackCarOverlay = document.getElementById("black-car-on-highway-cover-up")
+            var greenCarOnHighway = document.getElementById("green-small-car-on-highway1")
+            var blackCarOverlay1 = document.getElementById("black-car-on-highway-cover-up1")
+            var greenCarOnHighwayLeftLane = document.getElementById("green-small-car-on-highway")
+            var blackCarRightLane = document.getElementById("black-car-on-highway-cover-up-right-lane")
+            var blackCarRightLane1 = document.getElementById("black-car-on-highway-cover-up-right-lane1")
+            var blackCarRightLane2 = document.getElementById("black-car-on-highway-cover-up-right-lane2")
+            var blackCarRightLane3 = document.getElementById("black-car-on-highway-cover-up-right-lane3")
+            var greenCarHighwayLeftLane = document.getElementById("green-small-car-on-highway-cover-up")
+            var greenCarHighwayLeftLane1 = document.getElementById("green-small-car-on-highway-cover-up1")
+            var greenCarHighwayLeftLane2 = document.getElementById("green-small-car-on-highway-cover-up3")
+            var greenCarHighwayLeftLane3 = document.getElementById("green-small-car-on-highway-cover-up4")
+
+            var greenCarHighRightLane = document.getElementById("green-small-car-on-highway-cover-up-right-lane")
+            var greenCarHighRightLane1 = document.getElementById("green-small-car-on-highway-cover-up-right-lane1")
+            var greenCarHighRightLane2 = document.getElementById("green-small-car-on-highway-cover-up-right-lane2")
+            var greenCarHighRightLane3 = document.getElementById("green-small-car-on-highway-cover-up-right-lane3")
+            var blueLorryElectric = document.getElementById("blue-lorry-electric")
+            var redLorryElectric = document.getElementById("red-lorry-electric")
+            var redLorry = document.getElementById("red-lorry")
+            var greenLorryElectric = document.getElementById("green-lorry-electric")
+            var secondGreyCarKccElectric = document.getElementById("second-greycar-next-kcc-electric")
+            var redCarRightSideElectric = document.getElementById("red-car-right-side-electric")
+            var redCarRightSide = document.getElementById("red-car-right-side")
+            var electricBusRightCornerElectric = document.getElementById("bus-right-corner-electric")
+            var electricBusRightLane = document.getElementById("red-bus-on-highway1-electric")
+            var electricBusRightLane2 = document.getElementById("red-bus-on-highway1-electric1")
+
+
+            //Travel Demand
+
+            var leftSidePlane = document.getElementById("plane-above-station")
+            var horizontalPlane = document.getElementById("plane")
+            var blackCar = document.getElementById("black-car-on-highway")
+            var blackCar1 = document.getElementById("black-car-on-highway1")
+            var redCarHighway = document.getElementById("red-car-on-highway")
+            var redCarHighway1 = document.getElementById("red-car-on-highway-2")
+            var redCarHighway2 = document.getElementById("red-car-on-highway-3")
+            var redCarHighway3 = document.getElementById("red-car-on-highway-4")
+            var busRightCorner = document.getElementById("bus-right-corner")
+            var leftTrain = document.getElementById("left-train")
+            var rightTrain = document.getElementById("right-train")
+            var tram = document.getElementById("tram")
+            var blueBusHighway = document.getElementById("blue-bus-on-highway")
+            var redBusHighway = document.getElementById("red-bus-on-highway")
+            var redBusHighway1 = document.getElementById("red-bus-on-highway1")
+
+            //Heavy Vehicles
+            
+            var blueLorry = document.getElementById("blue-lorry")
+            var greenLorry = document.getElementById("greenLorry")
+
+            //Solar
+            var allSolarPanels = document.getElementById("solar-panels-script-id") 
+            var parliamentSolarPanels = document.getElementById("parliament-solar-panels")
+            var greenBuildingSolarPanels = document.getElementById("green-building-solar-panels")
+            var farmHouseSolarPanels = document.getElementById("farm-house-solar-panels")
+            var foregroundBuildingSolarPanels = document.getElementById("foreground-building-solar-panels")
+
+            var chargingStationLevel2 = document.getElementById("charging-station-level-2")
+            var chargingStationLevel3 = document.getElementById("charging-station-level-3")
+            var chargingStationLevel4 = document.getElementById("charging-station-level-4")
+
+            //Behaviour - Thermometers
+            var thermometerLevel1 = document.getElementById("thermometerlevel-4")
+            var thermometerLevel2 = document.getElementById("thermometerlevel-3")
+            var thermometerLevel3 = document.getElementById("thermometerlevel-2")
+            var thermometerLiquid = document.getElementById("thermometer-red-liquid")
+
+            //Heating Systems
+            var pipesLevel2 = document.getElementById("pipe-level-2")
+            var pipesLevel3 = document.getElementById("pipe-level-3")
+            var pipesLevel4 = document.getElementById("pipe-level-4")
+
+            //Efficiency
+            var insulationLv1 = document.getElementById("insulatorlv1")
+            var insulationLv2 = document.getElementById("insulatorlv2")
+            var insulationLv3 = document.getElementById("insulatorlv3")
+            var insulationLv4 = document.getElementById("insulatorlv4")
+
+            //Nuclear
+            var nuclearlv1 = document.getElementById("nuclear-lvl-1")
+            var nuclearlv2 = document.getElementById("nuclear-lvl-2")
+            var nuclearlv3 = document.getElementById("nuclear-lvl-3")
+            var nucPowerline =document.getElementById("nuc-powerline")
+
+            //Geo
+            var geothermal1 = document.getElementById("geo-lvl-1")
+            var geothermal2 = document.getElementById("geo-lvl-2")
+            var geothermal3 = document.getElementById("geo-lvl-3")
+            var geothermal4 = document.getElementById("geo-lvl-4")
+            var geoPowerline = document.getElementById("geo-powerline")
+
+            //HEP
+            var hydroelectric4 = document.getElementById("hep-lvl-4")
+            var hydroelectric3 = document.getElementById("hep-lvl-3")
+            var hydroelectric2 = document.getElementById("hep-lvl-2")
+            var hepPowerline = document.getElementById("hep-powerline")
+
+            //Turbine
+            var windTurbine1 = document.getElementById("turbine-1")
+            var windTurbine2 = document.getElementById("turbine-2")
+            var windTurbine3 = document.getElementById("turbine-3")
+            var windTurbine4 = document.getElementById("turbine-4")
+
+
+            function moveup(){
+                //reset levers
+                knob.style.top = "45vw";
+                knob1.style.top = "45vw"
+                knob2.style.top = "45vw"
+                knob3.style.top = "45vw"
+                knob4.style.top = "45vw"
+                knob5.style.top = "45vw"
+                knob6.style.top = "45vw"
+                knob7.style.top = "45vw"
+                knob8.style.top = "45vw"
+                knob9.style.top = "45vw"
+                knob10.style.top = "45vw"
+                knob11.style.top = "45vw"
+                knob12.style.top = "45vw"
+                knob13.style.top = "45vw"
+                knob14.style.top = "45vw"
+            }
+
+
+            //Bio-Energy Section
+
+            function knobLevel1(){
+                knob.style.top = "45vw"
+            }
+
+            function knobLevel2(){
+                knob.style.top = "42.65vw"
+            }
+
+            function knobLevel3(){
+                knob.style.top = "41.1vw"
+            }
+
+            function knobLevel4(){
+                knob.style.top = "39.81vw"
+            }
+
+ 
+            //Forestry Section
+            
+            function forestryKnobLevel1(){
+                knob1.style.top = "45vw"
+            }
+
+            function forestryKnobLevel2(){
+                knob1.style.top = "42.65vw"
+            }
+
+            function forestryKnobLevel3(){
+                knob1.style.top = "41.1vw"
+            }
+
+            function forestryKnobLevel4(){
+                knob1.style.top = "39.81vw"
+            }
+
+
+            //Wave & Tidal Section
+            
+            function waveKnobLevel1(){
+                knob2.style.top = "45vw"
+                geothermal1.style.opacity = 1;
+                geothermal2.style.opacity = 0;
+                geothermal3.style.opacity = 0;
+                geothermal4.style.opacity = 0;
+                geoPowerline.style.opacity = 0;
+            }
+
+            function waveKnobLevel2(){
+                knob2.style.top = "42.65vw"
+                geothermal1.style.opacity = 0;
+                geothermal2.style.opacity = 1;
+                geothermal3.style.opacity = 0;
+                geothermal4.style.opacity = 0;
+                geoPowerline.style.opacity = 1;
+            }
+
+            function waveKnobLevel3(){
+                knob2.style.top = "41.1vw"
+                geothermal1.style.opacity = 0;
+                geothermal2.style.opacity = 0;
+                geothermal3.style.opacity = 1;
+                geothermal4.style.opacity = 0;
+                geoPowerline.style.opacity = 1;
+            }
+
+            function waveKnobLevel4(){
+                knob2.style.top = "39.81vw"
+                geothermal1.style.opacity = 0;
+                geothermal2.style.opacity = 0;
+                geothermal3.style.opacity = 0;
+                geothermal4.style.opacity = 1;
+                geoPowerline.style.opacity = 1;
+            }
+
+
+            //Solar Section
+            
+            function solarKnobLevel1(){
+                knob3.style.top = "45vw"
+                parliamentSolarPanels.style.opacity = 0;
+                greenBuildingSolarPanels.style.opacity = 0;
+                farmHouseSolarPanels.style.opacity = 0;
+                foregroundBuildingSolarPanels.style.opacity = 0;
+            }
+
+            function solarKnobLevel2(){
+                knob3.style.top = "42.65vw"
+                parliamentSolarPanels.style.opacity = 1;
+                greenBuildingSolarPanels.style.opacity = 0;
+                farmHouseSolarPanels.style.opacity = 0;
+                foregroundBuildingSolarPanels.style.opacity = 0;
+            }
+
+            function solarKnobLevel3(){
+                knob3.style.top = "41.1vw"
+                parliamentSolarPanels.style.opacity = 1;
+                greenBuildingSolarPanels.style.opacity = 1;
+                farmHouseSolarPanels.style.opacity = 0;
+                foregroundBuildingSolarPanels.style.opacity = 0;
+            }
+
+            function solarKnobLevel4(){
+                knob3.style.top = "39.81vw"
+                parliamentSolarPanels.style.opacity = 1;
+                greenBuildingSolarPanels.style.opacity = 1;
+                farmHouseSolarPanels.style.opacity = 1;
+                foregroundBuildingSolarPanels.style.opacity = 1;
+            }
+
+
+            //Wind Section
+            
+            function windKnobLevel1(){
+                knob4.style.top = "45vw"
+                windTurbine1.style.opacity = 1;
+                windTurbine2.style.opacity = 0;
+                windTurbine3.style.opacity = 0;
+                windTurbine4.style.opacity = 0;
+            }
+
+            function windKnobLevel2(){
+                knob4.style.top = "42.65vw"
+                windTurbine1.style.opacity = 1;
+                windTurbine2.style.opacity = 1;
+                windTurbine3.style.opacity = 0;
+                windTurbine4.style.opacity = 0;
+            }
+
+            function windKnobLevel3(){
+                knob4.style.top = "41.1vw"
+                windTurbine1.style.opacity = 1;
+                windTurbine2.style.opacity = 1;
+                windTurbine3.style.opacity = 1;
+                windTurbine4.style.opacity = 0;
+            }
+
+            function windKnobLevel4(){
+                knob4.style.top = "39.81vw"
+                windTurbine1.style.opacity = 1;
+                windTurbine2.style.opacity = 1;
+                windTurbine3.style.opacity = 1;
+                windTurbine4.style.opacity = 1;
+            }
+
+
+            //Nuclear Section
+            
+            function nuclearKnobLevel1(){
+                knob5.style.top = "45vw"
+                nuclearlv1.style.opacity = 0;
+                nuclearlv2.style.opacity = 0;
+                nuclearlv3.style.opacity = 0;
+                nucPowerline.style.opacity = 0;
+            }
+
+            function nuclearKnobLevel2(){
+                knob5.style.top = "42.65vw"
+                nuclearlv1.style.opacity = 1;
+                nuclearlv2.style.opacity = 0;
+                nuclearlv3.style.opacity = 0;
+                nucPowerline.style.opacity = 1;
+            }
+
+            function nuclearKnobLevel3(){
+                knob5.style.top = "41.1vw"
+                nuclearlv1.style.opacity = 0;
+                nuclearlv2.style.opacity = 1;
+                nuclearlv3.style.opacity = 0;
+                nucPowerline.style.opacity = 1;
+            }
+
+            function nuclearKnobLevel4(){
+                knob5.style.top = "39.81vw"
+                nuclearlv1.style.opacity = 1;
+                nuclearlv2.style.opacity = 1;
+                nuclearlv3.style.opacity = 1;
+                nucPowerline.style.opacity = 1;
+            }
+
+
+            //Hydrogen Section
+            
+            function hydrogenKnobLevel1(){
+                knob6.style.top = "45vw"
+                hydroelectric4.style.opacity = 0;
+                hydroelectric3.style.opacity = 0;
+                hydroelectric2.style.opacity = 0;
+                hepPowerline.style.opacity = 0;
+            }
+
+            function hydrogenKnobLevel2(){
+                knob6.style.top = "42.65vw"
+                hydroelectric4.style.opacity = 0;
+                hydroelectric3.style.opacity = 0;
+                hydroelectric2.style.opacity = 1;
+                hepPowerline.style.opacity = 1;
+            }
+
+            function hydrogenKnobLevel3(){
+                knob6.style.top = "41.1vw"
+                hydroelectric4.style.opacity = 0;
+                hydroelectric3.style.opacity = 1;
+                hydroelectric2.style.opacity = 0;
+                hepPowerline.style.opacity = 1;
+            }
+
+            function hydrogenKnobLevel4(){
+                knob6.style.top = "39.81vw"
+                hydroelectric4.style.opacity = 1;
+                hydroelectric3.style.opacity = 0;
+                hydroelectric2.style.opacity = 0;
+                hepPowerline.style.opacity = 1;
+            }
+
+
+            //Carbon Capture Section
+            
+            function carbonKnobLevel1(){
+                knob7.style.top = "45vw"
+            }
+
+            function carbonKnobLevel2(){
+                knob7.style.top = "42.65vw"
+            }
+
+            function carbonKnobLevel3(){
+                knob7.style.top = "41.1vw"
+            }
+
+            function carbonKnobLevel4(){
+                knob7.style.top = "39.81vw"
+            }
+
+
+            //Carbon Intensity Section
+            
+            function carbonIntensityKnobLevel1(){
+                knob8.style.top = "45vw"
+            }
+
+            function carbonIntensityKnobLevel2(){
+                knob8.style.top = "42.65vw"
+            }
+
+            function carbonIntensityKnobLevel3(){
+                knob8.style.top = "41.1vw"
+            }
+
+            function carbonIntensityKnobLevel4(){
+                knob8.style.top = "39.81vw"
+            }
+
+
+            //Heating System Section
+            
+            function heatingKnobLevel1(){
+                knob9.style.top = "45vw"
+                pipesLevel2.style.top = "-1vw"
+                pipesLevel2.style.opacity = 0;
+
+                pipesLevel3.style.top = "-1vw"
+                pipesLevel3.style.opacity = 0;
+
+                pipesLevel4.style.top = "-1vw"
+                pipesLevel4.style.opacity = 0;
+            }
+
+            function heatingKnobLevel2(){
+                knob9.style.top = "42.65vw"
+                pipesLevel2.style.opacity = 1;
+                pipesLevel2.style.top = "0.55vw "
+
+                pipesLevel3.style.top = "-1vw"
+                pipesLevel3.style.opacity = 0;
+
+                pipesLevel4.style.top = "-1vw"
+                pipesLevel4.style.opacity = 0;
+            }
+
+            function heatingKnobLevel3(){
+                knob9.style.top = "41.1vw"
+                pipesLevel2.style.opacity = 1;
+                pipesLevel2.style.top = "0.55vw"
+
+                pipesLevel3.style.opacity = 1;
+                pipesLevel3.style.top = "0.55vw"
+
+                pipesLevel4.style.top = "-1vw"
+                pipesLevel4.style.opacity = 0;
+            }
+
+            function heatingKnobLevel4(){
+                knob9.style.top = "39.81vw"
+                pipesLevel2.style.opacity = 1;
+                pipesLevel2.style.top = "0.55vw "
+
+                pipesLevel3.style.opacity = 1;
+                pipesLevel3.style.top = "0.55vw"
+
+                pipesLevel4.style.opacity = 1;
+                pipesLevel4.style.top = "0.55vw"
+            }
+
+
+            //Efficiency Section
+            
+            function efficiencyKnobLevel1(){
+                knob10.style.top = "45vw"
+                insulationLv1.style.opacity = 1;
+                insulationLv1.style.top = "0.2vw"
+
+                insulationLv2.style.opacity = 0;
+                insulationLv2.style.top = "-1vw"
+
+                insulationLv3.style.opacity = 0;
+                insulationLv3.style.top = "-1vw"
+
+                insulationLv4.style.opacity = 0;
+                insulationLv4.style.top = "-1vw"
+            }
+
+            function efficiencyKnobLevel2(){
+                knob10.style.top = "42.65vw"
+                insulationLv1.style.opacity = 0;
+                insulationLv1.style.top = "-1vw"
+
+                insulationLv2.style.opacity = 1;
+                insulationLv2.style.top = "0.2vw"
+
+                insulationLv3.style.opacity = 0;
+                insulationLv3.style.top = "-1vw"
+
+                insulationLv4.style.opacity = 0;
+                insulationLv4.style.top = "-1vw"
+            }
+
+            function efficiencyKnobLevel3(){
+                knob10.style.top = "41.1vw"
+                insulationLv1.style.opacity = 0;
+                insulationLv1.style.top = "-1vw"
+
+                insulationLv2.style.opacity = 0;
+                insulationLv2.style.top = "-1vw"
+
+                insulationLv3.style.opacity = 1;
+                insulationLv3.style.top = "0.2vw"
+
+                insulationLv4.style.opacity = 0;
+                insulationLv4.style.top = "-1vw"
+            }
+
+            function efficiencyKnobLevel4(){
+                knob10.style.top = "39.81vw"
+                insulationLv1.style.opacity = 0;
+                insulationLv1.style.top = "-1vw"
+
+                insulationLv2.style.opacity = 0;
+                insulationLv2.style.top = "-1vw"
+
+                insulationLv3.style.opacity = 0;
+                insulationLv3.style.top = "-1vw"
+
+                insulationLv4.style.opacity = 1;
+                insulationLv4.style.top = "0.2vw"
+            }
+
+
+            //Behaviour Section
+            
+            function behaviourKnobLevel1(){
+                knob11.style.top = "45vw"
+                /* thermometerLevel1.style.opacity = 1;
+                thermometerLevel2.style.opacity = 0;
+                thermometerLevel3.style.opacity = 0; */
+                thermometerLiquid.style.transition = "height 0.5s"
+                thermometerLiquid.style.height = "4.45vw"
+            }
+
+            function behaviourKnobLevel2(){
+                knob11.style.top = "42.65vw"
+                /* thermometerLevel1.style.opacity = 0;
+                thermometerLevel2.style.opacity = 1;
+                thermometerLevel3.style.opacity = 0; */
+                thermometerLiquid.style.transition = "height 0.5s"
+                thermometerLiquid.style.height = "2.95vw"
+            }
+
+            function behaviourKnobLevel3(){
+                knob11.style.top = "41.1vw"
+                /* thermometerLevel1.style.opacity = 0;
+                thermometerLevel2.style.opacity = 0;
+                thermometerLevel3.style.opacity = 1; */
+                thermometerLiquid.style.transition = "height 0.5s"
+                thermometerLiquid.style.height = "1.45vw"
+            }
+
+            function behaviourKnobLevel4(){
+                knob11.style.top = "39.81vw"
+                /* thermometerLevel1.style.opacity = 0;
+                thermometerLevel2.style.opacity = 0;
+                thermometerLevel3.style.opacity = 1; */
+                thermometerLiquid.style.transition = "height 0.5s"
+                thermometerLiquid.style.height = "0.15vw"
+            }
+
+
+            //Heavy Vehicles Section
+            
+            function heavyVehiclesKnobLevel1(){
+                knob12.style.top = "45vw"
+                blueLorry.style.opacity = 0;
+                greenLorry.style.opacity = 0;
+
+                //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 0;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 0;
+                tram.style.opacity = 0;
+            }
+
+            function heavyVehiclesKnobLevel2(){
+                knob12.style.top = "42.65vw"
+                blueLorry.style.opacity = 1;
+                greenLorry.style.opacity = 0;
+
+                //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 0;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 0;
+                tram.style.opacity = 0;
+            }
+
+            function heavyVehiclesKnobLevel3(){
+                knob12.style.top = "41.1vw"
+                blueLorry.style.opacity = 1;
+                greenLorry.style.opacity = 1;
+
+                //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 1;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 1;
+                tram.style.opacity = 0;
+            }
+
+            function heavyVehiclesKnobLevel4(){
+                knob12.style.top = "39.81vw"
+                blueLorry.style.opacity = 1;
+                greenLorry.style.opacity = 1;
+
+                //Planes
+                leftSidePlane.style.opacity = 1;
+                horizontalPlane.style.opacity = 1;
+
+                //Trains
+                leftTrain.style.opacity = 1;
+                rightTrain.style.opacity = 1;
+                tram.style.opacity = 1;
+            }
+
+
+            //Light Vehicles Section
+            
+            function lightVehiclesKnobLevel1(){
+                knob13.style.top = "45vw"
+                greyCar1.style.opacity = 1;
+                electricCar1.style.opacity = 0;
+                electricBlue.style.opacity = 0;
+                greycarNearKcc.style.opacity = 1;
+                parking.style.opacity = 1;
+                parking.style.top = "26.4vw";
+                secondGreyCarKccElectric.style.opacity = 0;
+                redCarRightSideElectric.style.opacity = 0;
+                redCarRightSide.style.opacity = 1;
+
+                //Black Cars Highway Right Lane 
+                blackCarRightLane.style.opacity = 0;
+                blackCarRightLane1.style.opacity = 0;
+                blackCarRightLane2.style.opacity = 0;
+                blackCarRightLane3.style.opacity = 0;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 1;
+                redCarHighway2.style.opacity = 1;
+                redCarHighway3.style.opacity = 1;
+
+                //Green Car Highway Left Lane
+                greenCarHighwayLeftLane.style.opacity = 0;
+                greenCarHighwayLeftLane1.style.opacity = 0;
+                greenCarHighwayLeftLane2.style.opacity = 0;
+                greenCarHighwayLeftLane3.style.opacity = 0;
+
+                //Green Car Highway Right LANE
+                greenCarHighRightLane.style.opacity = 0;
+                greenCarHighRightLane1.style.opacity = 0;
+                greenCarHighRightLane2.style.opacity = 0;
+                greenCarHighRightLane3.style.opacity = 0;
+
+                //Trucks
+                blueLorryElectric.style.opacity = 0;
+                redLorryElectric.style.opacity = 0;
+                redLorry.style.opacity = 1;
+                greenLorryElectric.style.opacity = 0;
+
+                //Bus
+                electricBusRightCornerElectric.style.opacity = 0;
+                electricBusRightLane.style.opacity = 0;
+                electricBusRightLane2.style.opacity =0;
+
+                //Charging Stations
+                chargingStationLevel2.style.opacity = 0;
+                chargingStationLevel3.style.opacity = 0;
+                chargingStationLevel4.style.opacity = 0;
+
+
+                //from heavy vehicles
+                knob12.style.top = "45vw"
+                blueLorry.style.opacity = 0;
+                greenLorry.style.opacity = 0;
+
+                //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 0;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 0;
+                tram.style.opacity = 0;
+            }
+
+            function lightVehiclesKnobLevel2(){
+                knob13.style.top = "42.65vw"              
+                greyCar1.style.opacity = 0;
+                greyCar1.style.top = "10vw";
+                electricCar1.style.opacity = 1;
+                greycarNearKcc.style.opacity = 0;
+                electricBlue.style.opacity = 1;
+                parking.style.top = "22vw";
+                parking.style.opacity = 0;
+                secondGreyCarKccElectric.style.opacity = 0;
+                redCarRightSideElectric.style.opacity = 0;
+                redCarRightSide.style.opacity = 1;
+
+                //Black Cars Highway Right Lane 
+                blackCarRightLane.style.opacity = 0;
+                blackCarRightLane1.style.opacity = 0;
+                blackCarRightLane2.style.opacity = 0;
+                blackCarRightLane3.style.opacity = 0;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 1;
+                redCarHighway2.style.opacity = 1;
+                redCarHighway3.style.opacity = 1;
+
+                //Green Car Highway Left Lane
+                greenCarHighwayLeftLane.style.opacity = 0;
+                greenCarHighwayLeftLane1.style.opacity = 0;
+                greenCarHighwayLeftLane2.style.opacity = 0;
+                greenCarHighwayLeftLane3.style.opacity = 0;
+
+                //Green Car Highway Right LANE
+                greenCarHighRightLane.style.opacity = 0;
+                greenCarHighRightLane1.style.opacity = 0;
+                greenCarHighRightLane2.style.opacity = 0;
+                greenCarHighRightLane3.style.opacity = 0;
+
+                //Trucks
+                blueLorryElectric.style.opacity = 0;
+                redLorryElectric.style.opacity = 0;
+                redLorry.style.opacity = 1;
+                greenLorryElectric.style.opacity = 0;
+
+                //Bus
+                electricBusRightCornerElectric.style.opacity = 1;
+                electricBusRightLane.style.opacity = 1;
+                electricBusRightLane2.style.opacity =1;
+
+                //Charging Stations
+                chargingStationLevel2.style.opacity = 1;
+                chargingStationLevel3.style.opacity = 0;
+                chargingStationLevel4.style.opacity = 0;
+
+
+                //from heavy vehicles
+                knob12.style.top = "42.65vw"
+                blueLorry.style.opacity = 1;
+                greenLorry.style.opacity = 0;
+
+                //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 0;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 0;
+                tram.style.opacity = 0;
+            }
+
+            function lightVehiclesKnobLevel3(){
+                knob13.style.top = "41.1vw"
+                blackCarOverlay.style.opacity = 1;
+                greenCarOnHighway.style.opacity = 0;
+                blackCarOverlay1.style.opacity = 1;
+                greenCarOnHighwayLeftLane.style.opacity = 0;
+                electricCar1.style.opacity = 1;
+                greyCar1.style.opacity = 0;
+                electricBlue.style.opacity = 1;
+                greycarNearKcc.style.opacity = 0;
+                secondGreyCarKccElectric.style.opacity = 0;
+                redCarRightSideElectric.style.opacity = 0;
+                redCarRightSide.style.opacity = 1;
+
+                //Black Cars Highway Right Lane 
+                blackCarRightLane.style.opacity = 0;
+                blackCarRightLane1.style.opacity = 0;
+                blackCarRightLane2.style.opacity = 0;
+                blackCarRightLane3.style.opacity = 0;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 1;
+                redCarHighway2.style.opacity = 1;
+                redCarHighway3.style.opacity = 1;
+
+                //Green Car Highway Left Lane
+                greenCarHighwayLeftLane.style.opacity = 0;
+                greenCarHighwayLeftLane1.style.opacity = 0;
+                greenCarHighwayLeftLane2.style.opacity = 0;
+                greenCarHighwayLeftLane3.style.opacity = 0;
+
+                //Green Car Highway Right LANE
+                greenCarHighRightLane.style.opacity = 0;
+                greenCarHighRightLane1.style.opacity = 0;
+                greenCarHighRightLane2.style.opacity = 0;
+                greenCarHighRightLane3.style.opacity = 0;
+
+                //Trucks
+                blueLorryElectric.style.opacity = 1;
+                redLorryElectric.style.opacity = 1;
+                redLorry.style.opacity = 0;
+                greenLorryElectric.style.opacity = 1;
+
+                //Bus
+                electricBusRightCornerElectric.style.opacity = 1;
+                electricBusRightLane.style.opacity = 1;
+                electricBusRightLane2.style.opacity =1;
+
+                //Charging Stations
+                chargingStationLevel2.style.opacity = 1;
+                chargingStationLevel3.style.opacity = 1;
+                chargingStationLevel4.style.opacity = 0;
+
+
+                //from heavy vehicles
+                knob12.style.top = "41.1vw"
+                blueLorry.style.opacity = 1;
+                greenLorry.style.opacity = 1;
+
+                //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 1;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 1;
+                tram.style.opacity = 0;
+            }
+
+            function lightVehiclesKnobLevel4(){
+                knob13.style.top = "39.81vw"
+                blackCarOverlay.style.opacity = 0;
+                greenCarOnHighway.style.opacity = 1;
+                blackCarOverlay1.style.opacity = 0;
+                greenCarOnHighwayLeftLane.style.opacity = 1;
+                electricBlue.style.opacity = 1;
+                electricCar1.style.opacity = 1;
+                greyCar1.style.opacity = 0;
+                greycarNearKcc.style.opacity = 0;
+                secondGreyCarKccElectric.style.opacity = 1;
+                redCarRightSideElectric.style.opacity = 1;
+                redCarRightSide.style.opacity = 0;
+
+                //Black Cars Highway Right Lane 
+                blackCarRightLane.style.opacity = 1;
+                blackCarRightLane1.style.opacity = 1;
+                blackCarRightLane2.style.opacity = 1;
+                blackCarRightLane3.style.opacity = 1;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 1;
+                redCarHighway2.style.opacity = 1;
+                redCarHighway3.style.opacity = 1;
+
+                //Green Car Highway Left Lane
+                greenCarHighwayLeftLane.style.opacity = 1;
+                greenCarHighwayLeftLane1.style.opacity = 1;
+                greenCarHighwayLeftLane2.style.opacity = 1;
+                greenCarHighwayLeftLane3.style.opacity = 1;
+
+                //Green Car Highway Right LANE
+                greenCarHighRightLane.style.opacity = 1;
+                greenCarHighRightLane1.style.opacity = 1;
+                greenCarHighRightLane2.style.opacity = 1;
+                greenCarHighRightLane3.style.opacity = 1;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 0;
+                redCarHighway1.style.opacity = 0;
+                redCarHighway2.style.opacity = 0;
+                redCarHighway3.style.opacity = 0;
+
+                //Trucks
+                blueLorryElectric.style.opacity = 1;
+                redLorryElectric.style.opacity = 1;
+                redLorry.style.opacity = 0;
+                greenLorryElectric.style.opacity = 1;
+
+                //Bus
+                electricBusRightCornerElectric.style.opacity = 1;
+                electricBusRightLane.style.opacity = 1;
+                electricBusRightLane2.style.opacity =1;
+
+                //Charging Stations
+                chargingStationLevel2.style.opacity = 1;
+                chargingStationLevel3.style.opacity = 1;
+                chargingStationLevel4.style.opacity = 1;
+
+
+                //from heavy vehicles
+                knob12.style.top = "39.81vw"
+                blueLorry.style.opacity = 1;
+                greenLorry.style.opacity = 1;
+
+                //Planes
+                leftSidePlane.style.opacity = 1;
+                horizontalPlane.style.opacity = 1;
+
+                //Trains
+                leftTrain.style.opacity = 1;
+                rightTrain.style.opacity = 1;
+                tram.style.opacity = 1;
+            }
+
+
+             //Travel Demand Section
+            
+            function travelDemandKnobLevel1(){
+                knob14.style.top = "45vw"
+
+                /*//Parked Cars
+                parking.style.opacity = 0;
+                parking.style.top = "22vw";*/
+
+                //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 0;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 0;
+                tram.style.opacity = 1;
+
+                //Cars
+                blackCar.style.opacity = 1;
+                blackCar1.style.opacity = 1;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 1;
+                redCarHighway2.style.opacity = 1;
+                redCarHighway3.style.opacity = 1;
+
+                //Red Bus on Highway
+                redBusHighway.style.opacity = 0;
+                redBusHighway1.style.opacity = 0;
+
+                //Black Cars Highway Right Lane 
+                blackCarRightLane.style.opacity = 0;
+                blackCarRightLane1.style.opacity = 0;
+                blackCarRightLane2.style.opacity = 0;
+                blackCarRightLane3.style.opacity = 0;
+
+                blueBusHighway.style.opacity = 0;
+                blackCarOverlay.style.opacity = 0;
+                greenCarOnHighway.style.opacity = 1;
+                blackCarOverlay1.style.opacity = 0;
+                greenCarOnHighwayLeftLane.style.opacity = 1;
+
+                busRightCorner.style.opacity = 1;
+
+                //Electric Bus
+                electricBusRightCornerElectric.style.opacity = 0;
+                electricBusRightLane.style.opacity = 0;
+                electricBusRightLane2.style.opacity =0;
+            }
+
+            function travelDemandKnobLevel2(){
+                knob14.style.top = "42.65vw"
+
+                /*//Parked Cars
+                parking.style.top = "26.4vw";
+                parking.style.opacity = 1;*/
+
+                //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 0;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 0;
+                tram.style.opacity = 1;
+
+                //Cars
+                blackCar.style.opacity = 1;
+                blackCar1.style.opacity = 1;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 1;
+                redCarHighway2.style.opacity = 1;
+                redCarHighway3.style.opacity = 0;
+
+                //Red Bus on Highway
+                redBusHighway.style.opacity = 1;
+                redBusHighway1.style.opacity = 0;
+
+                blueBusHighway.style.opacity = 1;
+                blackCarOverlay.style.opacity = 0;
+                greenCarOnHighway.style.opacity = 1;
+                blackCarOverlay1.style.opacity = 0;
+                greenCarOnHighwayLeftLane.style.opacity = 0;
+
+                busRightCorner.style.opacity = 1;
+
+                //Electric Bus
+                electricBusRightCornerElectric.style.opacity = 0;
+                electricBusRightLane.style.opacity = 0;
+                electricBusRightLane2.style.opacity =0;
+            }
+
+            function travelDemandKnobLevel3(){
+                knob14.style.top = "41.1vw"
+
+                /*//Parked Cars
+                parking.style.top = "26.4vw";
+                parking.style.opacity = 1;*/
+
+                //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 0;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 1;
+                tram.style.opacity = 1;
+
+                //Cars
+                blackCar.style.opacity = 1;
+                blackCar1.style.opacity = 0;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 0;
+                redCarHighway2.style.opacity = 0;
+                redCarHighway3.style.opacity = 1;
+
+                //Red Bus on Highway
+                redBusHighway.style.opacity = 1;
+                redBusHighway1.style.opacity = 1;
+
+                blueBusHighway.style.opacity = 1;
+                blackCarOverlay.style.opacity = 0;
+                greenCarOnHighway.style.opacity = 1;
+                blackCarOverlay1.style.opacity = 0;
+                greenCarOnHighwayLeftLane.style.opacity = 0;
+
+                busRightCorner.style.opacity = 1;
+
+                //Electric Bus
+                electricBusRightCornerElectric.style.opacity = 0;
+                electricBusRightLane.style.opacity = 0;
+                electricBusRightLane2.style.opacity =0;
+            }
+
+            function travelDemandKnobLevel4(){
+                knob14.style.top = "39.81vw"
+
+                /*//Parked Cars
+                parking.style.top = "26.4vw";
+                parking.style.opacity = 1;*/
+                
+                //Planes
+                leftSidePlane.style.opacity = 1;
+                horizontalPlane.style.opacity = 1;
+
+                //Trains
+                leftTrain.style.opacity = 1;
+                rightTrain.style.opacity = 1;
+                tram.style.opacity = 1;
+
+                //Cars
+                blackCar.style.opacity = 0;
+                blackCar1.style.opacity = 1;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 0;
+                redCarHighway2.style.opacity = 0;
+                redCarHighway3.style.opacity = 0;
+
+                //Red Bus on Highway
+                redBusHighway.style.opacity = 1;
+                redBusHighway1.style.opacity = 1;
+
+                blueBusHighway.style.opacity = 1;
+                blackCarOverlay.style.opacity = 1;
+                greenCarOnHighway.style.opacity = 1;
+                blackCarOverlay1.style.opacity = 1;
+                greenCarOnHighwayLeftLane.style.opacity = 1;
+
+                busRightCorner.style.opacity = 1;
+
+                //Electric Bus
+                electricBusRightCornerElectric.style.opacity = 0;
+                electricBusRightLane.style.opacity = 0;
+                electricBusRightLane2.style.opacity =0;
+            }
+        </script>
+    </body>
+</html>
