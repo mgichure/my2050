@@ -10,8 +10,8 @@
     <title>
         My2050 Carbon Calculator
     </title>
-    <link rel="icon" type="image/ico" href="Assets/Courtofarms.png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="Assets/SU_favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@500&display=swap" rel="stylesheet">
 
     <style>
         html::-webkit-scrollbar {
@@ -921,7 +921,7 @@
             width: 3.1vw;
             top: 36vw;
             left: 92.7vw;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Helvetica', sans-serif;
             font-size: 0.8vw;
             font-weight: normal;
             text-align: center;
@@ -1734,6 +1734,34 @@
         #house-appliances-lv4{
             transition: opacity 0.5s;
         }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 6.65vw;
+            height: 0.9vw;
+            border-radius: 0.25vw;
+            background: #FFFFFF;
+            cursor: pointer;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 1.55vw;
+            height: 1.55vw;
+            border-radius: 50%;
+            background: #F0A800;
+            border: 0.1vw solid white;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #04AA6D;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -1776,8 +1804,8 @@
             <img src="Assets/Train4.webp" id="right-train">
             <img src="Assets/KQ_Plane.webp" id="plane">
             <img src="Assets/travel-bus.webp" id="blue-bus-on-highway">
-            <img src="Assets/vehicles/Aircrafts/helicopter.webm" id="choppa"
-                style="position: absolute; left: 0vw; top: 0; width: 100vw; z-index: 50;">
+            <!-- <img src="Assets/vehicles/Aircrafts/helicopter.webm" id="choppa"
+                style="position: absolute; left: 0vw; top: 0; width: 100vw; z-index: 50;"> -->
             <img src="Assets/vehicles/Cars/green-lorry.webp" id="greenLorry">
             <img src="Assets/vehicles/Cars/electric-cars/electric-lorry-2-north-west.webp" id="green-lorry-electric">
             <img src="Assets/vehicles/Cars/black-car.webp" id="black-car-on-highway">
@@ -2079,15 +2107,15 @@
         </div>
 
         <div id="forestry-section">
-            <img src="Assets/Buildings-images/Forestry-Lv1.webp" id="forestry-lvl-1" style="position: absolute; width: 99vw; left: 0vw; top: 0vw; z-index: 100; transition: opacity 0.5s;">
-            <img src="Assets/Buildings-images/Forestry-Lv2.webp" id="forestry-lvl-2" style="position: absolute; width: 99vw; left: 0vw; top: 0vw; z-index: 100; transition: opacity 0.5s;">
-            <img src="Assets/Buildings-images/Forestry-Lv3.webp" id="forestry-lvl-3" style="position: absolute; width: 99vw; left: 0vw; top: 0vw; z-index: 100; transition: opacity 0.5s;">
-            <img src="Assets/Buildings-images/Forestry-Lv4.webp" id="forestry-lvl-4" style="position: absolute; width: 99vw; left: 0vw; top: 0vw; z-index: 100; transition: opacity 0.5s;">
+            <img src="Assets/Buildings-images/Forestry-Lv1.webp" id="forestry-lvl-1" style="position: absolute; width: 99vw; left: 0vw; top: 0vw; z-index: 50; transition: opacity 0.5s;">
+            <img src="Assets/Buildings-images/Forestry-Lv2.webp" id="forestry-lvl-2" style="position: absolute; width: 99vw; left: 0vw; top: 0vw; z-index: 50; transition: opacity 0.5s;">
+            <img src="Assets/Buildings-images/Forestry-Lv3.webp" id="forestry-lvl-3" style="position: absolute; width: 99vw; left: 0vw; top: 0vw; z-index: 50; transition: opacity 0.5s;">
+            <img src="Assets/Buildings-images/Forestry-Lv4.webp" id="forestry-lvl-4" style="position: absolute; width: 99vw; left: 0vw; top: 0vw; z-index: 50; transition: opacity 0.5s;">
         </div>
     </div>
 
     <div id="animation-delay-bug-overlay"
-        style="position: absolute; width: 7vw; height: 5vw; top: 0vw; left: 0vw; background-color: #B0D6A4; z-index: 90;">
+        style="position: absolute; width: 7vw; height: 5vw; top: 0vw; left: 0vw; background-color: #B0D6A4; z-index: 40;">
     </div>
 
     <div id="right-side-meter" style="position: absolute; z-index: 60; display: none;">
@@ -2101,12 +2129,12 @@
         </div>
 
         <p
-            style="position: absolute; width: 7vw; left: 89.15vw; top: 5vw; font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+            style="position: absolute; width: 7vw; left: 89.15vw; top: 5vw; font-family: 'Helvetica', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
             CO&nbsp&nbsp&nbspe METER
         </p>
 
         <p
-            style="position: absolute; width: 6vw; left: 88.3vw; top: 5.45vw; font-family: 'Roboto', sans-serif; font-size: 0.9vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+            style="position: absolute; width: 6vw; left: 88.3vw; top: 5.45vw; font-family: 'Helvetica', sans-serif; font-size: 0.9vw; font-weight: normal; text-align: center; color: #FFFFFF;">
             2
         </p>
     </div>
@@ -2117,36 +2145,48 @@
             <div
                 style="position: absolute; width: 6.7vw; height: 1.2vw; border-radius: 0.5vw 0.5vw 0vw 0vw; background-color: #FFFFFF;">
                 <p
-                    style="text-align: center; font-family: Roboto; font-size: 0.75vw; font-weight: bold; color: #054170; line-height: 0vw;">
-                    CO2e METER
+                    style="text-align: center; font-family: Helvetica; font-size: 0.75vw; font-weight: bold; color: #054170; line-height: 0vw;">
+                    CO<sub>2</sub>e METER
                 </p>
             </div>
 
             <div
-                style="position: absolute; width: 4vw; height: 2vw; top: 1.6vw; left: 1vw; border-radius: 0.5vw; background-color: #054170; border: 0.1vw solid white;">
+                style="position: absolute; width: 4.5vw; height: 2vw; top: 1.6vw; left: 0.5vw; border-radius: 0.5vw; background-color: #054170; border: 0.1vw solid white;">
                 <p id="co-meter-text"
-                    style="text-align: center; margin-top: 0.3vw; font-family: Roboto; font-size: 1.3vw; color: white;">
+                    style="text-align: center; margin-top: 0.3vw; font-family: Helvetica; font-size: 1.3vw; color: white;">
                     0%
                 </p>
             </div>
 
-            <div onclick="openFormReset()"
-                style="position: absolute; top: 2.2vw; left: 5.3vw; width: 0.9vw; height: 0.9vw; border-radius: 50%; background-color: white; cursor: pointer;">
-                <p style="text-align: center; margin-top: 0vw; font-family: Roboto; font-size: 0.9vw;">
+            <div id="CO2-meter-pop-up-button" style="position: absolute; top: 2.2vw; left: 5.4vw; width: 0.9vw; height: 0.9vw; border-radius: 50%; background-color: white; cursor: pointer;">
+                <p style="text-align: center; margin-top: 0vw; font-family: Helvetica; font-size: 0.9vw;">
                     i
                 </p>
             </div>
 
-            <div
+            <!-- <div
                 style="margin-top: 3.95vw; margin-left: auto; margin-right: auto; width: 5.35vw; height: 0.7vw; border-radius: 0.15vw; box-shadow: 0.05vw 0.05vw 0.05vw black inset; background-color: white;">
-            </div>
+            </div> -->
+
+            <p style="text-align: center; margin-top: 3.75vw; font-family: Helvetica; font-weight: bold; font-size: 0.9vw; color: #054170;">
+                per year
+            </p>
+        </div>
+    </div>
+
+    <div id="CO2-meter-info-pop-up" style="position: absolute; width: 19.3vw; height: 7.4vw; left: 79vw; top: 19vw; background-color: white; border: 0.2vw solid #054170; font-family: Helvetica; font-size: 1.01vw; display: none;">
+        <p style="position: absolute; left: 0.45vw; line-height: 1.3vw;">
+            Meter showing MtCO2e/year reduction in Kenya's greenhouse gas emissions in 'carbon dioxide equivalents' (CO<span style="vertical-align: -0.2vw; font-size: 0.65vw;">2</span>e) in 2050, relative to 1990 emissions
+        </p>
+
+        <div id="triangle" style="position: absolute; top: 7.4vw; left: 16vw; width: 0vw; height: 0vw; border-left: 0.7vw solid transparent; border-right: 0.7vw solid transparent; border-top: 1.1vw solid white;">
         </div>
     </div>
 
     <div id="co-meter-text-background"
         style="position: absolute; left: 94.3vw; width: 3.4vw; top: 10vw; height: 1.8vw; background-color: rgb(26, 64, 109); border: 0.2vw solid white; z-index: 65; border-radius: 0.5vw; transition: top 0.5s; display: none;">
         <p id="co-meter-text"
-            style="font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF; line-height: 0vw;">
+            style="font-family: 'Helvetica', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF; line-height: 0vw;">
             100%
         </p>
     </div>
@@ -2185,7 +2225,7 @@
 
             <div id="transport-section">
                 <p
-                    style="position: absolute; left: 5.25vw; top: 46.3vw; font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                    style="position: absolute; left: 5.25vw; top: 46.3vw; font-family: 'Helvetica', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                     TRANSPORT
                 </p>
 
@@ -2195,7 +2235,7 @@
                         <div id="hover-effect-container" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 4vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/transport-demand.webp" id="transport-demand-icon" style="position: absolute; width: 3.5vw; top: 0.7vw; left: 0.5vw; transition: transform 0.4s;">
 
-                            <p style="position: absolute; width: 3.1vw; top: 2.45vw; left: 0.65vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; width: 3.1vw; top: 2.45vw; left: 0.65vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Travel Demand
                             </p>
 
@@ -2204,8 +2244,8 @@
                         </div>
                     </a>
 
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob-14"
-                        style="position: absolute; width: 1.46vw; left: 5.4vw; top: 39.81vw; transition: top 0.5s; z-index: 90;">
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob-14"
+                        style="position: absolute; width: 1.46vw; left: 5.4vw; top: 39.81vw; transition: top 0.5s; z-index: 90;"> -->
 
                     <div id="button-background">
                         <div onclick="travelDemandKnobLevel1()"
@@ -2224,17 +2264,19 @@
                             style="position: absolute; width: 0.9vw; height: 1.5vw; left: 5.7vw; top: 39.8vw; background-color: green; cursor: pointer; opacity: 0; z-index: 90;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange" style="position: absolute; top: 42.5vw; left: 2.75vw; transform: rotate(270deg); z-index: 100;">
                 </div>
 
                 <div id="Technology-section">
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob-13"
-                        style="position: absolute; width: 1.46vw; left: 10.4vw; top: 39.81vw; transition: top 0.5s; z-index: 90;">
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob-13"
+                        style="position: absolute; width: 1.46vw; left: 10.4vw; top: 39.81vw; transition: top 0.5s; z-index: 90;"> -->
 
                     <a href="light-vehicles-info-page.html">
                         <div id="hover-effect-container-lightvehicles" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 9vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/light-vehicles.webp" id="light-vehicles-image" style="position: absolute; width: 2vw; top: 0.7vw; left: 1.3vw; transition: transform 0.4s;">
 
-                            <p style="position: absolute; width: 3.1vw; top: 2.8vw; left: 0.4vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; width: 3.1vw; top: 2.8vw; left: 0.4vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Technology
                             </p>
 
@@ -2260,6 +2302,8 @@
                             style="position: absolute; width: 0.9vw; height: 1.3vw; left: 10.7vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0; z-index: 90;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange-technology-slider" style="position: absolute; top: 42.5vw; left: 7.75vw; transform: rotate(270deg); z-index: 100;">
                 </div>
 
                 <div id="kuficha-rada"
@@ -2273,19 +2317,19 @@
 
             <div id="buildings-section">
                 <p
-                    style="position: absolute; left: 23vw; top: 46.3vw; font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                    style="position: absolute; left: 23vw; top: 46.3vw; font-family: 'Helvetica', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                     BUILDINGS
                 </p>
 
                 <div id="travel-demand-section">
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob-11"
-                        style="position: absolute; width: 1.46vw; left: 19.1vw; top: 39.81vw; transition: top 0.5s;">
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob-11"
+                        style="position: absolute; width: 1.46vw; left: 19.1vw; top: 39.81vw; transition: top 0.5s;"> -->
 
                     <a href="behaviour-info-page.html">
                         <div id="hover-effect-container-housingappliances" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 17.6vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/house-temp-icon.webp" id="housing-appliances-image" style="position: absolute; width: 2vw; top: 0.7vw; left: 1.2vw; transition: transform 0.4s;">
 
-                            <p style="position: absolute; top: 2.4vw; left: 0vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; top: 2.4vw; left: 0vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Housing Appliances
                             </p>
                         </div>
@@ -2308,17 +2352,19 @@
                             style="position: absolute; width: 0.9vw; height: 1.3vw; left: 19.4vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange-housing-appliances-slider" style="position: absolute; top: 42.5vw; left: 16.3vw; transform: rotate(270deg); z-index: 100;">
                 </div>
 
                 <div id="Lighting-Appliances-section">
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob-10"
-                        style="position: absolute; width: 1.46vw; left: 24.45vw; top: 39.81vw; transition: top 0.5s;">
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob-10"
+                        style="position: absolute; width: 1.46vw; left: 24.45vw; top: 39.81vw; transition: top 0.5s;"> -->
 
                     <a href="efficiency-info-page.html">
                         <div id="hover-effect-container-lightingappliances" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 23vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/efficiency.webp" id="lighting-appliances-image" style="position: absolute; width: 2vw; top: 0.7vw; left: 1.2vw; transition: transform 0.4s;">
 
-                            <p style="position: absolute; top: 2.4vw; left: 0vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; top: 2.4vw; left: 0vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Lighting & Appliances
                             </p>
                         </div>
@@ -2341,17 +2387,19 @@
                             style="position: absolute; width: 0.9vw; height: 1.3vw; left: 24.7vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange-lighting-appliances-slider" style="position: absolute; top: 42.5vw; left: 21.7vw; transform: rotate(270deg); z-index: 100;">
                 </div>
 
                 <div id="Hot-Water-section">
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob-9"
-                        style="position: absolute; width: 1.46vw; left: 30.3vw; top: 39.81vw; transition: top 0.5s;">
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob-9"
+                        style="position: absolute; width: 1.46vw; left: 30.3vw; top: 39.81vw; transition: top 0.5s;"> -->
 
                     <a href="heating-systems-info-page (copy).html">
                         <div id="hover-effect-container-hotwater" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 28.8vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/heating.webp" id="hot-water-image" style="position: absolute; width: 2.7vw; top: 0.7vw; left: 0.85vw; transition: transform 0.4s;">
 
-                            <p style="position: absolute; top: 2.8vw; left: 0.65vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; top: 2.8vw; left: 0.65vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Hot Water
                             </p>
                         </div>
@@ -2374,24 +2422,26 @@
                             style="position: absolute; width: 0.9vw; height: 1.3vw; left: 30.6vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange-hot-water-slider" style="position: absolute; top: 42.5vw; left: 27.5vw; transform: rotate(270deg); z-index: 100;">
                 </div>
             </div>
 
             <div id="industry-ccs-hydrogen-section">
                 <p
-                    style="position: absolute; width: 20vw; left: 35vw; top: 46.3vw; font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                    style="position: absolute; width: 20vw; left: 35vw; top: 46.3vw; font-family: 'Helvetica', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                     INDUSTRY & CCS
                 </p>
 
                 <div id="carbon-intensity-section">
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob-8"
-                        style="position: absolute; width: 1.46vw; left: 38.22vw; top: 39.81vw; transition: top 0.5s;">
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob-8"
+                        style="position: absolute; width: 1.46vw; left: 38.22vw; top: 39.81vw; transition: top 0.5s;"> -->
 
                     <a href="carbon-intensity-systems-info-page.html">
                         <div id="hover-effect-container-carbon-intensity" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 36.8vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/carbon-intensity.webp" id="carbon-intensity-image" style="position: absolute; width: 2vw; top: 0.5vw; left: 1.2vw; transition: transform 0.4s;">
 
-                            <p style="position: absolute; top: 2.4vw; left: 0vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; top: 2.4vw; left: 0vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Carbon Intensity
                             </p>
                         </div>
@@ -2414,17 +2464,19 @@
                             style="position: absolute; width: 0.9vw; height: 1.3vw; left: 38.51vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange-carbon-intensity-slider" style="position: absolute; top: 42.5vw; left: 35.5vw; transform: rotate(270deg); z-index: 100;">
                 </div>
 
                 <div id="Carbon-Capture-section">
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob-7"
-                        style="position: absolute; width: 1.46vw; left: 44vw; top: 39.81vw; transition: top 0.5s;">
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob-7"
+                        style="position: absolute; width: 1.46vw; left: 44vw; top: 39.81vw; transition: top 0.5s;"> -->
 
                     <a href="carbon-capture-systems-info-page.html">
                         <div id="hover-effect-container-carboncapture" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 42.3vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/carbon-capture.webp" id="carbon-capture-image" style="position: absolute; width: 2.3vw; top: 0.6vw; left: 1.05vw; transition: transform 0.4s;">
 
-                            <p style="position: absolute; top: 2.4vw; left: 0vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; top: 2.4vw; left: 0vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Carbon Capture
                             </p>
 
@@ -2450,17 +2502,19 @@
                             style="position: absolute; width: 0.9vw; height: 1.3vw; left: 44.25vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange-carbon-capture-slider" style="position: absolute; top: 42.5vw; left: 41.2vw; transform: rotate(270deg); z-index: 100;">
                 </div>
 
                 <div id="Hydroelectric-Power-section">
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob-6"
-                        style="position: absolute; width: 1.46vw; left: 49.3vw; top: 39.81vw; transition: top 0.5s;">
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob-6"
+                        style="position: absolute; width: 1.46vw; left: 49.3vw; top: 39.81vw; transition: top 0.5s;"> -->
 
                     <a href="hydrogen-info-page.html">
                         <div id="hover-effect-container-hydro" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 48vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/H2.webp" id="hydro-image" style="position: absolute; width: 2.1vw; top: 0.5vw; left: 1.22vw; transition: transform 0.4s;">
 
-                            <p style="position: absolute; top: 2.4vw; left: 0vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; top: 2.4vw; left: 0vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Hydroelectric Power
                             </p>
                         </div>
@@ -2483,24 +2537,26 @@
                             style="position: absolute; width: 0.9vw; height: 1.3vw; left: 49.6vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange-hydro-electric-slider" style="position: absolute; top: 42.5vw; left: 46.6vw; transform: rotate(270deg); z-index: 100;">
                 </div>
             </div>
 
             <div id="low-carbon-electricity-section">
                 <p
-                    style="position: absolute; width: 20vw; left: 56vw; top: 46.3vw; font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                    style="position: absolute; width: 20vw; left: 56vw; top: 46.3vw; font-family: 'Helvetica', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                     ELECTRICITY
                 </p>
 
                 <div id="nuclear-section">
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob-5"
-                        style="position: absolute; width: 1.46vw; left: 56.35vw; top: 39.81vw; transition: top 0.5s;">
-                   
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob-5"
+                        style="position: absolute; width: 1.46vw; left: 56.35vw; top: 39.81vw; transition: top 0.5s;"> -->
+
                     <a href="nuclear-info-page.html">
                         <div id="hover-effect-container-nuclear" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 55vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/nuclear-icon.webp" id="nuclear-image" style="position: absolute; width: 2vw; top: 0.7vw; left: 1.15vw; transition: transform 0.2s;">
 
-                            <p style="position: absolute; top: 2.8vw; left: 0.9vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; top: 2.8vw; left: 0.9vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Nuclear
                             </p>
                         </div>
@@ -2523,17 +2579,19 @@
                             style="position: absolute; width: 0.9vw; height: 1.3vw; left: 56.65vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange-nuclear-slider" style="position: absolute; top: 42.5vw; left: 53.6vw; transform: rotate(270deg); z-index: 100;">
                 </div>
 
                 <div id="wind-section">
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob-4"
-                        style="position: absolute; width: 1.46vw; left: 61.74vw; top: 39.81vw; transition: top 0.5s;">
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob-4"
+                        style="position: absolute; width: 1.46vw; left: 61.74vw; top: 39.81vw; transition: top 0.5s;"> -->
 
                     <a href="wind-info-page.html">
                         <div id="hover-effect-container-windmill" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 60vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/windmill-icon.webp" id="windmill-image" style="position: absolute; width: 2.5vw; top: 0.7vw; left: 1.15vw; transition: transform 0.2s;">
 
-                            <p style="position: absolute; top: 2.8vw; left: 1.4vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; top: 2.8vw; left: 1.4vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Wind
                             </p>
                         </div>
@@ -2556,17 +2614,19 @@
                             style="position: absolute; width: 0.9vw; height: 1.3vw; left: 62.05vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange-wind-slider" style="position: absolute; top: 42.5vw; left: 59vw; transform: rotate(270deg); z-index: 100;">
                 </div>
 
                 <div id="solar-section">
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob-3"
-                        style="position: absolute; width: 1.46vw; left: 67.4vw; top: 39.81vw; transition: top 0.5s;">
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob-3"
+                        style="position: absolute; width: 1.46vw; left: 67.4vw; top: 39.81vw; transition: top 0.5s;"> -->
 
                     <a href="solar-info-page.html">
                         <div id="hover-effect-container-solar" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 65.8vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/solar-icon.webp" id="solar-image" style="position: absolute; width: 2.2vw; top: 0.75vw; left: 0.9vw; transition: transform 0.2s;">
 
-                            <p style="position: absolute; top: 2.8vw; left: 1.4vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; top: 2.8vw; left: 1.4vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Solar
                             </p>
                         </div>
@@ -2589,17 +2649,19 @@
                             style="position: absolute; width: 0.9vw; height: 1.3vw; left: 67.65vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange-solar-slider" style="position: absolute; top: 42.5vw; left: 64.7vw; transform: rotate(270deg); z-index: 100;">
                 </div>
 
                 <div id="geothermal-section">
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob-2"
-                        style="position: absolute; width: 1.46vw; left: 72.935vw; top: 39.81vw; transition: top 0.5s;">
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob-2"
+                        style="position: absolute; width: 1.46vw; left: 72.935vw; top: 39.81vw; transition: top 0.5s;"> -->
 
                     <a href="wave-tidal-info-page.html">
                         <div id="hover-effect-container-geothermal" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 71.5vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/wave-tidal-icon.webp" id="geo-image" style="position: absolute; width: 2.95vw; top: 0.95vw; left: 0.75vw; transition: transform 0.2s;">
 
-                            <p style="position: absolute; top: 2.8vw; left: 0.35vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; top: 2.8vw; left: 0.35vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Geothermal
                             </p>
                         </div>
@@ -2622,24 +2684,26 @@
                             style="position: absolute; width: 0.9vw; height: 1.3vw; left: 73.25vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange-geothermal-slider" style="position: absolute; top: 42.5vw; left: 70.2vw; transform: rotate(270deg); z-index: 100;">
                 </div>
             </div>
 
             <div id="land-bioenergy-waste-section">
                 <p
-                    style="position: absolute; width: 20vw; left: 75.5vw; top: 46.3vw; font-family: 'Roboto', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                    style="position: absolute; width: 20vw; left: 75.5vw; top: 46.3vw; font-family: 'Helvetica', sans-serif; font-size: 1vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                     LAND, BIOENERGY & WASTE
                 </p>
 
                 <div id="forestry-section">
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob-1"
-                        style="position: absolute; width: 1.46vw; top: 39.81vw; left: 79.51vw; transition: top 0.5s;">
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob-1"
+                        style="position: absolute; width: 1.46vw; top: 39.81vw; left: 79.51vw; transition: top 0.5s;"> -->
 
                     <a href="">
                         <div id="hover-effect-container-forestry" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 78vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/forestr-icon.webp" id="forestry-image" style="position: absolute; width: 2.5vw; top: 0.95vw; left: 0.9vw; transition: transform 0.2s;">
 
-                            <p style="position: absolute; top: 2.8vw; left: 0.85vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; top: 2.8vw; left: 0.85vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Forestry
                             </p>
                         </div>
@@ -2662,17 +2726,19 @@
                             style="position: absolute; width: 0.9vw; height: 1.3vw; left: 79.8vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange-forestry-slider" style="position: absolute; top: 42.5vw; left: 76.8vw; transform: rotate(270deg); z-index: 100;">
                 </div>
 
                 <div id="bioenergy-section">
-                    <img src="Assets/Slider_Knob.webp" id="yellow-knob"
-                        style="position: absolute; width: 1.46vw; top: 39.81vw; left: 84.9vw; transition: top 0.5s;">
+                    <!-- <img src="Assets/Slider_Knob.webp" id="yellow-knob"
+                        style="position: absolute; width: 1.46vw; top: 39.81vw; left: 84.9vw; transition: top 0.5s;"> -->
 
                     <a href="">
                         <div id="hover-effect-container-bio" style="position: absolute; width: 4.4vw; height: 5vw; top: 34.2vw; left: 83.5vw; border: 0.1vw solid white; border-radius: 0.1vw; cursor: pointer;">
                             <img src="Assets/bio-energy-icon.webp" id="bio-image" style="position: absolute; width: 2vw; top: 0.7vw; left: 1.1vw; transition: transform 0.2s;">
 
-                            <p style="position: absolute; top: 2.8vw; left: 0.45vw; font-family: 'Roboto', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
+                            <p style="position: absolute; top: 2.8vw; left: 0.45vw; font-family: 'Helvetica', sans-serif; font-size: 0.7vw; font-weight: normal; text-align: center; color: #FFFFFF;">
                                 Bio-Energy
                             </p>
                         </div>
@@ -2695,6 +2761,8 @@
                             style="position: absolute; width: 0.9vw; height: 1.3vw; left: 85.2vw; top: 40vw; background-color: green; cursor: pointer; opacity: 0;">
                         </div>
                     </div>
+
+                    <input type="range" min="1" max="4" step="1" value="4" class="slider" id="myRange-bio-slider" style="position: absolute; top: 42.5vw; left: 82.1vw; transform: rotate(270deg); z-index: 100;">
                 </div>
             </div>
         </div>
@@ -2718,7 +2786,7 @@
                     </div>
 
                     <p
-                        style="position: absolute; width: 3.1vw; top: 42.2vw; left: 92.8vw; font-family: 'Roboto', sans-serif; font-size: 0.8vw; font-weight: normal; text-align: center; color: black;">
+                        style="position: absolute; width: 3.1vw; top: 42.2vw; left: 92.8vw; font-family: 'Helvetica', sans-serif; font-size: 0.8vw; font-weight: normal; text-align: center; color: black;">
                         RESET LEVERS
                     </p>
                 </div>
@@ -2735,17 +2803,18 @@
             <div id="background"
                 style="position: absolute; left: 27.8vw; top: 16.6vw; width: 47vw; height: 16.5vw; background-color: #FFFFFF; z-index: 120; border-radius: 0.5vw;">
                 <p
-                    style="text-align: center; margin-top: 5vw; margin-bottom: 0vw; font-family: Roboto; font-weight: bold; font-size: 1.3vw; color: #F0A800;">
-                    WELCOME TO My 2050 Carbon Calculator
+                    style="text-align: center; margin-top: 5vw; margin-bottom: 0vw; font-family: Helvetica; font-weight: bold; font-size: 1.3vw; color: #F0A800; line-height: 5%;">
+                    WELCOME TO My2050 Kenya
                 </p>
 
-                <p style="text-align: center; margin-top: 1.4vw; font-family: Roboto; font-size: 0.9vw;">
-                    My 2050  Carbon Emissions Calculator is an online tool that allows users to create instances that can be used to predict Kenya's CO2 GreenHouse Gas emissions to inform the necessary decisions that will help realize Kenya's NET ZERO emission targets by 2050.
+                <p style="text-align: center; margin-top: 1.4vw; font-family: Helvetica; font-size: 0.9vw; font-style: bold;">
+                    <br>My 2050  Carbon Emissions Calculator is an online tool that allows users to create instances <br> that can be used to predict Kenya's CO<sub>2</sub> greenhouse gas emissions to inform the necessary <br> decisions that will help realise Kenya’s journey to net zero emission targets by 2050.
                 </p>
+
 
                 <div onclick="closeFoatingCard1()"
                     style="position: absolute; left: 23.35vw; top: 13.3vw; width: 7vw; height: 1.65vw; border-radius: 0.2vw; background-color: #054170; cursor: pointer;">
-                    <p style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Roboto; color: white; font-size: 1vw;">
+                    <p style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Helvetica; color: white; font-size: 1vw;">
                         Next
                     </p>
                 </div>
@@ -2753,7 +2822,7 @@
                 <div onclick="closeForm()"
                     style="position: absolute; left: 14vw; top: 13.3vw; width: 7vw; height: 1.45vw; border-radius: 0.2vw; border: 0.15vw solid #054170; cursor: pointer;">
                     <p
-                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Roboto; font-size: 1vw;">
+                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Helvetica; font-size: 1vw;">
                         Skip Tour
                     </p>
                 </div>
@@ -2768,11 +2837,11 @@
                 </div>
 
                 <p
-                    style="text-align: center; margin-top: 2.4vw; margin-bottom: 0vw; font-family: Roboto; font-weight: bold; font-size: 1.3vw; color: #F0A800;">
+                    style="text-align: center; margin-top: 2.4vw; margin-bottom: 0vw; font-family: Helvetica; font-weight: bold; font-size: 1.3vw; color: #F0A800;">
                     Find your pathway by:
                 </p>
 
-                <ul style="margin-top: 1.4vw; margin-left: 0vw; font-family: Roboto; font-size: 0.9vw;">
+                <ul style="margin-top: 1.4vw; margin-left: 0vw; font-family: Helvetica; font-size: 0.9vw;">
                     <li>
                         Choosing your level of ambition from 1 (minimum effort) to 4 (extreme effort) for each of the
                         levers of decarbonisation at the bottom
@@ -2786,7 +2855,7 @@
                 <div onclick="closeFoatingCard2()"
                     style="position: absolute; left: 19vw; top: 11.3vw; width: 7vw; height: 1.65vw; border-radius: 0.2vw; background-color: #054170; cursor: pointer;">
                     <p
-                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Roboto; color: white; font-size: 1vw;">
+                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Helvetica; color: white; font-size: 1vw;">
                         Next
                     </p>
                 </div>
@@ -2794,7 +2863,7 @@
                 <div onclick="closeForm()"
                     style="position: absolute; left: 10vw; top: 11.3vw; width: 7vw; height: 1.45vw; border-radius: 0.2vw; border: 0.15vw solid #054170; cursor: pointer;">
                     <p
-                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Roboto; font-size: 1vw;">
+                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Helvetica; font-size: 1vw;">
                         Skip Tour
                     </p>
                 </div>
@@ -2805,17 +2874,17 @@
             <div id="background"
                 style="position: absolute; left: 51.5vw; top: 28.4vw; width: 38.4vw; height: 14.4vw; background-color: #FFFFFF; z-index: 120; border-radius: 0.5vw;">
                 <p
-                    style="text-align: center; margin-top: 2.5vw; margin-bottom: 0vw; font-family: Roboto; font-weight: bold; font-size: 1.25vw; color: #F0A800;">
-                    The Kenya Carbon Emission Reduction Tool (KCERT) 2050
+                    style="text-align: center; margin-top: 2.5vw; margin-bottom: 0vw; font-family: Helvetica; font-weight: bold; font-size: 1.25vw; color: #F0A800;">
+                    My2050 Kenya
                 </p>
 
                 <p
-                    style="margin-top: 0.8vw; margin-left: 3vw; font-family: Roboto; font-size: 0.9vw; line-height: 1.3vw;">
+                    style="margin-top: 0.8vw; margin-left: 3vw; font-family: Helvetica; font-size: 0.9vw; line-height: 1.3vw;">
                     There are 2 online versions of the calculator, a universal version called KCERT2050 <br> and a
                     detailed Excel version.
                 </p>
 
-                <ul style="margin-left: 3vw; font-family: Roboto; font-size: 0.9vw; line-height: 1.3vw;">
+                <ul style="margin-left: 3vw; font-family: Helvetica; font-size: 0.9vw; line-height: 1.3vw;">
                     <li>
                         <a href="https://kcert.ilabafrica.ac.ke/" target="_blank">
                             KCERT2050 Web Tool
@@ -2833,7 +2902,7 @@
                 <div onclick="closeFoatingCard3()"
                     style="position: absolute; left: 20.35vw; top: 11.7vw; width: 7vw; height: 1.65vw; border-radius: 0.2vw; background-color: #054170; cursor: pointer;">
                     <p
-                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Roboto; color: white; font-size: 1vw;">
+                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Helvetica; color: white; font-size: 1vw;">
                         Next
                     </p>
                 </div>
@@ -2841,32 +2910,32 @@
                 <div onclick="closeForm()"
                     style="position: absolute; left: 11vw; top: 11.7vw; width: 7vw; height: 1.45vw; border-radius: 0.2vw; border: 0.15vw solid #054170; cursor: pointer;">
                     <p
-                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Roboto; font-size: 1vw;">
+                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Helvetica; font-size: 1vw;">
                         Skip Tour
                     </p>
                 </div>
-            </div>
+            </div>Roboto
         </div>
 
         <div id="floating-card-4" style="display: none;">
             <div id="background"
                 style="position: absolute; left: 27.8vw; top: 16.6vw; width: 44.5vw; height: 16.5vw; background-color: #FFFFFF; z-index: 120; border-radius: 0.5vw;">
                 <p
-                    style="text-align: center; margin-top: 3vw; margin-bottom: 0vw; font-family: Roboto; font-weight: bold; font-size: 1.3vw; color: #F0A800;">
-                    The Kenya Carbon Emission Reduction Tool (KCERT) 2050
+                    style="text-align: center; margin-top: 3vw; margin-bottom: 0vw; font-family: Helvetica; font-weight: bold; font-size: 1.3vw; color: #F0A800;">
+                    My2050 Kenya
                 </p>
 
-                <p style="margin-top: 1.4vw; margin-left: 4vw; font-family: Roboto; font-size: 0.85vw;">
-                    Both versions contain levers of decarbonisation, 15 in KCERT2050 and 45 in the detailed version. You
-                    select your level of ambition of decarbonisation effort using the levers, ranging from Level 1 -
-                    minimal effort, to Level 4 - maximum effort. Popup descriptions explain what the levels represent in
+                <p style="margin-top: 1.4vw; margin-left: 1vw; font-family: Helvetica; font-size: 0.85vw; text-align: center;">
+                    Both versions contain levers of decarbonisation, 15 in My2050 Kenya and 45 in the detailed<br> version. You
+                    select your level of ambition of decarbonisation effort using the levers, ranging<br> from Level 1 -
+                    minimal effort, to Level 4 - maximum effort. Popup descriptions explain what<br> the levels represent in
                     terms of behavioural change or infrastructure investment.
                 </p>
 
                 <div onclick="closeFoatingCard4()"
                     style="position: absolute; left: 23.35vw; top: 13.3vw; width: 7vw; height: 1.65vw; border-radius: 0.2vw; background-color: #054170; cursor: pointer;">
                     <p
-                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Roboto; color: white; font-size: 1vw;">
+                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Helvetica; color: white; font-size: 1vw;">
                         Next
                     </p>
                 </div>
@@ -2874,7 +2943,7 @@
                 <div onclick="closeForm()"
                     style="position: absolute; left: 14vw; top: 13.3vw; width: 7vw; height: 1.45vw; border-radius: 0.2vw; border: 0.15vw solid #054170; cursor: pointer;">
                     <p
-                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Roboto; font-size: 1vw;">
+                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Helvetica; font-size: 1vw;">
                         Skip Tour
                     </p>
                 </div>
@@ -2885,11 +2954,11 @@
             <div id="background"
                 style="position: absolute; left: 12vw; top: 25vw; width: 38.3vw; height: 14vw; background-color: #FFFFFF; z-index: 120; border-radius: 0.5vw;">
                 <p
-                    style="text-align: center; margin-top: 3vw; margin-bottom: 0vw; font-family: Roboto; font-weight: bold; font-size: 1.3vw; color: #F0A800;">
+                    style="text-align: center; margin-top: 3vw; margin-bottom: 0vw; font-family: Helvetica; font-weight: bold; font-size: 1.3vw; color: #F0A800;">
                     The levels of ambition
                 </p>
 
-                <p style="margin-top: 1.4vw; margin-left: 3vw; font-family: Roboto; font-size: 0.85vw;">
+                <p style="margin-top: 1.4vw; margin-left: 0vw; font-family: Helvetica; font-size: 0.85vw; text-align: center; position: absolute;">
                     The levels of ambition are based on views expressed by over 100 expert stakeholders, including
                     academics, non-government organisations, industry bodies, operators and consultants. They don’t
                     reflect government policy but can be used to represent policy. </p>
@@ -2897,13 +2966,13 @@
                 <div onclick="closeForm()"
                     style="position: absolute; left: 16vw; top: 11.1vw; width: 7vw; height: 1.65vw; border-radius: 0.2vw; background-color: #054170; cursor: pointer;">
                     <p
-                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Roboto; color: white; font-size: 1vw;">
+                        style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Helvetica; color: white; font-size: 1vw;">
                         Next
                     </p>
                 </div>
 
                 <!-- <div onclick="closeForm()" style="position: absolute; left: 14vw; top: 13.3vw; width: 7vw; height: 1.45vw; border-radius: 0.2vw; border: 0.15vw solid #054170; cursor: pointer;">
-                        <p style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Roboto; font-size: 1vw;">
+                        <p style="text-align: center; margin-top: 0.9vw; line-height: 0vw; font-family: Helvetica; font-size: 1vw;">
                             Skip Tour
                         </p>
                     </div> -->
@@ -2912,6 +2981,31 @@
     </div>
 
     <script>
+        var meterInfoButton = document.getElementById("CO2-meter-pop-up-button");
+        var meterInfoPopUp = document.getElementById("CO2-meter-info-pop-up");
+        let isVisible = false; //Initial State is Hidden
+
+        meterInfoButton.addEventListener('click', function() {
+            if (isVisible) {
+                meterInfoPopUp.style.display = 'none';
+            } else {
+                meterInfoPopUp.style.display = 'block';
+            }
+
+            isVisible = !isVisible;
+        });
+
+
+        // //mouseover event listener (start) to amongUsButton
+        // meterInfoButton.addEventListener('mouseover', function() {
+        //     meterInfoPopUp.style.display = 'none';
+        // });
+
+        // //mouseout event listener (end) to amongUsButton
+        // meterInfoButton.addEventListener('mouseout', function() {
+        //     meterInfoPopUp.style.display = 'block';
+        // });
+
         function openForm() {
             document.getElementById("onboarding-screen").style.display = "block";
         }
@@ -3309,7 +3403,7 @@
             // transportDemandImage.style.top = '0.5vw';
             transportDemandImage.style.transform = 'scale(1.08)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainer.addEventListener('mouseout', function() {
             // transportDemandImage.style.top = '0.7vw';
@@ -3326,12 +3420,12 @@
         hoverEffectContainerlightvehicles.addEventListener('mouseover', function() {
             lightVehiclesImage.style.transform = 'scale(1.1)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainerlightvehicles.addEventListener('mouseout', function() {
             lightVehiclesImage.style.transform = 'scale(1)';
         });
-        
+
 
 
 
@@ -3342,13 +3436,13 @@
         hoverEffectContainerHousingAppliances.addEventListener('mouseover', function() {
             housingAppliancesImage.style.transform = 'scale(1.15)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainerHousingAppliances.addEventListener('mouseout', function() {
             housingAppliancesImage.style.transform = 'scale(1)';
         });
 
-        
+
 
 
         var hoverEffectContainerLightingAppliances = document.getElementById("hover-effect-container-lightingappliances");
@@ -3358,7 +3452,7 @@
         hoverEffectContainerLightingAppliances.addEventListener('mouseover', function() {
             lightingAppliancesImage.style.transform = 'scale(1.15)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainerLightingAppliances.addEventListener('mouseout', function() {
             lightingAppliancesImage.style.transform = 'scale(1)';
@@ -3374,7 +3468,7 @@
         hoverEffectContainerHotWater.addEventListener('mouseover', function() {
             hotWaterImage.style.transform = 'scale(1.15)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainerHotWater.addEventListener('mouseout', function() {
             hotWaterImage.style.transform = 'scale(1)';
@@ -3391,7 +3485,7 @@
         hoverEffectContainerCarbonIntensity.addEventListener('mouseover', function() {
             carbonIntensityImage.style.transform = 'scale(1.1)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainerCarbonIntensity.addEventListener('mouseout', function() {
             carbonIntensityImage.style.transform = 'scale(1)';
@@ -3407,7 +3501,7 @@
         hoverEffectContainerCarbonCapture.addEventListener('mouseover', function() {
             carbonCaptureImage.style.transform = 'scale(1.15)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainerCarbonCapture.addEventListener('mouseout', function() {
             carbonCaptureImage.style.transform = 'scale(1)';
@@ -3424,7 +3518,7 @@
         hoverEffectContainerHydro.addEventListener('mouseover', function() {
             hydroImage.style.transform = 'scale(1.15)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainerHydro.addEventListener('mouseout', function() {
             hydroImage.style.transform = 'scale(1)';
@@ -3441,7 +3535,7 @@
         hoverEffectContainerNuclear.addEventListener('mouseover', function() {
             nuclearImage.style.transform = 'scale(1.1)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainerNuclear.addEventListener('mouseout', function() {
             nuclearImage.style.transform = 'scale(1)';
@@ -3457,7 +3551,7 @@
         hoverEffectContainerWindmill.addEventListener('mouseover', function() {
             windmillImage.style.transform = 'scale(1.15)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainerWindmill.addEventListener('mouseout', function() {
             windmillImage.style.transform = 'scale(1)';
@@ -3473,7 +3567,7 @@
         hoverEffectContainerSolar.addEventListener('mouseover', function() {
             solarImage.style.transform = 'scale(1.1)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainerSolar.addEventListener('mouseout', function() {
             solarImage.style.transform = 'scale(1)';
@@ -3490,7 +3584,7 @@
         hoverEffectContainerGeothermal.addEventListener('mouseover', function() {
             geoImage.style.transform = 'scale(1.1)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainerGeothermal.addEventListener('mouseout', function() {
             geoImage.style.transform = 'scale(1)';
@@ -3506,7 +3600,7 @@
         hoverEffectContainerForestry.addEventListener('mouseover', function() {
             forestryImage.style.transform = 'scale(1.1)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainerForestry.addEventListener('mouseout', function() {
             forestryImage.style.transform = 'scale(1)';
@@ -3522,33 +3616,1110 @@
         hoverEffectContainerBio.addEventListener('mouseover', function() {
             bioImage.style.transform = 'scale(1.1)';
         });
-    
+
         //mouseout event listener to mathButton
         hoverEffectContainerBio.addEventListener('mouseout', function() {
             bioImage.style.transform = 'scale(1)';
         });
 
 
-        function moveup() {
-            //reset levers
-            knob.style.top = "45vw";
-            knob1.style.top = "45vw"
-            knob2.style.top = "45vw"
-            knob3.style.top = "45vw"
-            knob4.style.top = "45vw"
-            knob5.style.top = "45vw"
-            knob6.style.top = "45vw"
-            knob7.style.top = "45vw"
-            knob8.style.top = "45vw"
-            knob9.style.top = "45vw"
-            knob10.style.top = "45vw"
-            knob11.style.top = "45vw"
-            // knob12.style.top = "45vw"
-            knob13.style.top = "45vw"
-            knob14.style.top = "45vw"
 
-            example.style.top = "25vw"
-            //exampleText.innerText = "0";
+        //Slider
+        var slider = document.getElementById("myRange");
+        var techSlider = document.getElementById("myRange-technology-slider");
+        var housingAppliancesSlider = document.getElementById("myRange-housing-appliances-slider");
+        var lightingAppliancesSlider = document.getElementById("myRange-lighting-appliances-slider");
+        var hotwaterSlider = document.getElementById("myRange-hot-water-slider");
+        var carbonIntensitySlider = document.getElementById("myRange-carbon-intensity-slider");
+        var carbonCaptureSlider = document.getElementById("myRange-carbon-capture-slider");
+        var hydroElectricSlider = document.getElementById("myRange-hydro-electric-slider");
+        var nuclearSlider = document.getElementById("myRange-nuclear-slider");
+        var windSlider = document.getElementById("myRange-wind-slider");
+        var solarSlider = document.getElementById("myRange-solar-slider");
+        var geoSlider = document.getElementById("myRange-geothermal-slider");
+        var forestrySlider = document.getElementById("myRange-forestry-slider");
+        var bioSlider = document.getElementById("myRange-bio-slider");
+
+
+
+
+        //Travel Demand Slider
+        slider.oninput = function() {
+            if (this.value === "1") {
+                    //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 0;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 0;
+                tram.style.opacity = 1;
+
+                //Cars
+                blackCar.style.opacity = 1;
+                blackCar1.style.opacity = 1;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 1;
+                redCarHighway2.style.opacity = 1;
+                redCarHighway3.style.opacity = 1;
+
+                //Red Bus on Highway
+                redBusHighway.style.opacity = 0;
+                redBusHighway1.style.opacity = 0;
+
+                //Black Cars Highway Right Lane
+                blackCarRightLane.style.opacity = 0;
+                blackCarRightLane1.style.opacity = 0;
+                blackCarRightLane2.style.opacity = 0;
+                blackCarRightLane3.style.opacity = 0;
+
+                blueBusHighway.style.opacity = 0;
+                blackCarOverlay.style.opacity = 0;
+                greenCarOnHighway.style.opacity = 1;
+                blackCarOverlay1.style.opacity = 0;
+                greenCarOnHighwayLeftLane.style.opacity = 1;
+
+                busRightCorner.style.opacity = 1;
+
+                //Electric Bus
+                electricBusRightCornerElectric.style.opacity = 0;
+                electricBusRightLane.style.opacity = 0;
+                electricBusRightLane2.style.opacity = 0;
+
+                travel_demand = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                    //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 0;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 0;
+                tram.style.opacity = 1;
+
+                //Cars
+                blackCar.style.opacity = 1;
+                blackCar1.style.opacity = 1;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 1;
+                redCarHighway2.style.opacity = 1;
+                redCarHighway3.style.opacity = 0;
+
+                //Red Bus on Highway
+                redBusHighway.style.opacity = 1;
+                redBusHighway1.style.opacity = 0;
+
+                blueBusHighway.style.opacity = 1;
+                blackCarOverlay.style.opacity = 0;
+                greenCarOnHighway.style.opacity = 1;
+                blackCarOverlay1.style.opacity = 0;
+                greenCarOnHighwayLeftLane.style.opacity = 0;
+
+                busRightCorner.style.opacity = 1;
+
+                //Electric Bus
+                electricBusRightCornerElectric.style.opacity = 0;
+                electricBusRightLane.style.opacity = 0;
+                electricBusRightLane2.style.opacity = 0;
+
+                travel_demand = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                    //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 0;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 1;
+                tram.style.opacity = 1;
+
+                //Cars
+                blackCar.style.opacity = 1;
+                blackCar1.style.opacity = 0;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 0;
+                redCarHighway2.style.opacity = 0;
+                redCarHighway3.style.opacity = 1;
+
+                //Red Bus on Highway
+                redBusHighway.style.opacity = 1;
+                redBusHighway1.style.opacity = 1;
+
+                blueBusHighway.style.opacity = 1;
+                blackCarOverlay.style.opacity = 0;
+                greenCarOnHighway.style.opacity = 1;
+                blackCarOverlay1.style.opacity = 0;
+                greenCarOnHighwayLeftLane.style.opacity = 0;
+
+                busRightCorner.style.opacity = 1;
+
+                //Electric Bus
+                electricBusRightCornerElectric.style.opacity = 0;
+                electricBusRightLane.style.opacity = 0;
+                electricBusRightLane2.style.opacity = 0;
+
+                travel_demand = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                    //Planes
+                leftSidePlane.style.opacity = 1;
+                horizontalPlane.style.opacity = 1;
+
+                //Trains
+                leftTrain.style.opacity = 1;
+                rightTrain.style.opacity = 1;
+                tram.style.opacity = 1;
+
+                //Cars
+                blackCar.style.opacity = 0;
+                blackCar1.style.opacity = 1;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 0;
+                redCarHighway2.style.opacity = 0;
+                redCarHighway3.style.opacity = 0;
+
+                //Red Bus on Highway
+                redBusHighway.style.opacity = 1;
+                redBusHighway1.style.opacity = 1;
+
+                blueBusHighway.style.opacity = 1;
+                blackCarOverlay.style.opacity = 1;
+                greenCarOnHighway.style.opacity = 1;
+                blackCarOverlay1.style.opacity = 1;
+                greenCarOnHighwayLeftLane.style.opacity = 1;
+
+                busRightCorner.style.opacity = 1;
+
+                //Electric Bus
+                electricBusRightCornerElectric.style.opacity = 0;
+                electricBusRightLane.style.opacity = 0;
+                electricBusRightLane2.style.opacity = 0;
+
+                travel_demand = 4.0
+                getValueWb();
+            }
+        };
+
+
+        //Technology Slider
+        techSlider.oninput = function() {
+            if (this.value === "1") {
+                greyCar1.style.opacity = 1;
+                electricCar1.style.opacity = 0;
+                electricBlue.style.opacity = 0;
+                greycarNearKcc.style.opacity = 1;
+                parking.style.opacity = 1;
+                parking.style.top = "26.4vw";
+                secondGreyCarKccElectric.style.opacity = 0;
+                redCarRightSideElectric.style.opacity = 0;
+                redCarRightSide.style.opacity = 1;
+
+                //Black Cars Highway Right Lane
+                blackCarRightLane.style.opacity = 0;
+                blackCarRightLane1.style.opacity = 0;
+                blackCarRightLane2.style.opacity = 0;
+                blackCarRightLane3.style.opacity = 0;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 1;
+                redCarHighway2.style.opacity = 1;
+                redCarHighway3.style.opacity = 1;
+
+                //Green Car Highway Left Lane
+                greenCarHighwayLeftLane.style.opacity = 0;
+                greenCarHighwayLeftLane1.style.opacity = 0;
+                greenCarHighwayLeftLane2.style.opacity = 0;
+                greenCarHighwayLeftLane3.style.opacity = 0;
+
+                //Green Car Highway Right LANE
+                greenCarHighRightLane.style.opacity = 0;
+                greenCarHighRightLane1.style.opacity = 0;
+                greenCarHighRightLane2.style.opacity = 0;
+                greenCarHighRightLane3.style.opacity = 0;
+
+                //Trucks
+                blueLorryElectric.style.opacity = 0;
+                redLorryElectric.style.opacity = 0;
+                redLorry.style.opacity = 1;
+                greenLorryElectric.style.opacity = 0;
+
+                //Bus
+                electricBusRightCornerElectric.style.opacity = 0;
+                electricBusRightLane.style.opacity = 0;
+                electricBusRightLane2.style.opacity = 0;
+
+                //Charging Stations
+                chargingStationLevel2.style.opacity = 0;
+                chargingStationLevel3.style.opacity = 0;
+                chargingStationLevel4.style.opacity = 0;
+
+
+                //from heavy vehicles
+                // knob12.style.top = "45vw"
+                blueLorry.style.opacity = 0;
+                greenLorry.style.opacity = 0;
+
+                //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 0;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 0;
+                tram.style.opacity = 0;
+
+                light_vehicles = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                greyCar1.style.opacity = 0;
+                greyCar1.style.top = "10vw";
+                electricCar1.style.opacity = 1;
+                greycarNearKcc.style.opacity = 0;
+                electricBlue.style.opacity = 1;
+                parking.style.top = "22vw";
+                parking.style.opacity = 0;
+                secondGreyCarKccElectric.style.opacity = 0;
+                redCarRightSideElectric.style.opacity = 0;
+                redCarRightSide.style.opacity = 1;
+
+                //Black Cars Highway Right Lane
+                blackCarRightLane.style.opacity = 0;
+                blackCarRightLane1.style.opacity = 0;
+                blackCarRightLane2.style.opacity = 0;
+                blackCarRightLane3.style.opacity = 0;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 1;
+                redCarHighway2.style.opacity = 1;
+                redCarHighway3.style.opacity = 1;
+
+                //Green Car Highway Left Lane
+                greenCarHighwayLeftLane.style.opacity = 0;
+                greenCarHighwayLeftLane1.style.opacity = 0;
+                greenCarHighwayLeftLane2.style.opacity = 0;
+                greenCarHighwayLeftLane3.style.opacity = 0;
+
+                //Green Car Highway Right LANE
+                greenCarHighRightLane.style.opacity = 0;
+                greenCarHighRightLane1.style.opacity = 0;
+                greenCarHighRightLane2.style.opacity = 0;
+                greenCarHighRightLane3.style.opacity = 0;
+
+                //Trucks
+                blueLorryElectric.style.opacity = 0;
+                redLorryElectric.style.opacity = 0;
+                redLorry.style.opacity = 1;
+                greenLorryElectric.style.opacity = 0;
+
+                //Bus
+                electricBusRightCornerElectric.style.opacity = 1;
+                electricBusRightLane.style.opacity = 1;
+                electricBusRightLane2.style.opacity = 1;
+
+                //Charging Stations
+                chargingStationLevel2.style.opacity = 1;
+                chargingStationLevel3.style.opacity = 0;
+                chargingStationLevel4.style.opacity = 0;
+
+
+                //from heavy vehicles
+                // knob12.style.top = "42.65vw"
+                blueLorry.style.opacity = 1;
+                greenLorry.style.opacity = 0;
+
+                //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 0;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 0;
+                tram.style.opacity = 0;
+
+                light_vehicles = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                blackCarOverlay.style.opacity = 1;
+                greenCarOnHighway.style.opacity = 0;
+                blackCarOverlay1.style.opacity = 1;
+                greenCarOnHighwayLeftLane.style.opacity = 0;
+                electricCar1.style.opacity = 1;
+                greyCar1.style.opacity = 0;
+                electricBlue.style.opacity = 1;
+                greycarNearKcc.style.opacity = 0;
+                secondGreyCarKccElectric.style.opacity = 0;
+                redCarRightSideElectric.style.opacity = 0;
+                redCarRightSide.style.opacity = 1;
+
+                //Black Cars Highway Right Lane
+                blackCarRightLane.style.opacity = 0;
+                blackCarRightLane1.style.opacity = 0;
+                blackCarRightLane2.style.opacity = 0;
+                blackCarRightLane3.style.opacity = 0;
+
+                //Red Cars Highway Right Lane
+                redCarHighway.style.opacity = 1;
+                redCarHighway1.style.opacity = 1;
+                redCarHighway2.style.opacity = 1;
+                redCarHighway3.style.opacity = 1;
+
+                //Green Car Highway Left Lane
+                greenCarHighwayLeftLane.style.opacity = 0;
+                greenCarHighwayLeftLane1.style.opacity = 0;
+                greenCarHighwayLeftLane2.style.opacity = 0;
+                greenCarHighwayLeftLane3.style.opacity = 0;
+
+                //Green Car Highway Right LANE
+                greenCarHighRightLane.style.opacity = 0;
+                greenCarHighRightLane1.style.opacity = 0;
+                greenCarHighRightLane2.style.opacity = 0;
+                greenCarHighRightLane3.style.opacity = 0;
+
+                //Trucks
+                blueLorryElectric.style.opacity = 1;
+                redLorryElectric.style.opacity = 1;
+                redLorry.style.opacity = 0;
+                greenLorryElectric.style.opacity = 1;
+
+                //Bus
+                electricBusRightCornerElectric.style.opacity = 1;
+                electricBusRightLane.style.opacity = 1;
+                electricBusRightLane2.style.opacity = 1;
+
+                //Charging Stations
+                chargingStationLevel2.style.opacity = 1;
+                chargingStationLevel3.style.opacity = 1;
+                chargingStationLevel4.style.opacity = 0;
+
+
+                //from heavy vehicles
+                // knob12.style.top = "41.1vw"
+                blueLorry.style.opacity = 1;
+                greenLorry.style.opacity = 1;
+
+                //Planes
+                leftSidePlane.style.opacity = 0;
+                horizontalPlane.style.opacity = 1;
+
+                //Trains
+                leftTrain.style.opacity = 0;
+                rightTrain.style.opacity = 1;
+                tram.style.opacity = 0;
+
+                light_vehicles = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                blackCarOverlay.style.opacity = 0;
+            greenCarOnHighway.style.opacity = 1;
+            blackCarOverlay1.style.opacity = 0;
+            greenCarOnHighwayLeftLane.style.opacity = 1;
+            electricBlue.style.opacity = 1;
+            electricCar1.style.opacity = 1;
+            greyCar1.style.opacity = 0;
+            greycarNearKcc.style.opacity = 0;
+            secondGreyCarKccElectric.style.opacity = 1;
+            redCarRightSideElectric.style.opacity = 1;
+            redCarRightSide.style.opacity = 0;
+
+            //Black Cars Highway Right Lane
+            blackCarRightLane.style.opacity = 1;
+            blackCarRightLane1.style.opacity = 1;
+            blackCarRightLane2.style.opacity = 1;
+            blackCarRightLane3.style.opacity = 1;
+
+            //Red Cars Highway Right Lane
+            redCarHighway.style.opacity = 1;
+            redCarHighway1.style.opacity = 1;
+            redCarHighway2.style.opacity = 1;
+            redCarHighway3.style.opacity = 1;
+
+            //Green Car Highway Left Lane
+            greenCarHighwayLeftLane.style.opacity = 1;
+            greenCarHighwayLeftLane1.style.opacity = 1;
+            greenCarHighwayLeftLane2.style.opacity = 1;
+            greenCarHighwayLeftLane3.style.opacity = 1;
+
+            //Green Car Highway Right LANE
+            greenCarHighRightLane.style.opacity = 1;
+            greenCarHighRightLane1.style.opacity = 1;
+            greenCarHighRightLane2.style.opacity = 1;
+            greenCarHighRightLane3.style.opacity = 1;
+
+            //Red Cars Highway Right Lane
+            redCarHighway.style.opacity = 0;
+            redCarHighway1.style.opacity = 0;
+            redCarHighway2.style.opacity = 0;
+            redCarHighway3.style.opacity = 0;
+
+            //Trucks
+            blueLorryElectric.style.opacity = 1;
+            redLorryElectric.style.opacity = 1;
+            redLorry.style.opacity = 0;
+            greenLorryElectric.style.opacity = 1;
+
+            //Bus
+            electricBusRightCornerElectric.style.opacity = 1;
+            electricBusRightLane.style.opacity = 1;
+            electricBusRightLane2.style.opacity = 1;
+
+            //Charging Stations
+            chargingStationLevel2.style.opacity = 1;
+            chargingStationLevel3.style.opacity = 1;
+            chargingStationLevel4.style.opacity = 1;
+
+
+            //from heavy vehicles
+            // knob12.style.top = "39.81vw"
+            blueLorry.style.opacity = 1;
+            greenLorry.style.opacity = 1;
+
+            //Planes
+            leftSidePlane.style.opacity = 1;
+            horizontalPlane.style.opacity = 1;
+
+            //Trains
+            leftTrain.style.opacity = 1;
+            rightTrain.style.opacity = 1;
+            tram.style.opacity = 1;
+
+            light_vehicles = 4.0
+            getValueWb();
+            }
+        };
+
+
+
+        //Housing Appliances Slider
+        housingAppliancesSlider.oninput = function() {
+            if (this.value === "1") {
+                HouseAppliancesLV4.style.opacity = 0;
+                HouseAppliancesLV3.style.opacity = 0;
+                HouseAppliancesLV2.style.opacity = 0;
+                HouseAppliancesLV1.style.opacity = 1;
+
+                behaviour = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                HouseAppliancesLV4.style.opacity = 0;
+                HouseAppliancesLV3.style.opacity = 0;
+                HouseAppliancesLV2.style.opacity = 1;
+                HouseAppliancesLV1.style.opacity = 0;
+
+                behaviour = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                HouseAppliancesLV4.style.opacity = 0;
+                HouseAppliancesLV3.style.opacity = 1;
+                HouseAppliancesLV2.style.opacity = 0;
+                HouseAppliancesLV1.style.opacity = 0;
+
+                behaviour = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                HouseAppliancesLV4.style.opacity = 1;
+                HouseAppliancesLV3.style.opacity = 0;
+                HouseAppliancesLV2.style.opacity = 0;
+                HouseAppliancesLV1.style.opacity = 0;
+
+                behaviour = 4.0
+                getValueWb();
+            }
+        };
+
+
+        //Lighting Appliances Slider
+        lightingAppliancesSlider.oninput = function() {
+            if (this.value === "1") {
+                insulationLv1.style.opacity = 1;
+                insulationLv1.style.top = "0.2vw"
+
+                insulationLv2.style.opacity = 0;
+                insulationLv2.style.top = "-1vw"
+
+                insulationLv3.style.opacity = 0;
+                insulationLv3.style.top = "-1vw"
+
+                insulationLv4.style.opacity = 0;
+                insulationLv4.style.top = "-1vw"
+
+                efficiency = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                insulationLv1.style.opacity = 0;
+                insulationLv1.style.top = "-1vw"
+
+                insulationLv2.style.opacity = 1;
+                insulationLv2.style.top = "0.2vw"
+
+                insulationLv3.style.opacity = 0;
+                insulationLv3.style.top = "-1vw"
+
+                insulationLv4.style.opacity = 0;
+                insulationLv4.style.top = "-1vw"
+
+                efficiency = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                insulationLv1.style.opacity = 0;
+                insulationLv1.style.top = "-1vw"
+
+                insulationLv2.style.opacity = 0;
+                insulationLv2.style.top = "-1vw"
+
+                insulationLv3.style.opacity = 1;
+                insulationLv3.style.top = "0.2vw"
+
+                insulationLv4.style.opacity = 0;
+                insulationLv4.style.top = "-1vw"
+
+                efficiency = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                insulationLv1.style.opacity = 0;
+                insulationLv1.style.top = "-1vw"
+
+                insulationLv2.style.opacity = 0;
+                insulationLv2.style.top = "-1vw"
+
+                insulationLv3.style.opacity = 0;
+                insulationLv3.style.top = "-1vw"
+
+                insulationLv4.style.opacity = 1;
+                insulationLv4.style.top = "0.2vw"
+
+                efficiency = 4.0
+                getValueWb();
+            }
+        };
+
+
+        //hotwaterSlider
+        hotwaterSlider.oninput = function() {
+            if (this.value === "1") {
+                pipesLevel2.style.top = "-1vw"
+                pipesLevel2.style.opacity = 0;
+
+                pipesLevel3.style.top = "-1vw"
+                pipesLevel3.style.opacity = 0;
+
+                pipesLevel4.style.top = "-1vw"
+                pipesLevel4.style.opacity = 0;
+
+                heating_system = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                pipesLevel2.style.opacity = 1;
+                pipesLevel2.style.top = "0.55vw "
+
+                pipesLevel3.style.top = "-1vw"
+                pipesLevel3.style.opacity = 0;
+
+                pipesLevel4.style.top = "-1vw"
+                pipesLevel4.style.opacity = 0;
+
+                heating_system = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                pipesLevel2.style.opacity = 1;
+                pipesLevel2.style.top = "0.55vw"
+
+                pipesLevel3.style.opacity = 1;
+                pipesLevel3.style.top = "0.55vw"
+
+                pipesLevel4.style.top = "-1vw"
+                pipesLevel4.style.opacity = 0;
+
+                heating_system = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                pipesLevel2.style.opacity = 1;
+                pipesLevel2.style.top = "0.55vw "
+
+                pipesLevel3.style.opacity = 1;
+                pipesLevel3.style.top = "0.55vw"
+
+                pipesLevel4.style.opacity = 1;
+                pipesLevel4.style.top = "0.55vw"
+
+                heating_system = 4.0
+                getValueWb();
+            }
+        };
+
+
+        //carbonIntensitySlider
+        carbonIntensitySlider.oninput = function() {
+            if (this.value === "1") {
+                carbon_intensity = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                carbon_intensity = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                carbon_intensity = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                carbon_intensity = 4.0
+                getValueWb();
+            }
+        };
+
+
+
+        //carbonCaptureSlider
+        carbonCaptureSlider.oninput = function() {
+            if (this.value === "1") {
+                carbonCapture2.style.opacity = 0;
+                carbonCapture3.style.opacity = 0;
+                carbonCapture4.style.opacity = 0;
+                smoke2.style.display = "block";
+                smoke3.style.display = "block";
+                smoke4.style.display = "block";
+                carbon_capture = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                carbonCapture2.style.opacity = 1;
+                carbonCapture3.style.opacity = 0;
+                carbonCapture4.style.opacity = 0;
+                smoke2.style.display = "none";
+                smoke3.style.display = "block";
+                smoke4.style.display = "block";
+                carbon_capture = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                carbonCapture2.style.opacity = 0;
+                carbonCapture3.style.opacity = 1;
+                carbonCapture4.style.opacity = 0;
+                smoke2.style.display = "none";
+                smoke3.style.display = "none";
+                smoke4.style.display = "block";
+                carbon_capture = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                carbonCapture2.style.opacity = 0;
+                carbonCapture3.style.opacity = 0;
+                carbonCapture4.style.opacity = 1;
+                smoke2.style.display = "none";
+                smoke3.style.display = "none";
+                smoke4.style.display = "none";
+                carbon_capture = 4.0
+                getValueWb();
+            }
+        };
+
+
+
+        //hydroElectricSlider
+        hydroElectricSlider.oninput = function() {
+            if (this.value === "1") {
+                hydroelectric4.style.opacity = 0;
+                hydroelectric3.style.opacity = 0;
+                hydroelectric2.style.opacity = 1;
+                hepPowerlineStraight1.style.opacity = 1;
+                hepPowerlineStraight2.style.opacity = 0;
+                hepPowerlineStraight3.style.opacity = 0;
+                hepPowerlineStraight4.style.opacity = 0;
+                hydro_electric = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                hydroelectric4.style.opacity = 0;
+                hydroelectric3.style.opacity = 0;
+                hydroelectric2.style.opacity = 1;
+                hepPowerlineStraight1.style.opacity = 1;
+                hepPowerlineStraight2.style.opacity = 1;
+                hepPowerlineStraight3.style.opacity = 0;
+                hepPowerlineStraight4.style.opacity = 0;
+                hydro_electric = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                hydroelectric4.style.opacity = 0;
+                hydroelectric3.style.opacity = 1;
+                hydroelectric2.style.opacity = 0;
+                hepPowerlineStraight1.style.opacity = 1;
+                hepPowerlineStraight2.style.opacity = 1;
+                hepPowerlineStraight3.style.opacity = 1;
+                hepPowerlineStraight4.style.opacity = 0;
+                hydro_electric = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                hydroelectric4.style.opacity = 1;
+                hydroelectric3.style.opacity = 0;
+                hydroelectric2.style.opacity = 0;
+                hepPowerlineStraight1.style.opacity = 1;
+                hepPowerlineStraight2.style.opacity = 1;
+                hepPowerlineStraight3.style.opacity = 1;
+                hepPowerlineStraight4.style.opacity = 1;
+                hydro_electric = 4.0
+                getValueWb();
+            }
+        };
+
+
+
+
+        //nuclearSlider
+        nuclearSlider.oninput = function() {
+            if (this.value === "1") {
+                nuclearlv1.style.opacity = 0;
+                nuclearlv2.style.opacity = 0;
+                nuclearlv3.style.opacity = 0;
+                nuclearPowerLineStraight1.style.opacity = 0;
+                nuclearPowerLineStraight2.style.opacity = 0;
+                nuclearPowerLineStraight3.style.opacity = 0;
+                nuclearPowerLineStraight4.style.opacity = 0;
+                nuclearStraightPowerline.style.opacity = 0;
+                nuclearSmokeEffect.style.opacity = 0;
+                nuclear = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                nuclearlv1.style.opacity = 1;
+                nuclearlv2.style.opacity = 0;
+                nuclearlv3.style.opacity = 0;
+                nuclearPowerLineStraight1.style.opacity = 1;
+                nuclearPowerLineStraight2.style.opacity = 1;
+                nuclearPowerLineStraight3.style.opacity = 0;
+                nuclearPowerLineStraight4.style.opacity = 0;
+                nuclearStraightPowerline.style.opacity = 1;
+                nuclearSmokeEffect.style.opacity = 1;
+                nuclear = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                nuclearlv1.style.opacity = 0;
+                nuclearlv2.style.opacity = 1;
+                nuclearlv3.style.opacity = 0;
+                nuclearPowerLineStraight1.style.opacity = 1;
+                nuclearPowerLineStraight2.style.opacity = 1;
+                nuclearPowerLineStraight3.style.opacity = 1;
+                nuclearPowerLineStraight4.style.opacity = 0;
+                nuclearStraightPowerline.style.opacity = 1;
+                nuclearSmokeEffect.style.opacity = 1;
+                nuclear = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                nuclearlv1.style.opacity = 1;
+                nuclearlv2.style.opacity = 1;
+                nuclearlv3.style.opacity = 1;
+                nuclearPowerLineStraight1.style.opacity = 1;
+                nuclearPowerLineStraight2.style.opacity = 1;
+                nuclearPowerLineStraight3.style.opacity = 1;
+                nuclearPowerLineStraight4.style.opacity = 1;
+                nuclearStraightPowerline.style.opacity = 1;
+                nuclearSmokeEffect.style.opacity = 1;
+                nuclear = 4.0
+                getValueWb();
+            }
+        };
+
+
+        //windSlider
+        windSlider.oninput = function() {
+            if (this.value === "1") {
+                windTurbineStatic1.style.opacity = 1;
+                windTurbineStatic2.style.opacity = 0;
+                windTurbineStatic3.style.opacity = 0;
+                windTurbineStatic4.style.opacity = 0;
+                wind = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                windTurbineStatic1.style.opacity = 1;
+                windTurbineStatic2.style.opacity = 1;
+                windTurbineStatic3.style.opacity = 0;
+                windTurbineStatic4.style.opacity = 0;
+                wind = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                windTurbineStatic1.style.opacity = 1;
+                windTurbineStatic2.style.opacity = 1;
+                windTurbineStatic3.style.opacity = 1;
+                windTurbineStatic4.style.opacity = 0;
+                wind = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                windTurbineStatic1.style.opacity = 1;
+                windTurbineStatic2.style.opacity = 1;
+                windTurbineStatic3.style.opacity = 1;
+                windTurbineStatic4.style.opacity = 1;
+                wind = 4.0
+                getValueWb();
+            }
+        };
+
+
+
+
+        //solarSlider
+        solarSlider.oninput = function() {
+            if (this.value === "1") {
+                parliamentSolarPanels.style.opacity = 0;
+                greenBuildingSolarPanels.style.opacity = 0;
+                farmHouseSolarPanels.style.opacity = 0;
+                foregroundBuildingSolarPanels.style.opacity = 0;
+                solar = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                parliamentSolarPanels.style.opacity = 1;
+                greenBuildingSolarPanels.style.opacity = 0;
+                farmHouseSolarPanels.style.opacity = 0;
+                foregroundBuildingSolarPanels.style.opacity = 0;
+                solar = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                parliamentSolarPanels.style.opacity = 1;
+                greenBuildingSolarPanels.style.opacity = 1;
+                farmHouseSolarPanels.style.opacity = 0;
+                foregroundBuildingSolarPanels.style.opacity = 0;
+                solar = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                parliamentSolarPanels.style.opacity = 1;
+                greenBuildingSolarPanels.style.opacity = 1;
+                farmHouseSolarPanels.style.opacity = 1;
+                foregroundBuildingSolarPanels.style.opacity = 1;
+                solar = 4.0
+                getValueWb();
+            }
+        };
+
+
+
+
+        //geoSlider
+        geoSlider.oninput = function() {
+            if (this.value === "1") {
+                geothermal1.style.opacity = 1;
+                geothermal2.style.opacity = 0;
+                geothermal3.style.opacity = 0;
+                geothermal4.style.opacity = 0;
+                geoPowerLineStraight1.style.opacity = 1;
+                geoPowerLineStraight2.style.opacity = 0;
+                geoPowerLineStraight3.style.opacity = 0;
+                geoPowerLineStraight4.style.opacity = 0;
+                wave_tidal = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                geothermal1.style.opacity = 0;
+                geothermal2.style.opacity = 1;
+                geothermal3.style.opacity = 0;
+                geothermal4.style.opacity = 0;
+                geoPowerLineStraight1.style.opacity = 1;
+                geoPowerLineStraight2.style.opacity = 1;
+                geoPowerLineStraight3.style.opacity = 0;
+                geoPowerLineStraight4.style.opacity = 0;
+                wave_tidal = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                geothermal1.style.opacity = 0;
+                geothermal2.style.opacity = 0;
+                geothermal3.style.opacity = 1;
+                geothermal4.style.opacity = 0;
+                geoPowerLineStraight1.style.opacity = 1;
+                geoPowerLineStraight2.style.opacity = 1;
+                geoPowerLineStraight3.style.opacity = 1;
+                geoPowerLineStraight4.style.opacity = 0;
+                wave_tidal = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                geothermal1.style.opacity = 0;
+                geothermal2.style.opacity = 0;
+                geothermal3.style.opacity = 0;
+                geothermal4.style.opacity = 1;
+                geoPowerLineStraight1.style.opacity = 1;
+                geoPowerLineStraight2.style.opacity = 1;
+                geoPowerLineStraight3.style.opacity = 1;
+                geoPowerLineStraight4.style.opacity = 1;
+                wave_tidal = 4.0
+                getValueWb();
+            }
+        };
+
+
+
+
+        //forestrySlider
+        forestrySlider.oninput = function() {
+            if (this.value === "1") {
+                forest1.style.opacity = 1;
+                forest2.style.opacity = 0;
+                forest3.style.opacity = 0;
+                forest4.style.opacity = 0;
+                forestry = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                forest1.style.opacity = 0;
+                forest2.style.opacity = 1;
+                forest3.style.opacity = 0;
+                forest4.style.opacity = 0;
+                forestry = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                forest1.style.opacity = 0;
+                forest2.style.opacity = 0;
+                forest3.style.opacity = 1;
+                forest4.style.opacity = 0;
+                forestry = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                forest1.style.opacity = 0;
+                forest2.style.opacity = 0;
+                forest3.style.opacity = 0;
+                forest4.style.opacity = 1;
+                forestry = 4.0
+                getValueWb();
+            }
+        };
+
+
+
+
+        //bioSlider
+        bioSlider.oninput = function() {
+            if (this.value === "1") {
+                bioEnergy1.style.opacity = 1;
+                bioEnergy2.style.opacity = 0;
+                bioEnergy3.style.opacity = 0;
+                bioEnergy4.style.opacity = 0;
+                bioenergy = 1.0
+                getValueWb();
+            }
+
+            else if (this.value === "2") {
+                bioEnergy1.style.opacity = 0;
+                bioEnergy2.style.opacity = 1;
+                bioEnergy3.style.opacity = 0;
+                bioEnergy4.style.opacity = 0;
+                bioenergy = 2.0
+                getValueWb();
+            }
+
+            else if (this.value === "3") {
+                bioEnergy1.style.opacity = 0;
+                bioEnergy2.style.opacity = 0;
+                bioEnergy3.style.opacity = 1;
+                bioEnergy4.style.opacity = 0;
+                bioenergy = 3.0
+                getValueWb();
+            }
+
+            else if (this.value === "4") {
+                bioEnergy1.style.opacity = 0;
+                bioEnergy2.style.opacity = 0;
+                bioEnergy3.style.opacity = 0;
+                bioEnergy4.style.opacity = 1;
+                bioenergy = 4.0
+                getValueWb();
+            }
+        };
+
+
+
+
+        function moveup() {
+            //reset sliders
+            slider.value = 1;
+            techSlider.value = 1;
+            housingAppliancesSlider.value = 1;
+            lightingAppliancesSlider.value = 1;
+            hotwaterSlider.value = 1;
+            carbonIntensitySlider.value = 1;
+            carbonCaptureSlider.value = 1;
+            hydroElectricSlider.value = 1;
+            nuclearSlider.value = 1;
+            windSlider.value = 1;
+            solarSlider.value = 1;
+            geoSlider.value = 1;
+            forestrySlider.value = 1;
+            bioSlider.value = 1;
+
 
             //nuclear-section
             nuclearlv1.style.opacity = 0;
@@ -3559,6 +4730,7 @@
             nuclearPowerLineStraight3.style.opacity = 0;
             nuclearPowerLineStraight4.style.opacity = 0;
             nuclearStraightPowerline.style.opacity = 0;
+            nuclearSmokeEffect.style.opacity = 0;
 
             //Bioenergy
             bioEnergy1.style.opacity = 1;
