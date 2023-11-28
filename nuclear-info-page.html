@@ -633,7 +633,7 @@
 
     <div id="section-1">
       <img
-        src="images/Nuclear.png"
+        src="images/Nuclear.webp"
         style="position: absolute; width: 100vw; top: 5vw; left: -0.1vw"
       />
 
@@ -721,7 +721,7 @@
             "
           ></div>
 
-          <p
+          <p id="ambitionlevelinfo"
             style="
               position: absolute;
               left: 29.85vw;
@@ -735,7 +735,7 @@
               line-height: 2.4vw;
             "
           >
-            2
+            
           </p>
         </div>
       </div>
@@ -954,5 +954,13 @@
         applied.
       </p>
     </div>
+
+    <script>
+      const searchParams = new URLSearchParams(window.location.search);
+
+      var nuclearAmbitionLeverNumber = searchParams.get('nuclearAmbitionLeverNumber');
+
+      document.getElementById("ambitionlevelinfo").innerText = nuclearAmbitionLeverNumber;
+  </script>
   </body>
 </html>

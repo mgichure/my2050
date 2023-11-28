@@ -654,7 +654,7 @@
 
     <div id="section-1">
       <img
-        src="images/Hydro.png"
+        src="images/Hydro.webp"
         style="position: absolute; width: 100vw; top: 5vw; left: -0.1vw"
       />
 
@@ -742,7 +742,7 @@
             "
           ></div>
 
-          <p
+          <p id="ambitionlevelinfo"
             style="
               position: absolute;
               left: 29.85vw;
@@ -756,7 +756,7 @@
               line-height: 2.4vw;
             "
           >
-            2
+            
           </p>
         </div>
       </div>
@@ -997,5 +997,13 @@
         energy future.
       </p>
     </div>
+
+    <script>
+      const searchParams = new URLSearchParams(window.location.search);
+
+      var hepAmbitionLeverNumber = searchParams.get('hepAmbitionLeverNumber');
+
+      document.getElementById("ambitionlevelinfo").innerText = hepAmbitionLeverNumber;
+  </script>
   </body>
 </html>

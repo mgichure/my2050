@@ -232,8 +232,8 @@
                     <div id="number-2-background" style="position: absolute; left: 28.2vw; width: 4.4vw; height: 2.6vw; top: 41.5vw; background-color: #054170; border-radius: 0.2vw;">
                     </div>
 
-                    <p style="position: absolute; left: 29.85vw; top: 39.8vw; width: 54vw; font-family: 'Roboto', sans-serif; font-size: 1.9vw; font-weight: 600; color: #F0A828; z-index: 10; line-height: 2.4vw;">
-                        2
+                    <p id="ambitionlevelinfo" style="position: absolute; left: 29.85vw; top: 39.8vw; width: 54vw; font-family: 'Roboto', sans-serif; font-size: 1.9vw; font-weight: 600; color: #F0A828; z-index: 10; line-height: 2.4vw;">
+                        4
                     </p>
                 </div>
             </div>
@@ -304,5 +304,13 @@
                 Transport emissions depend on the demand for travel, but also the carbon intensity of the vehicles used to meet that demand. You can reduce carbon intensity by shifting to electric vehicles using the Light Vehicles and Heavy Vehicles levers, and by making electricity generation lower carbon using the Electricity levers for nuclear and renewables, or the Carbon Capture lever to decarbonise electricity produced from fossil fuels.
             </p>
         </div>
+
+        <script>
+            const searchParams = new URLSearchParams(window.location.search);
+
+            var ambitionLeverNumber = searchParams.get('ambitionLeverNumber');
+
+            document.getElementById("ambitionlevelinfo").innerText = ambitionLeverNumber;
+        </script>
     </body>
 </html>

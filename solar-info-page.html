@@ -588,7 +588,7 @@
 
     <div id="section-1">
       <img
-        src="images/Solar.png"
+        src="images/Solar.webp"
         style="position: absolute; width: 100vw; top: 5vw; left: -0.1vw"
       />
 
@@ -675,7 +675,7 @@
             "
           ></div>
 
-          <p
+          <p id="ambitionlevelinfo"
             style="
               position: absolute;
               left: 29.85vw;
@@ -689,7 +689,7 @@
               line-height: 2.4vw;
             "
           >
-            2
+            
           </p>
         </div>
       </div>
@@ -909,5 +909,13 @@
         applied.
       </p>
     </div>
+
+    <script>
+      const searchParams = new URLSearchParams(window.location.search);
+
+      var solarAmbitionLeverNumber = searchParams.get('solarAmbitionLeverNumber');
+
+      document.getElementById("ambitionlevelinfo").innerText = solarAmbitionLeverNumber;
+  </script>
   </body>
 </html>

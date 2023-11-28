@@ -746,7 +746,7 @@
 
     <div id="section-1">
       <img
-        src="images/Buildings_Efficiency.png"
+        src="images/Buildings_Efficiency.webp"
         style="position: absolute; width: 100vw; top: 5vw; left: -0.1vw"
       />
 
@@ -833,7 +833,7 @@
             "
           ></div>
 
-          <p
+          <p id="ambitionlevelinfo"
             style="
               position: absolute;
               left: 29.85vw;
@@ -847,7 +847,7 @@
               line-height: 2.4vw;
             "
           >
-            2
+            
           </p>
         </div>
       </div>
@@ -1072,5 +1072,13 @@
         requirements and emissions from electricity generation.
       </p>
     </div>
+
+    <script>
+      const searchParams = new URLSearchParams(window.location.search);
+
+      var lightingAmbitionLeverNumber = searchParams.get('lightingAmbitionLeverNumber');
+
+      document.getElementById("ambitionlevelinfo").innerText = lightingAmbitionLeverNumber;
+  </script>
   </body>
 </html>

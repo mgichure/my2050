@@ -549,7 +549,7 @@
 
     <div id="section-1">
       <img
-        src="images/Bioenergy.png"
+        src="images/Bioenergy.webp"
         style="position: absolute; width: 100vw; top: 5vw; left: -0.1vw"
       />
 
@@ -636,7 +636,7 @@
             "
           ></div>
 
-          <p
+          <p id="ambitionlevelinfo"
             style="
               position: absolute;
               left: 29.85vw;
@@ -650,7 +650,7 @@
               line-height: 2.4vw;
             "
           >
-            2
+            
           </p>
         </div>
       </div>
@@ -865,5 +865,13 @@
         transport, buildings and industry.
       </p>
     </div>
+
+    <script>
+      const searchParams = new URLSearchParams(window.location.search);
+
+      var bioAmbitionLeverNumber = searchParams.get('bioAmbitionLeverNumber');
+
+      document.getElementById("ambitionlevelinfo").innerText = bioAmbitionLeverNumber;
+  </script>
   </body>
 </html>

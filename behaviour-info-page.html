@@ -769,7 +769,7 @@
 
     <div id="section-1">
       <img
-        src="images/Buildings.png"
+        src="images/Buildings.webp"
         style="position: absolute; width: 100vw; top: 5vw; left: -0.1vw"
       />
 
@@ -856,7 +856,7 @@
             "
           ></div>
 
-          <p
+          <p id="ambitionlevelinfo"
             style="
               position: absolute;
               left: 29.85vw;
@@ -1090,5 +1090,13 @@
         insulation, affects how much energy is needed for heating buildings.
       </p>
     </div>
+
+    <script>
+      const searchParams = new URLSearchParams(window.location.search);
+
+      var houseAmbitionLeverNumber = searchParams.get('houseAmbitionLeverNumber');
+
+      document.getElementById("ambitionlevelinfo").innerText = houseAmbitionLeverNumber;
+  </script>
   </body>
 </html>
