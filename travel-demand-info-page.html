@@ -30,7 +30,7 @@
             </div>
 
             <div id="light-vehicles-nav-link">
-                <a href="light-vehicles-info-page.html">
+                <a href="javascript:technologyPage()">
                     <img src="Assets/light-vehicles.svg" style="position: absolute; width: 2vw; top: 1.5vw; left: 9.4vw; z-index: 10;">
                 </a>
 
@@ -39,9 +39,11 @@
             </div>
 
             <div id="heavy-vehicles-nav-link">
-                <a href="heavy-vehicles-info-page.html">
+                <!-- <a href="heavy-vehicles-info-page.html">
                     <img src="Assets/heavy-vehicles.svg" style="position: absolute; width: 2.4vw; top: 1.5vw; left: 13.95vw; z-index: 10;">
-                </a>
+                </a> -->
+
+                <img src="Assets/heavy-vehicles.svg" style="position: absolute; width: 2.4vw; top: 1.5vw; left: 13.95vw; z-index: 10;">
 
                 <!-- <img src="Assets/heavy-vehicles.svg" style="position: absolute; width: 2.4vw; top: 1.5vw; left: 13.95vw; z-index: 10;"> -->
 
@@ -50,7 +52,7 @@
             </div>
 
             <div id="behaviour-nav-link">
-                <a href="behaviour-info-page.html">
+                <a href="javascript:housingAppliancesPage()">
                     <img src="Assets/house-temp-icon.svg" style="position: absolute; width: 2vw; top: 1.5vw; left: 19.1vw;">
                 </a>
                 <!-- <img src="Assets/house-temp-icon.svg" style="position: absolute; width: 2vw; top: 1.5vw; left: 19.1vw;"> -->
@@ -60,7 +62,7 @@
             </div>
 
             <div id="efficiency-nav-link">
-                <a href="efficiency-info-page.html">
+                <a href="javascript:lightingAppliancesPage()">
                     <img src="Assets/efficiency.svg" style="position: absolute; width: 2vw; top: 1.5vw; left: 24.05vw;">
                 </a>
 
@@ -71,7 +73,7 @@
             </div>
 
             <div id="heating-system-nav-link">
-                <a href="heating-systems-info-page (copy).html">
+                <a href="javascript:hotWaterPage()">
                     <img src="Assets/heating.svg" style="position: absolute; width: 2.7vw; top: 1.5vw; left: 28.65vw;">
                 </a>
 
@@ -82,7 +84,7 @@
             </div>
 
             <div id="carbon-instesity-nav-link">
-                <a href="carbon-intensity-systems-info-page.html">
+                <a href="javascript:carbonIntensityPage()">
                     <img src="Assets/carbon-intensity.svg" style="position: absolute; width: 2vw; top: 1.5vw; left: 33.9vw;">
                 </a>
 
@@ -93,7 +95,7 @@
             </div>
 
             <div id="carbon-capture-nav-link">
-                <a href="carbon-capture-systems-info-page.html">
+                <a href="javascript:carbonCapturePage()">
                     <img src="Assets/carbon-capture.svg" style="position: absolute; width: 2.2vw; top: 1.5vw; left: 38.8vw;">
                 </a>
 
@@ -104,7 +106,7 @@
             </div>
 
             <div id="hydrogen-nav-link">
-                <a href="hep-page.html">
+                <a href="javascript:hepPage()">
                     <img src="Assets/hydro-power-icon.png" style="position: absolute; width: 2.2vw; top: 1.5vw; left: 43.77vw;">
                 </a>
 
@@ -115,7 +117,7 @@
             </div>
 
             <div id="nuclear-nav-link">
-                <a href="nuclear-info-page.html">
+                <a href="javascript:nuclearPage()">
                     <img src="Assets/nuclear-icon.svg" style="position: absolute; width: 2vw; top: 1.5vw; left: 48.69vw;">
                 </a>
 
@@ -126,7 +128,7 @@
             </div>
 
             <div id="wind-nav-link">
-                <a href="wind-info-page.html">
+                <a href="javascript:windPage()">
                     <img src="Assets/windmill-icon.svg" style="position: absolute; width: 2.2vw; top: 1.55vw; left: 53.7vw;">
                 </a>
 
@@ -137,7 +139,7 @@
             </div>
 
             <div id="solar-nav-link">
-                <a href="solar-info-page.html">
+                <a href="javascript:solarPage()">
                     <img src="Assets/solar-icon.svg" style="position: absolute; width: 2.2vw; top: 1.5vw; left: 58.4vw;">
                 </a>
 
@@ -148,7 +150,7 @@
             </div>
 
             <div id="wave-tidal-nav-link">
-                <a href="geothermal-page.html">
+                <a href="javascript:geoPage()">
                     <img src="Assets/geothermal-icon.png" style="position: absolute; width: 2.1vw; top: 1.5vw; left: 63.3vw;">
                 </a>
 
@@ -159,7 +161,7 @@
             </div>
 
             <div id="forestry-nav-link">
-                <a href="forestry-info-page.html">
+                <a href="javascript:forestryPage()">
                     <img src="Assets/forestr-icon.svg" style="position: absolute; width: 2.4vw; top: 1.5vw; left: 68.18vw;">
                 </a>
 
@@ -170,7 +172,7 @@
             </div>
 
             <div id="bio-eneergy-nav-link">
-                <a href="bioenergy-info-page.html">
+                <a href="javascript:bioPage()">
                     <img src="Assets/bio-energy-icon.svg" style="position: absolute; width: 1.8vw; top: 1.5vw; left: 73.35vw;">
                 </a>
 
@@ -309,6 +311,65 @@
             const searchParams = new URLSearchParams(window.location.search);
 
             var ambitionLeverNumber = searchParams.get('ambitionLeverNumber');
+
+            //Will Update the URL parameters of the pages according to the variables they are added to
+            function travelDemandPage() {
+                window.location.href = "travel-demand-info-page.html?" +window.location.search
+            }
+
+            function technologyPage() {
+                window.location.href = "light-vehicles-info-page.html?" +window.location.search
+            }
+
+            function housingAppliancesPage() {
+                window.location.href = "behaviour-info-page.html?" +window.location.search
+            }
+
+            function lightingAppliancesPage() {
+                window.location.href = "efficiency-info-page.html?" +window.location.search
+            }
+
+            function hotWaterPage() {
+                window.location.href = "heating-systems-info-page (copy).html?" +window.location.search
+            }
+
+            function carbonIntensityPage() {
+                window.location.href = "carbon-intensity-systems-info-page.html?" +window.location.search
+            }
+
+            function carbonCapturePage() {
+                window.location.href = "carbon-capture-systems-info-page.html?" +window.location.search
+            }
+
+            function hepPage() {
+                window.location.href = "hep-page.html?" +window.location.search
+            }
+
+            function nuclearPage() {
+                window.location.href = "nuclear-info-page.html?" +window.location.search
+            }
+
+            function windPage() {
+                window.location.href = "wind-info-page.html?" +window.location.search
+            }
+
+            function solarPage() {
+                window.location.href = "solar-info-page.html?" +window.location.search
+            }
+
+            function geoPage() {
+                window.location.href = "geothermal-page.html?" +window.location.search
+            }
+
+            function forestryPage() {
+                window.location.href = "forestry-info-page.html?" +window.location.search
+            }
+
+            function bioPage() {
+                window.location.href = "bioenergy-info-page.html?" +window.location.search
+            }
+
+            
 
             document.getElementById("ambitionlevelinfo").innerText = ambitionLeverNumber;
         </script>
