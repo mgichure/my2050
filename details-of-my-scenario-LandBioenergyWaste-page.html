@@ -99,7 +99,7 @@
             <a href="javascript:detailsIndustry()">
                 <div id="white-background" style="position: absolute; width: 20.3vw; height: 2.9vw; left: 0vw; top: 10.3vw; background-color: #165108;">
                     <p style="position: absolute; left: 1.6vw; font-family: Roboto; font-size: 1.3vw; line-height: 0.5vw; color: white;">
-                        Industry, CCS & Hydrogen
+                        Industry, CCS & HEP
                     </p>
                 </div>
             </a>
@@ -131,10 +131,10 @@
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 24.4vw; font-family: Roboto; font-size: 1.2vw; font-weight: bold; z-index: -10; letter-spacing: 0.05vw;">
-                Ambition Level 1
+                Ambition Level <span id="forestryambitionlevelinfo"></span>
             </p>
 
-            <p style="position: absolute; left: 24.3vw; top: 27.1vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
+            <p id="forestryambitionlevelinfocontent" style="position: absolute; left: 24.3vw; top: 27.1vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
                 8% of Kenya land area covered by forest by 2070 (compared to 7% in 2015).
             </p>
 
@@ -143,10 +143,10 @@
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 37.6vw; font-family: Roboto; font-size: 1.2vw; font-weight: bold; z-index: -10; letter-spacing: 0.05vw;">
-                Ambition Level 1
+                Ambition Level <span id="bioambitionlevelinfo"></span>
             </p>
 
-            <p style="position: absolute; left: 24.3vw; top: 40vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
+            <p id="bioambitionlevelinfocontent" style="position: absolute; left: 24.3vw; top: 40vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
                 0.6% of Kenya land area covered by biocrops by 2050 (compared to 0% in 2015) and 8-40% of agricultural wastes <br>
                 are collected for energy.
             </p>
@@ -273,9 +273,16 @@
             var transport_international_current_val = searchParams.get('transport_international_current_val');
             var total_emmissions_current_val = searchParams.get('total_emmissions_current_val');
 
+
+            var bioAmbitionLeverNumber = searchParams.get('bioAmbitionLeverNumber');
+            var forestryAmbitionLeverNumber = searchParams.get('forestryAmbitionLeverNumber');
+
+            document.getElementById("bioambitionlevelinfo").innerText = bioAmbitionLeverNumber;
+            document.getElementById("forestryambitionlevelinfo").innerText = forestryAmbitionLeverNumber;
+
             const integerValue = parseInt(total_emmissions_current_val); //Convert total emissions to interger
 
-            exampleText.textContent = integerValue.toFixed(1); //Set total emissions to one decimal point
+            // exampleText.textContent = integerValue.toFixed(1); //Set total emissions to one decimal point
 
             function energy(){
                 window.location.href = "energy-demand-and-supply.html"+window.location.search
@@ -305,30 +312,68 @@
                 window.location.href = "details-of-my-scenario.html"+window.location.search
             }
 
-            new Chart(ctx, {
-              type: 'bar',
-              data: {
-                labels: ['Total','Hydrogen','Other Energy','Waste','Agriculture','Industry','Residential','Non-residential','Domestic travel','International travel'],
-                datasets: [{
-                  label: 'Reference value',
-                  data: [total_emmissions_val,hydrogen_val,other_energy_val,waste_management_val,agriculture_val,industry_val,building_residential_val,building_non_residential_val,transport_domestic_val,transport_international_val],
-                  borderWidth: 1
-                },
-                {
-                  label: 'Scenario value',
-                  data: [total_emmissions_current_val,hydrogen_current_val,other_energy_current_val,waste_management_current_val,agriculture_current_val,industry_current_val,building_residential_current_val,building_non_residential_current_val,transport_domestic_current_val,transport_international_current_val],
-                  borderWidth: 1
+
+            if (forestryAmbitionLeverNumber === "1") {
+                
+                document.getElementById("forestryambitionlevelinfocontent").innerText = "8% of Kenya land area covered by forest by 2070(compared to 7% in 2015).";
+
+                } else if (forestryAmbitionLeverNumber === "2") {
+                
+                    document.getElementById("forestryambitionlevelinfocontent").innerText = "9% of Kenya land area covered by forest by 2070 (compared to 7% in 2015).";
+
+                } else if (forestryAmbitionLeverNumber === "3") {
+                
+                    document.getElementById("forestryambitionlevelinfocontent").innerText = "9% of Kenya land area covered by forest by 2070 (compared to 7% in 2015).";
+
+                } else if (forestryAmbitionLeverNumber === "4") {
+                
+                    document.getElementById("forestryambitionlevelinfocontent").innerText = "11% of Kenya land area covered by forest by 2070 (compared to 7% in 2015).";
+
                 }
-            ]
-              },
-              options: {
-                scales: {
-                  y: {
-                    beginAtZero: true
-                  }
+
+      
+            if (bioAmbitionLeverNumber === "1") {
+                
+                document.getElementById("bioambitionlevelinfocontent").innerText = "0.6% of Kenya land area covered by biocrops by 2050 (compared to 0% in 2015) and 8-40% of agricultural wastes are collected for energy.";
+
+                } else if (bioAmbitionLeverNumber === "2") {
+                
+                    document.getElementById("bioambitionlevelinfocontent").innerText = "1.1% of Kenya land area covered by biocrops by 2050 (compared to 0% in 2015) and 18-60% of agricultural wastes are collected for energy.";
+
+                } else if (bioAmbitionLeverNumber === "3") {
+                
+                    document.getElementById("bioambitionlevelinfocontent").innerText = "2.7% of Kenya land area covered by biocrops by 2050 (compared to 0% in 2015) and 18-70% of agricultural wastes are collected for energy.";
+
+                } else if (bioAmbitionLeverNumber === "4") {
+                
+                    document.getElementById("bioambitionlevelinfocontent").innerText = "3.4% of Kenya land area covered by biocrops by 2050 (compared to 0% in 2015) and 18-100% of agricultural wastes are collected for energy.";
+
                 }
-              }
-            });
+
+            // new Chart(ctx, {
+            //   type: 'bar',
+            //   data: {
+            //     labels: ['Total','Hydrogen','Other Energy','Waste','Agriculture','Industry','Residential','Non-residential','Domestic travel','International travel'],
+            //     datasets: [{
+            //       label: 'Reference value',
+            //       data: [total_emmissions_val,hydrogen_val,other_energy_val,waste_management_val,agriculture_val,industry_val,building_residential_val,building_non_residential_val,transport_domestic_val,transport_international_val],
+            //       borderWidth: 1
+            //     },
+            //     {
+            //       label: 'Scenario value',
+            //       data: [total_emmissions_current_val,hydrogen_current_val,other_energy_current_val,waste_management_current_val,agriculture_current_val,industry_current_val,building_residential_current_val,building_non_residential_current_val,transport_domestic_current_val,transport_international_current_val],
+            //       borderWidth: 1
+            //     }
+            // ]
+            //   },
+            //   options: {
+            //     scales: {
+            //       y: {
+            //         beginAtZero: true
+            //       }
+            //     }
+            //   }
+            // });
           </script>
     </body>
 </html>

@@ -97,7 +97,7 @@
             <a href="javascript:detailsIndustry()">
                 <div id="white-background" style="position: absolute; width: 20.3vw; height: 2.9vw; left: 0vw; top: 10.3vw; background-color: #165108;">
                     <p style="position: absolute; left: 1.6vw; font-family: Roboto; font-size: 1.3vw; line-height: 0.5vw; color: white;">
-                        Industry, CCS & Hydrogen
+                        Industry, CCS & HEP
                     </p>
                 </div>
             </a>
@@ -129,22 +129,22 @@
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 24.4vw; font-family: Roboto; font-size: 1.2vw; font-weight: bold; z-index: -10; letter-spacing: 0.05vw;">
-                Ambition Level 1
+                Ambition Level <span id="ambitionlevelinfo"></span>
             </p>
 
-            <p style="position: absolute; left: 24.3vw; top: 27.1vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
+            <p id="traveldemandcontent" style="position: absolute; left: 24.3vw; top: 27.1vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
                 By 2050 the average annual distance travelled per person is 10% less than in 2015. 38% of this is done by car.
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 34vw; font-family: Roboto; font-size: 1.5vw; font-weight: bold; z-index: -10; color: #054170;">
-                Light Vehicles:
+                Technology:
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 37.6vw; font-family: Roboto; font-size: 1.2vw; font-weight: bold; z-index: -10; letter-spacing: 0.05vw;">
-                Ambition Level 1
+                Ambition Level <span id="techambitionlevelinfo"></span>
             </p>
 
-            <p style="position: absolute; left: 24.3vw; top: 40vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
+            <p id="techambitionlevelinfocontent" style="position: absolute; left: 24.3vw; top: 40vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
                 0% of cars are electric by 2050 (0% of vans and 0% of small trucks).
             </p>
 
@@ -153,10 +153,10 @@
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 50.5vw; font-family: Roboto; font-size: 1.2vw; font-weight: bold; z-index: -10; letter-spacing: 0.05vw;">
-                Ambition Level 1
+                Ambition Level <span id="heavyambitionlevelinfo"></span>
             </p>
 
-            <p style="position: absolute; left: 24.3vw; top: 52.9vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
+            <p id="heavyambitionlevelinfocontent" style="position: absolute; left: 24.3vw; top: 52.9vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
                 0% of large trucks, 0% of buses and 65% of passenger trains are electric by 2050.
             </p>
 
@@ -284,9 +284,18 @@
             var transport_international_current_val = searchParams.get('transport_international_current_val');
             var total_emmissions_current_val = searchParams.get('total_emmissions_current_val');
 
+            var ambitionLeverNumber = searchParams.get('ambitionLeverNumber');
+            var techAmbitionLeverNumber = searchParams.get('techAmbitionLeverNumber');
+
+            document.getElementById("ambitionlevelinfo").innerText = ambitionLeverNumber;
+            document.getElementById("techambitionlevelinfo").innerText = techAmbitionLeverNumber;
+            document.getElementById("heavyambitionlevelinfo").innerText = techAmbitionLeverNumber;
+            
+
+
             const integerValue = parseInt(total_emmissions_current_val); //Convert total emissions to interger
 
-            exampleText.textContent = integerValue.toFixed(1); //Set total emissions to one decimal point
+            // exampleText.textContent = integerValue.toFixed(1); //Set total emissions to one decimal point
 
             function energy(){
                 window.location.href = "energy-demand-and-supply.html"+window.location.search
@@ -312,30 +321,88 @@
                 window.location.href = "details-of-my-scenario-LandBioenergyWaste-page.html"+window.location.search
             }
 
-            new Chart(ctx, {
-              type: 'bar',
-              data: {
-                labels: ['Total','Hydrogen','Other Energy','Waste','Agriculture','Industry','Residential','Non-residential','Domestic travel','International travel'],
-                datasets: [{
-                  label: 'Reference value',
-                  data: [total_emmissions_val,hydrogen_val,other_energy_val,waste_management_val,agriculture_val,industry_val,building_residential_val,building_non_residential_val,transport_domestic_val,transport_international_val],
-                  borderWidth: 1
-                },
-                {
-                  label: 'Scenario value',
-                  data: [total_emmissions_current_val,hydrogen_current_val,other_energy_current_val,waste_management_current_val,agriculture_current_val,industry_current_val,building_residential_current_val,building_non_residential_current_val,transport_domestic_current_val,transport_international_current_val],
-                  borderWidth: 1
+
+            if (techAmbitionLeverNumber === "1") {
+                
+                document.getElementById("heavyambitionlevelinfocontent").innerText = "0% of large trucks, 0% of buses and 65% of passenger trains are electric by 2050.";
+
+                } else if (techAmbitionLeverNumber === "2") {
+                
+                    document.getElementById("heavyambitionlevelinfocontent").innerText = "1% of large trucks, 20% of buses and 80% of passenger trains are electric by 2050.";
+
+                } else if (techAmbitionLeverNumber === "3") {
+                
+                    document.getElementById("heavyambitionlevelinfocontent").innerText = "10% of large trucks, 30% of buses and 90% of passenger trains are electric by 2050.";
+
+                } else if (techAmbitionLeverNumber === "4") {
+                
+                    document.getElementById("heavyambitionlevelinfocontent").innerText = "50% of large trucks, 50% of buses and 100% of passenger trains are electric by 2050.";
+
                 }
-            ]
-              },
-              options: {
-                scales: {
-                  y: {
-                    beginAtZero: true
-                  }
+
+
+
+            if (techAmbitionLeverNumber === "1") {
+                
+                document.getElementById("techambitionlevelinfocontent").innerText = "0% of cars are electric by 2050 (0% of vans and 0% of small trucks).";
+
+                } else if (techAmbitionLeverNumber === "2") {
+                
+                    document.getElementById("techambitionlevelinfocontent").innerText = "25% of cars are electric by 2050 (25% of vans and 10% of small trucks).";
+
+                } else if (techAmbitionLeverNumber === "3") {
+                
+                    document.getElementById("techambitionlevelinfocontent").innerText = "50% of cars are electric by 2050 (50% of vans and 25% of small trucks).";
+
+                } else if (techAmbitionLeverNumber === "4") {
+                
+                    document.getElementById("techambitionlevelinfocontent").innerText = "90% of cars are electric by 2050 (90% of vans and 50% of small trucks).";
+
                 }
-              }
-            });
+
+            
+            if (ambitionLeverNumber === "1") {
+                
+                document.getElementById("traveldemandcontent").innerText = "By 2050 the average annual distance travelled per person is 10% less than in 2015. 38% of this is done by car.";
+
+                } else if (ambitionLeverNumber === "2") {
+                
+                    document.getElementById("traveldemandcontent").innerText = "By 2050 the average annual distance travelled per person is 22% less than in 2015. 35% of this is done by car.";
+
+                } else if (ambitionLeverNumber === "3") {
+                
+                    document.getElementById("traveldemandcontent").innerText = "By 2050 the average annual distance travelled per person is 32% less than in 2015. 30% of this is done by car.";
+
+                } else if (ambitionLeverNumber === "4") {
+                
+                    document.getElementById("traveldemandcontent").innerText = "By 2050 the average annual distance travelled per person is 41% less than in 2015. 25% of this is done by car.";
+
+                }
+
+            // new Chart(ctx, {
+            //   type: 'bar',
+            //   data: {
+            //     labels: ['Total','Hydrogen','Other Energy','Waste','Agriculture','Industry','Residential','Non-residential','Domestic travel','International travel'],
+            //     datasets: [{
+            //       label: 'Reference value',
+            //       data: [total_emmissions_val,hydrogen_val,other_energy_val,waste_management_val,agriculture_val,industry_val,building_residential_val,building_non_residential_val,transport_domestic_val,transport_international_val],
+            //       borderWidth: 1
+            //     },
+            //     {
+            //       label: 'Scenario value',
+            //       data: [total_emmissions_current_val,hydrogen_current_val,other_energy_current_val,waste_management_current_val,agriculture_current_val,industry_current_val,building_residential_current_val,building_non_residential_current_val,transport_domestic_current_val,transport_international_current_val],
+            //       borderWidth: 1
+            //     }
+            // ]
+            //   },
+            //   options: {
+            //     scales: {
+            //       y: {
+            //         beginAtZero: true
+            //       }
+            //     }
+            //   }
+            // });
           </script>
     </body>
 </html>

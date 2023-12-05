@@ -99,7 +99,7 @@
             <a href="javascript:detailsIndustry()">
                 <div id="white-background" style="position: absolute; width: 20.3vw; height: 2.9vw; left: 0vw; top: 10.3vw; background-color: white;">
                     <p style="position: absolute; left: 1.6vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; line-height: 0.5vw; color: black;">
-                        Industry, CCS & Hydrogen
+                        Industry, CCS & HEP
                     </p>
                 </div>
             </a>
@@ -123,7 +123,7 @@
 
         <div id="main-content">
             <p style="position: absolute; left: 24.3vw; top: 16.7vw; font-family: Roboto; font-size: 1.8vw; font-weight: bold; z-index: -10;">
-                Industry, CCS & Hydrogen
+                Industry, CCS & Hydroelectric power
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 20.8vw; font-family: Roboto; font-size: 1.5vw; font-weight: bold; z-index: -10; color: #054170;">
@@ -131,7 +131,7 @@
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 24.4vw; font-family: Roboto; font-size: 1.2vw; font-weight: bold; z-index: -10; letter-spacing: 0.05vw;">
-                Ambition Level 1
+                Ambition Level <span id="carbonIntensityambitionlevelinfo"></span>
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 27.1vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
@@ -143,10 +143,10 @@
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 37.6vw; font-family: Roboto; font-size: 1.2vw; font-weight: bold; z-index: -10; letter-spacing: 0.05vw;">
-                Ambition Level 1
+                Ambition Level <span id="carboncaptureambitionlevelinfo"></span>
             </p>
 
-            <p style="position: absolute; left: 24.3vw; top: 40vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
+            <p id="carboncaptureambitionlevelinfocontent" style="position: absolute; left: 24.3vw; top: 40vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
                 0% to 85% capture rate range for CCS processes by 2070.
             </p>
 
@@ -155,10 +155,10 @@
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 50.5vw; font-family: Roboto; font-size: 1.2vw; font-weight: bold; z-index: -10; letter-spacing: 0.05vw;">
-                Ambition Level 1
+                Ambition Level <span id="hepambitionlevelinfo"></span>
             </p>
 
-            <p style="position: absolute; left: 24.3vw; top: 52.9vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
+            <p id="hepambitionlevelinfocontent" style="position: absolute; left: 24.3vw; top: 52.9vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
                 0.698 GW capacity by 2050 (0 GW in 2015) capable of generating up to 5 TWh per year.
             </p>
 
@@ -286,9 +286,18 @@
             var transport_international_current_val = searchParams.get('transport_international_current_val');
             var total_emmissions_current_val = searchParams.get('total_emmissions_current_val');
 
+
+            var hepAmbitionLeverNumber = searchParams.get('hepAmbitionLeverNumber');
+            var carbonIntensityAmbitionLeverNumber = searchParams.get('carbonIntensityAmbitionLeverNumber');
+            var carbonCaptureAmbitionLeverNumber = searchParams.get('carbonCaptureAmbitionLeverNumber');
+        
+            document.getElementById("hepambitionlevelinfo").innerText = hepAmbitionLeverNumber;
+            document.getElementById("carbonIntensityambitionlevelinfo").innerText = carbonIntensityAmbitionLeverNumber;
+            document.getElementById("carboncaptureambitionlevelinfo").innerText = carbonCaptureAmbitionLeverNumber;
+
             const integerValue = parseInt(total_emmissions_current_val); //Convert total emissions to interger
 
-            exampleText.textContent = integerValue.toFixed(1); //Set total emissions to one decimal point
+            // exampleText.textContent = integerValue.toFixed(1); //Set total emissions to one decimal point
 
             function energy(){
                 window.location.href = "energy-demand-and-supply.html"+window.location.search
@@ -318,30 +327,67 @@
                 window.location.href = "details-of-my-scenario.html"+window.location.search
             }
 
-            new Chart(ctx, {
-              type: 'bar',
-              data: {
-                labels: ['Total','Hydrogen','Other Energy','Waste','Agriculture','Industry','Residential','Non-residential','Domestic travel','International travel'],
-                datasets: [{
-                  label: 'Reference value',
-                  data: [total_emmissions_val,hydrogen_val,other_energy_val,waste_management_val,agriculture_val,industry_val,building_residential_val,building_non_residential_val,transport_domestic_val,transport_international_val],
-                  borderWidth: 1
-                },
-                {
-                  label: 'Scenario value',
-                  data: [total_emmissions_current_val,hydrogen_current_val,other_energy_current_val,waste_management_current_val,agriculture_current_val,industry_current_val,building_residential_current_val,building_non_residential_current_val,transport_domestic_current_val,transport_international_current_val],
-                  borderWidth: 1
+            if (hepAmbitionLeverNumber === "1") {
+                
+                document.getElementById("hepambitionlevelinfocontent").innerText = "0.698 GW capacity by 2050 (0 GW in 2015) capable of generating up to 5 TWh per year.";
+
+                } else if (hepAmbitionLeverNumber === "2") {
+                
+                    document.getElementById("hepambitionlevelinfocontent").innerText = "1.048 GW capacity by 2050 (0 GW in 2015) capable of generating up to 8 TWh per year.";
+
+                } else if (hepAmbitionLeverNumber === "3") {
+                
+                    document.getElementById("hepambitionlevelinfocontent").innerText = "1.397 GW capacity by 2050 (0 GW in 2015) capable of generating up to 10 TWh per year.";
+
+                } else if (hepAmbitionLeverNumber === "4") {
+                
+                    document.getElementById("hepambitionlevelinfocontent").innerText = "1.746 GW capacity by 2050 (0 GW in 2015) capable of generating up to 13 TWh per year.";
+
                 }
-            ]
-              },
-              options: {
-                scales: {
-                  y: {
-                    beginAtZero: true
-                  }
+
+
+            if (carbonCaptureAmbitionLeverNumber === "1") {
+                
+                document.getElementById("carboncaptureambitionlevelinfocontent").innerText = "0% to 85% capture rate range for CCS processes by 2070.";
+
+                } else if (carbonCaptureAmbitionLeverNumber === "2") {
+                
+                    document.getElementById("carboncaptureambitionlevelinfocontent").innerText = "0% to 90% capture rate range for CCS processes by 2070.";
+
+                } else if (carbonCaptureAmbitionLeverNumber === "3") {
+                
+                    document.getElementById("carboncaptureambitionlevelinfocontent").innerText = "0% to 95% capture rate range for CCS processes by 2070.";
+
+                } else if (carbonCaptureAmbitionLeverNumber === "4") {
+                
+                    document.getElementById("carboncaptureambitionlevelinfocontent").innerText = "0% to 100% capture rate range for CCS processes by 2070.";
+
                 }
-              }
-            });
+
+            // new Chart(ctx, {
+            //   type: 'bar',
+            //   data: {
+            //     labels: ['Total','Hydrogen','Other Energy','Waste','Agriculture','Industry','Residential','Non-residential','Domestic travel','International travel'],
+            //     datasets: [{
+            //       label: 'Reference value',
+            //       data: [total_emmissions_val,hydrogen_val,other_energy_val,waste_management_val,agriculture_val,industry_val,building_residential_val,building_non_residential_val,transport_domestic_val,transport_international_val],
+            //       borderWidth: 1
+            //     },
+            //     {
+            //       label: 'Scenario value',
+            //       data: [total_emmissions_current_val,hydrogen_current_val,other_energy_current_val,waste_management_current_val,agriculture_current_val,industry_current_val,building_residential_current_val,building_non_residential_current_val,transport_domestic_current_val,transport_international_current_val],
+            //       borderWidth: 1
+            //     }
+            // ]
+            //   },
+            //   options: {
+            //     scales: {
+            //       y: {
+            //         beginAtZero: true
+            //       }
+            //     }
+            //   }
+            // });
           </script>
     </body>
 </html>

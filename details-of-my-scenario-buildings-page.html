@@ -99,7 +99,7 @@
             <a href="javascript:detailsIndustry()">
                 <div id="white-background" style="position: absolute; width: 20.3vw; height: 2.9vw; left: 0vw; top: 10.3vw; background-color: #165108;">
                     <p style="position: absolute; left: 1.6vw; font-family: Roboto; font-size: 1.3vw; line-height: 0.5vw; color: white;">
-                        Industry, CCS & Hydrogen
+                        Industry, CCS & HEP
                     </p>
                 </div>
             </a>
@@ -127,15 +127,15 @@
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 20.8vw; font-family: Roboto; font-size: 1.5vw; font-weight: bold; z-index: -10; color: #054170;">
-                Behaviour:
+                Housing Appliances:
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 24.4vw; font-family: Roboto; font-size: 1.2vw; font-weight: bold; z-index: -10; letter-spacing: 0.05vw;">
-                Ambition Level 1
+                Ambition Level <span id="houseambitionlevelinfo"></span>
             </p>
 
-            <p style="position: absolute; left: 24.3vw; top: 27.1vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
-                Consumer behaviour worsens, and the average internal temperature in homes goes up to <br> 20&deg;C with more hot water being needed. Half of homes have air conditioning.
+            <p id="houseambitionlevelinfocontent" style="position: absolute; left: 24.3vw; top: 27.1vw; font-family: Roboto; font-size: 1vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2vw;">
+                Consumer behaviour worsens, and the average internal temperature in homes goes up to 20&deg;C with more hot water being needed. Half of homes have air conditioning.
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 34vw; font-family: Roboto; font-size: 1.5vw; font-weight: bold; z-index: -10; color: #054170;">
@@ -143,10 +143,10 @@
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 37.6vw; font-family: Roboto; font-size: 1.2vw; font-weight: bold; z-index: -10; letter-spacing: 0.05vw;">
-                Ambition Level 1
+                Ambition Level <span id="lightingambitionlevelinfo"></span>
             </p>
 
-            <p style="position: absolute; left: 24.3vw; top: 40vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
+            <p id="lightingambitionlevelinfocontent" style="position: absolute; left: 24.3vw; top: 40vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
                 By 2050, compared to 2015, domestic lighting demand per person is 50% higher and the same efficiency, appliance demand is 50% higher and the same efficiency.
             </p>
 
@@ -155,10 +155,10 @@
             </p>
 
             <p style="position: absolute; left: 24.3vw; top: 50.5vw; font-family: Roboto; font-size: 1.2vw; font-weight: bold; z-index: -10; letter-spacing: 0.05vw;">
-                Ambition Level 1
+                Ambition Level <span id="hotwaterambitionlevelinfo"></span>
             </p>
 
-            <p style="position: absolute; left: 24.3vw; top: 52.9vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
+            <p id="hotwaterambitionlevelinfocontent" style="position: absolute; left: 24.3vw; top: 52.9vw; font-family: Roboto; font-size: 1.2vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2vw;">
                 The heat pump market fails to grow, and very few heat pumps are installed, with most <br> homes continuing to use boilers fuelled with gas from the gas grid.
             </p>
 
@@ -286,9 +286,18 @@
             var transport_international_current_val = searchParams.get('transport_international_current_val');
             var total_emmissions_current_val = searchParams.get('total_emmissions_current_val');
 
+
+            var lightingAmbitionLeverNumber = searchParams.get('lightingAmbitionLeverNumber');
+            var houseAmbitionLeverNumber = searchParams.get('houseAmbitionLeverNumber');
+            var hotWaterAmbitionLeverNumber = searchParams.get('hotWaterAmbitionLeverNumber');
+
+            document.getElementById("lightingambitionlevelinfo").innerText = lightingAmbitionLeverNumber;
+            document.getElementById("houseambitionlevelinfo").innerText = houseAmbitionLeverNumber;
+            document.getElementById("hotwaterambitionlevelinfo").innerText = hotWaterAmbitionLeverNumber;
+
             const integerValue = parseInt(total_emmissions_current_val); //Convert total emissions to interger
 
-            exampleText.textContent = integerValue.toFixed(1); //Set total emissions to one decimal point
+            // exampleText.textContent = integerValue.toFixed(1); //Set total emissions to one decimal point
 
             function energy(){
                 window.location.href = "energy-demand-and-supply.html"+window.location.search
@@ -318,30 +327,92 @@
                 window.location.href = "details-of-my-scenario.html"+window.location.search
             }
 
-            new Chart(ctx, {
-              type: 'bar',
-              data: {
-                labels: ['Total','Hydrogen','Other Energy','Waste','Agriculture','Industry','Residential','Non-residential','Domestic travel','International travel'],
-                datasets: [{
-                  label: 'Reference value',
-                  data: [total_emmissions_val,hydrogen_val,other_energy_val,waste_management_val,agriculture_val,industry_val,building_residential_val,building_non_residential_val,transport_domestic_val,transport_international_val],
-                  borderWidth: 1
-                },
-                {
-                  label: 'Scenario value',
-                  data: [total_emmissions_current_val,hydrogen_current_val,other_energy_current_val,waste_management_current_val,agriculture_current_val,industry_current_val,building_residential_current_val,building_non_residential_current_val,transport_domestic_current_val,transport_international_current_val],
-                  borderWidth: 1
+
+            if (lightingAmbitionLeverNumber === "1") {
+                
+                document.getElementById("lightingambitionlevelinfocontent").innerText = "By 2050, compared to 2015, domestic lighting demand per person is 50% higher and the same efficiency, appliance demand is 50% higher and the same efficiency";
+
+                } else if (lightingAmbitionLeverNumber === "2") {
+                
+                    document.getElementById("lightingambitionlevelinfocontent").innerText = "By 2050, compared to 2015, domestic lighting demand per person is 20% higher and 5% more efficient, appliance demand is 20% higher and 5% more efficient.";
+
+                } else if (lightingAmbitionLeverNumber === "3") {
+                
+                    document.getElementById("lightingambitionlevelinfocontent").innerText = "By 2050, compared to 2015, domestic lighting demand per person is 15% lower and 10% more efficient, appliance demand is 15% lower and 10% more efficient.";
+
+                } else if (lightingAmbitionLeverNumber === "4") {
+                
+                    document.getElementById("lightingambitionlevelinfocontent").innerText = "By 2050, compared to 2015, domestic lighting demand per person is 25% lower and 15% more efficient, appliance demand is 25% lower and 15% more efficient.";
+
                 }
-            ]
-              },
-              options: {
-                scales: {
-                  y: {
-                    beginAtZero: true
-                  }
+
+            
+            if (houseAmbitionLeverNumber === "1") {
+                
+                document.getElementById("houseambitionlevelinfocontent").innerText = "By 2050, for residential buildings  there will be  5% less usage of biofuels in cooking than in 2015.  For fossil fuel use in cooking in residential buildings it will be , 55.08% less than in 2015. For wood fuel use in cooking in residential buildings it will be , 19.1% more than    in 2015. For electricty use in cooking  it will be , 0.57% less than in 2015.";
+
+                } else if (houseAmbitionLeverNumber === "2") {
+                
+                    document.getElementById("houseambitionlevelinfocontent").innerText = "By 2050, for residential buildings  there will be  5% more  usage of biofuels in cooking than in 2015.  For fossil fuel use in cooking in residential buildings it will be , 55.2% less than in 2015. For wood fuel use in cooking in residential buildings it will be , 37.56% less than in 2015. For electricty use in cooking  it will be , 28.43% more than    in 2015.";
+
+                } else if (houseAmbitionLeverNumber === "3") {
+                
+                    document.getElementById("houseambitionlevelinfocontent").innerText = "By 2050, for residential buildings  there will be  2% more  usage of biofuels in cooking than in 2015.  For fossil fuel use in cooking in residential buildings it will be , 55.32% less than in 2015. For wood fuel use in cooking in residential buildings it will be , 37.81% less than in 2015. For electricty use in cooking  it will be , 68.43% more than in 2015.";
+
+                } else if (houseAmbitionLeverNumber === "4") {
+                
+                    document.getElementById("houseambitionlevelinfocontent").innerText = "By 2050, for residential buildings  there will be  5% less usage of biofuels in cooking than in 2015.  For fossil fuel use in cooking in residential buildings it will be , 55.46% less than in 2015. For wood fuel use in cooking in residential buildings it will be , 37.9% less than in 2015. For electricty use in cooking  it will be , 98.43% more than in 2015.";
+
                 }
-              }
-            });
+
+
+            if (hotWaterAmbitionLeverNumber === "1") {
+                
+                document.getElementById("hotwaterambitionlevelinfocontent").innerText = "By 2050, domestic hot water demand is 30% more than in 2015. By 2050, for residential buildings, 23% more homes use wood to heat water than in 2015. the use of solar in homes is the same as in 2015. 23% less homes use electricty to heat water than in 2015. By 2050. For non residential buildings, 3% more buildings use wood to heat water than in 2015. 0.1% more buildings use solar to heat water than in 2015.  2.6% less buildings use electricty to heat water than in 2015. 0.4 % less buildings  use fossil fuel to heat water than in 2015.";
+
+                } else if (hotWaterAmbitionLeverNumber === "2") {
+                
+                    document.getElementById("hotwaterambitionlevelinfocontent").innerText = "By 2050, domestic hot water demand is 20% more than in 2015. By 2050, for residential buildings, 13% more homes use wood to heat water than in 2015. 10% more homes use solar to heat water than in 2015.  23% less homes use electricty to heat water than in 2015. By 2050. For non residential buildings, 1.5% more buildings use wood to heat water than in 2015. 9.6% more buildings use solar to heat water than in 2015.  12.4% more buildings use electricty to heat water than in 2015. 23.4 % less buildings  use fossil fuel to heat water than in 2015.";
+
+                } else if (hotWaterAmbitionLeverNumber === "3") {
+                
+                    document.getElementById("hotwaterambitionlevelinfocontent").innerText = "By 2050, domestic hot water demand is 10% more than in 2015. By 2050, for residential buildings, 3% more homes use wood to heat water than in 2015. 20% more homes use solar to heat water than in 2015.  23% less homes use electricty to heat water than in 2015. By 2050. For non residential buildings, 0.5% less than use wood to heat water than in 2015. 19.6% more buildings use solar to heat water than in 2015.  27.4% more buildings use electricty to heat water than in 2015. 46.4 % less buildings  use fossil fuel to heat water than in 2015.";
+
+                } else if (hotWaterAmbitionLeverNumber === "4") {
+                
+                    document.getElementById("hotwaterambitionlevelinfocontent").innerText = "By 2050, domestic hot water demand is the same as in in 2015. By 2050, for residential buildings, 7% less than use wood to heat water than in 2015. 30% more homes use solar to heat water than in 2015.  23% less homes use electricty to heat water than in 2015. By 2050. For non residential buildings, 1.5% less than use wood to heat water than in 2015. 29.6% more buildings use solar to heat water than in 2015.  47.4% more buildings use electricty to heat water than in 2015. 75.4 % less buildings  use fossil fuel to heat water than in 2015.";
+
+                }
+
+        
+
+
+            
+
+            // new Chart(ctx, {
+            //   type: 'bar',
+            //   data: {
+            //     labels: ['Total','Hydrogen','Other Energy','Waste','Agriculture','Industry','Residential','Non-residential','Domestic travel','International travel'],
+            //     datasets: [{
+            //       label: 'Reference value',
+            //       data: [total_emmissions_val,hydrogen_val,other_energy_val,waste_management_val,agriculture_val,industry_val,building_residential_val,building_non_residential_val,transport_domestic_val,transport_international_val],
+            //       borderWidth: 1
+            //     },
+            //     {
+            //       label: 'Scenario value',
+            //       data: [total_emmissions_current_val,hydrogen_current_val,other_energy_current_val,waste_management_current_val,agriculture_current_val,industry_current_val,building_residential_current_val,building_non_residential_current_val,transport_domestic_current_val,transport_international_current_val],
+            //       borderWidth: 1
+            //     }
+            // ]
+            //   },
+            //   options: {
+            //     scales: {
+            //       y: {
+            //         beginAtZero: true
+            //       }
+            //     }
+            //   }
+            // });
           </script>
     </body>
 </html>

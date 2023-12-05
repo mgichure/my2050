@@ -318,7 +318,7 @@
               color: white;
             "
           >
-            Industry, CCS & Hydrogen
+            Industry, CCS & HEP
           </p>
         </div>
       </a>
@@ -421,10 +421,10 @@
           letter-spacing: 0.05vw;
         "
       >
-        Ambition Level 1
+        Ambition Level <span id="nuclearambitionlevelinfo"></span>
       </p>
 
-      <p
+      <p id="nuclearambitionlevelinfocontent"
         style="
           position: absolute;
           left: 24.3vw;
@@ -468,10 +468,10 @@
           letter-spacing: 0.05vw;
         "
       >
-        Ambition Level 1
+        Ambition Level <span id="windambitionlevelinfo"></span>
       </p>
 
-      <p
+      <p id="windambitionlevelinfocontent"
         style="
           position: absolute;
           left: 24.3vw;
@@ -516,10 +516,10 @@
           letter-spacing: 0.05vw;
         "
       >
-        Ambition Level 1
+        Ambition Level <span id="solarambitionlevelinfo"></span>
       </p>
 
-      <p
+      <p id="solarambitionlevelinfocontent"
         style="
           position: absolute;
           left: 24.3vw;
@@ -885,9 +885,18 @@
         "total_emmissions_current_val"
       );
 
+
+      var nuclearAmbitionLeverNumber = searchParams.get('nuclearAmbitionLeverNumber');
+      var windAmbitionLeverNumber = searchParams.get('windAmbitionLeverNumber');
+      var solarAmbitionLeverNumber = searchParams.get('solarAmbitionLeverNumber');
+
+      document.getElementById("nuclearambitionlevelinfo").innerText = nuclearAmbitionLeverNumber;
+      document.getElementById("windambitionlevelinfo").innerText = windAmbitionLeverNumber;
+      document.getElementById("solarambitionlevelinfo").innerText = solarAmbitionLeverNumber;
+
       const integerValue = parseInt(total_emmissions_current_val); //Convert total emissions to interger
 
-      exampleText.textContent = integerValue.toFixed(1); //Set total emissions to one decimal point
+      // exampleText.textContent = integerValue.toFixed(1); //Set total emissions to one decimal point
 
       function energy() {
         window.location.href =
@@ -925,64 +934,121 @@
           "details-of-my-scenario.html" + window.location.search;
       }
 
-      new Chart(ctx, {
-        type: "bar",
-        data: {
-          labels: [
-            "Total",
-            "Hydrogen",
-            "Other Energy",
-            "Waste",
-            "Agriculture",
-            "Industry",
-            "Residential",
-            "Non-residential",
-            "Domestic travel",
-            "International travel",
-          ],
-          datasets: [
-            {
-              label: "Reference value",
-              data: [
-                total_emmissions_val,
-                hydrogen_val,
-                other_energy_val,
-                waste_management_val,
-                agriculture_val,
-                industry_val,
-                building_residential_val,
-                building_non_residential_val,
-                transport_domestic_val,
-                transport_international_val,
-              ],
-              borderWidth: 1,
-            },
-            {
-              label: "Scenario value",
-              data: [
-                total_emmissions_current_val,
-                hydrogen_current_val,
-                other_energy_current_val,
-                waste_management_current_val,
-                agriculture_current_val,
-                industry_current_val,
-                building_residential_current_val,
-                building_non_residential_current_val,
-                transport_domestic_current_val,
-                transport_international_current_val,
-              ],
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-        },
-      });
+
+      if (nuclearAmbitionLeverNumber === "1") {
+                
+                document.getElementById("solarambitionlevelinfocontent").innerText = "0.698 GW capacity by 2050 (0.7x the 0 GW capacity in 2015) capable of generating up to 5 TWh per year. Equivalent to 0.2 3 GW plants.";
+
+                } else if (nuclearAmbitionLeverNumber === "2") {
+                
+                    document.getElementById("solarambitionlevelinfocontent").innerText = "1.048 GW capacity by 2050 (1x the 0 GW capacity in 2015) capable of generating up to 8 TWh per year. Equivalent to 0.3 3 GW plants.";
+
+                } else if (nuclearAmbitionLeverNumber === "3") {
+                
+                    document.getElementById("solarambitionlevelinfocontent").innerText = "1.397 GW capacity by 2050 (1.4x the 0 GW capacity in 2015) capable of generating up to 10 TWh per year. Equivalent to 0.5 3 GW plants.";
+
+                } else if (nuclearAmbitionLeverNumber === "4") {
+                
+                    document.getElementById("solarambitionlevelinfocontent").innerText = "1.746 GW capacity by 2050 (1.7x the 0 GW capacity in 2015) capable of generating up to 13 TWh per year. Equivalent to 0.6 3 GW plants.";
+
+                }
+
+      
+      if (windAmbitionLeverNumber === "1") {
+                
+                document.getElementById("windambitionlevelinfocontent").innerText = "3.2 GW capacity by 2050, 3.2 GW onshore and 0 GW offshore (10.1x the 0.3 GW capacity in 2015) capable of generating up to 13 TWh per year.";
+
+                } else if (windAmbitionLeverNumber === "2") {
+                
+                    document.getElementById("windambitionlevelinfocontent").innerText = "3.6 GW capacity by 2050, 3.6 GW onshore and 0 GW offshore (11.2x the 0.3 GW capacity in 2015) capable of generating up to 15 TWh per year.";
+
+                } else if (windAmbitionLeverNumber === "3") {
+                
+                    document.getElementById("windambitionlevelinfocontent").innerText = "4.1 GW capacity by 2050, 4.1 GW onshore and 0 GW offshore (12.9x the 0.3 GW capacity in 2015) capable of generating up to 17 TWh per year.";
+
+                } else if (windAmbitionLeverNumber === "4") {
+                
+                    document.getElementById("windambitionlevelinfocontent").innerText = "4.5 GW capacity by 2050, 4.5 GW onshore and 0 GW offshore (14x the 0.3 GW capacity in 2015) capable of generating up to 19 TWh per year.";
+
+                }
+
+
+      if (solarAmbitionLeverNumber === "1") {
+                
+                document.getElementById("solarambitionlevelinfocontent").innerText = "1.669 GW capacity by 2050 (33.4x the 0.1 GW capacity in 2015) capable of generating up to 3 TWh per year.";
+
+                } else if (solarAmbitionLeverNumber === "2") {
+                
+                    document.getElementById("solarambitionlevelinfocontent").innerText = "2.645 GW capacity by 2050 (52.9x the 0.1 GW capacity in 2015) capable of generating up to 5 TWh per year.";
+
+                } else if (solarAmbitionLeverNumber === "3") {
+                
+                    document.getElementById("solarambitionlevelinfocontent").innerText = "3.307 GW capacity by 2050 (66.1x the 0.1 GW capacity in 2015) capable of generating up to 6 TWh per year.";
+
+                } else if (solarAmbitionLeverNumber === "4") {
+                
+                    document.getElementById("solarambitionlevelinfocontent").innerText = "4.414 GW capacity by 2050 (88.3x the 0.1 GW capacity in 2015) capable of generating up to 8 TWh per year.";
+
+                }
+
+      // new Chart(ctx, {
+      //   type: "bar",
+      //   data: {
+      //     labels: [
+      //       "Total",
+      //       "Hydrogen",
+      //       "Other Energy",
+      //       "Waste",
+      //       "Agriculture",
+      //       "Industry",
+      //       "Residential",
+      //       "Non-residential",
+      //       "Domestic travel",
+      //       "International travel",
+      //     ],
+      //     datasets: [
+      //       {
+      //         label: "Reference value",
+      //         data: [
+      //           total_emmissions_val,
+      //           hydrogen_val,
+      //           other_energy_val,
+      //           waste_management_val,
+      //           agriculture_val,
+      //           industry_val,
+      //           building_residential_val,
+      //           building_non_residential_val,
+      //           transport_domestic_val,
+      //           transport_international_val,
+      //         ],
+      //         borderWidth: 1,
+      //       },
+      //       {
+      //         label: "Scenario value",
+      //         data: [
+      //           total_emmissions_current_val,
+      //           hydrogen_current_val,
+      //           other_energy_current_val,
+      //           waste_management_current_val,
+      //           agriculture_current_val,
+      //           industry_current_val,
+      //           building_residential_current_val,
+      //           building_non_residential_current_val,
+      //           transport_domestic_current_val,
+      //           transport_international_current_val,
+      //         ],
+      //         borderWidth: 1,
+      //       },
+      //     ],
+      //   },
+      //   options: {
+      //     scales: {
+      //       y: {
+      //         beginAtZero: true,
+      //       },
+      //     },
+      //   },
+      // });
     </script>
   </body>
 </html>
