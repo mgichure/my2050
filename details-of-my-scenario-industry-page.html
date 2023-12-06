@@ -134,7 +134,7 @@
                 Ambition Level <span id="carbonIntensityambitionlevelinfo"></span>
             </p>
 
-            <p style="position: absolute; left: 24.3vw; top: 27.1vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
+            <p id="carbonintensityambitionlevelinfocontent" style="position: absolute; left: 24.3vw; top: 27.1vw; font-family: Roboto; font-size: 1.3vw; font-weight: bold; z-index: -10; color: #707070; letter-spacing: 0.05vw; line-height: 2.7vw;">
                 10% decrease to 10% decrease in energy consumption and no change in process emissions, per unit of output <br> by 2050
             </p>
 
@@ -361,6 +361,25 @@
                 } else if (carbonCaptureAmbitionLeverNumber === "4") {
                 
                     document.getElementById("carboncaptureambitionlevelinfocontent").innerText = "0% to 100% capture rate range for CCS processes by 2070.";
+
+                }
+
+
+            if (carbonIntensityAmbitionLeverNumber === "1") {
+                
+                document.getElementById("carbonintensityambitionlevelinfocontent").innerText = "By 2050, 39% of heat generated in industry is from electricity. Industry energy efficiency improves by 10% relative to 2015.";
+
+                } else if (carbonIntensityAmbitionLeverNumber === "2") {
+                
+                    document.getElementById("carbonintensityambitionlevelinfocontent").innerText = "By 2050, 50% of heat generated in industry is from electricity. Industry energy efficiency improves by 20% relative to 2015.";
+
+                } else if (carbonIntensityAmbitionLeverNumber === "3") {
+                
+                    document.getElementById("carbonintensityambitionlevelinfocontent").innerText = "By 2050, 70% of heat generated in industry is from electricity. Industry energy efficiency improves by 30% relative to 2015.";
+
+                } else if (carbonIntensityAmbitionLeverNumber === "4") {
+                
+                    document.getElementById("carbonintensityambitionlevelinfocontent").innerText = "By 2050, 99% of heat generated in industry is from electricity. Industry energy efficiency improves by 40% relative to 2015.";
 
                 }
 
