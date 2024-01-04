@@ -2932,7 +2932,7 @@
             color: #054170;
           "
         >
-          Percentage %
+          Percent
         </p>
       </div>
     </div>
@@ -2952,8 +2952,8 @@
         display: none;
       "
     >
-      <p style="position: absolute; left: 0.45vw; line-height: 1.3vw">
-        Meter showing Kenya&apos;s Green House Gas percentage reduction in 2050 relative to 2015 emissions.
+      <p style="position: absolute; left: 0.45vw; line-height: 1.22vw">
+        The meter is showing the difference of Kenya&apos;s greenhouse gas emissions in 2050 between the chosen scenario and the predicted business as usual scenario as a percentage.
       </p>
 
       <div
@@ -7549,6 +7549,242 @@
           getValueWb();
         }
       };
+
+
+
+
+
+      //reset sliders By Default
+      slider.value = 1;
+        techSlider.value = 1;
+        housingAppliancesSlider.value = 1;
+        lightingAppliancesSlider.value = 1;
+        hotwaterSlider.value = 1;
+        carbonIntensitySlider.value = 1;
+        carbonCaptureSlider.value = 1;
+        hydroElectricSlider.value = 1;
+        nuclearSlider.value = 1;
+        windSlider.value = 1;
+        solarSlider.value = 1;
+        geoSlider.value = 1;
+        forestrySlider.value = 1;
+        bioSlider.value = 1;
+
+        ambitionLeverNumber = "1";
+        techAmbitionLeverNumber = "1";
+        houseAmbitionLeverNumber = "1";
+        lightingAmbitionLeverNumber = "1";
+        hotWaterAmbitionLeverNumber = "1";
+        carbonIntensityAmbitionLeverNumber = "1";
+        carbonCaptureAmbitionLeverNumber = "1";
+        hepAmbitionLeverNumber = "1";
+        nuclearAmbitionLeverNumber = "1";
+        windAmbitionLeverNumber = "1";
+        solarAmbitionLeverNumber = "1";
+        geoAmbitionLeverNumber = "1";
+        forestryAmbitionLeverNumber = "1";
+        bioAmbitionLeverNumber = "1";
+
+        //nuclear-section
+        nuclearlv1.style.opacity = 0;
+        nuclearlv2.style.opacity = 0;
+        nuclearlv3.style.opacity = 0;
+        nuclearPowerLineStraight1.style.opacity = 0;
+        nuclearPowerLineStraight2.style.opacity = 0;
+        nuclearPowerLineStraight3.style.opacity = 0;
+        nuclearPowerLineStraight4.style.opacity = 0;
+        nuclearStraightPowerline.style.opacity = 0;
+        nuclearSmokeEffect.style.opacity = 0;
+
+        //Bioenergy
+        bioEnergy1.style.opacity = 1;
+        bioEnergy2.style.opacity = 0;
+        bioEnergy3.style.opacity = 0;
+        bioEnergy4.style.opacity = 0;
+
+        //forestry
+        forest1.style.opacity = 1;
+        forest2.style.opacity = 0;
+        forest3.style.opacity = 0;
+        forest4.style.opacity = 0;
+
+        //geothermal
+        geothermal1.style.opacity = 1;
+        geothermal2.style.opacity = 0;
+        geothermal3.style.opacity = 0;
+        geothermal4.style.opacity = 0;
+        geoPowerLineStraight1.style.opacity = 1;
+        geoPowerLineStraight2.style.opacity = 0;
+        geoPowerLineStraight3.style.opacity = 0;
+        geoPowerLineStraight4.style.opacity = 0;
+
+        //solar
+        parliamentSolarPanels.style.opacity = 0;
+        greenBuildingSolarPanels.style.opacity = 0;
+        farmHouseSolarPanels.style.opacity = 0;
+        foregroundBuildingSolarPanels.style.opacity = 0;
+
+        //wind
+        windTurbineStatic1.style.opacity = 1;
+        windTurbineStatic2.style.opacity = 0;
+        windTurbineStatic3.style.opacity = 0;
+        windTurbineStatic4.style.opacity = 0;
+
+        //HEP
+        hydroelectric4.style.opacity = 0;
+        hydroelectric3.style.opacity = 0;
+        hydroelectric2.style.opacity = 1;
+        hepPowerlineStraight1.style.opacity = 1;
+        hepPowerlineStraight2.style.opacity = 0;
+        hepPowerlineStraight3.style.opacity = 0;
+        hepPowerlineStraight4.style.opacity = 0;
+
+        //carbon capture
+        carbonCapture2.style.opacity = 0;
+        carbonCapture3.style.opacity = 0;
+        carbonCapture4.style.opacity = 0;
+        smoke2.style.display = "block";
+        smoke3.style.display = "block";
+        smoke4.style.display = "block";
+
+        //heating
+        pipesLevel2.style.top = "-1vw";
+        pipesLevel2.style.opacity = 0;
+
+        //housing
+        HouseAppliancesLV4.style.opacity = 0;
+        HouseAppliancesLV3.style.opacity = 0;
+        HouseAppliancesLV2.style.opacity = 0;
+        HouseAppliancesLV1.style.opacity = 1;
+
+        greyCar1.style.opacity = 1;
+        electricCar1.style.opacity = 0;
+        electricBlue.style.opacity = 0;
+        greycarNearKcc.style.opacity = 1;
+        parking.style.opacity = 1;
+        parking.style.top = "26.4vw";
+        secondGreyCarKccElectric.style.opacity = 0;
+        redCarRightSideElectric.style.opacity = 0;
+        redCarRightSide.style.opacity = 1;
+
+        //Black Cars Highway Right Lane
+        blackCarRightLane.style.opacity = 0;
+        blackCarRightLane1.style.opacity = 0;
+        blackCarRightLane2.style.opacity = 0;
+        blackCarRightLane3.style.opacity = 0;
+
+        //Red Cars Highway Right Lane
+        redCarHighway.style.opacity = 1;
+        redCarHighway1.style.opacity = 1;
+        redCarHighway2.style.opacity = 1;
+        redCarHighway3.style.opacity = 1;
+
+        //Green Car Highway Left Lane
+        greenCarHighwayLeftLane.style.opacity = 0;
+        greenCarHighwayLeftLane1.style.opacity = 0;
+        greenCarHighwayLeftLane2.style.opacity = 0;
+        greenCarHighwayLeftLane3.style.opacity = 0;
+
+        //Green Car Highway Right LANE
+        greenCarHighRightLane.style.opacity = 0;
+        greenCarHighRightLane1.style.opacity = 0;
+        greenCarHighRightLane2.style.opacity = 0;
+        greenCarHighRightLane3.style.opacity = 0;
+
+        //Trucks
+        blueLorryElectric.style.opacity = 0;
+        redLorryElectric.style.opacity = 0;
+        redLorry.style.opacity = 1;
+        greenLorryElectric.style.opacity = 0;
+
+        //Bus
+        electricBusRightCornerElectric.style.opacity = 0;
+        electricBusRightLane.style.opacity = 0;
+        electricBusRightLane2.style.opacity = 0;
+
+        //Charging Stations
+        chargingStationLevel2.style.opacity = 0;
+        chargingStationLevel3.style.opacity = 0;
+        chargingStationLevel4.style.opacity = 0;
+
+        //from heavy vehicles
+        // knob12.style.top = "45vw"
+        blueLorry.style.opacity = 0;
+        greenLorry.style.opacity = 0;
+
+        //Planes
+        leftSidePlane.style.opacity = 0;
+        horizontalPlane.style.opacity = 0;
+
+        //Trains
+        leftTrain.style.opacity = 0;
+        rightTrain.style.opacity = 0;
+        tram.style.opacity = 0;
+
+        //travel demand
+        leftSidePlane.style.opacity = 0;
+        horizontalPlane.style.opacity = 0;
+
+        //Trains
+        leftTrain.style.opacity = 0;
+        rightTrain.style.opacity = 0;
+        tram.style.opacity = 1;
+
+        //Cars
+        blackCar.style.opacity = 1;
+        blackCar1.style.opacity = 1;
+
+        //Red Cars Highway Right Lane
+        redCarHighway.style.opacity = 1;
+        redCarHighway1.style.opacity = 1;
+        redCarHighway2.style.opacity = 1;
+        redCarHighway3.style.opacity = 1;
+
+        //Red Bus on Highway
+        redBusHighway.style.opacity = 0;
+        redBusHighway1.style.opacity = 0;
+
+        //Black Cars Highway Right Lane
+        blackCarRightLane.style.opacity = 0;
+        blackCarRightLane1.style.opacity = 0;
+        blackCarRightLane2.style.opacity = 0;
+        blackCarRightLane3.style.opacity = 0;
+
+        blueBusHighway.style.opacity = 0;
+        blackCarOverlay.style.opacity = 0;
+        greenCarOnHighway.style.opacity = 1;
+        blackCarOverlay1.style.opacity = 0;
+        greenCarOnHighwayLeftLane.style.opacity = 1;
+
+        busRightCorner.style.opacity = 1;
+
+        //Electric Bus
+        electricBusRightCornerElectric.style.opacity = 0;
+        electricBusRightLane.style.opacity = 0;
+        electricBusRightLane2.style.opacity = 0;
+
+        travel_demand = 1.0;
+        heavy_vehicles = 1.0;
+        light_vehicles = 1.0;
+        behaviour = 1.0;
+        efficiency = 1.0;
+        heating_system = 1.0;
+        carbon_intensity = 1.0;
+        carbon_capture = 1.0;
+        hydro_electric = 1.0;
+        nuclear = 1.0;
+        wind = 1.0;
+        solar = 1.0;
+        wave_tidal = 1.0;
+        forestry = 1.0;
+        bioenergy = 1.0;
+        getValueWb();
+
+
+
+
+
+
 
       function moveup() {
         //reset sliders
